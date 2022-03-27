@@ -1,0 +1,5 @@
+This is a test for my java program.
+
+I sure hope my project #1 goes well
+
+I should have 124 characters, 26 words, & 5 lines

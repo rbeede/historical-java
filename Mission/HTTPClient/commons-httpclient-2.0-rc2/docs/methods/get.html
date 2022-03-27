@@ -1,0 +1,1084 @@
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  
+      
+  
+
+      
+      
+      
+      
+      
+      
+        
+         
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      
+
+      
+
+  
+  
+
+  
+  
+
+   
+   
+
+   
+   
+
+
+    
+	
+	
+
+    
+    
+      
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <html>
+      <head>
+        
+        
+        
+          <title>HttpClient - 
+          Get Method
+        </title>
+        
+        
+        <style type="text/css">
+          @import url("../style/tigris.css");
+          @import url("../style/maven.css");
+        </style>
+        
+        
+        
+        
+        
+        <link rel="stylesheet" href="../style/print.css" type="text/css" media="print"></link>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+        
+          <meta name="author" content="Adrian Sutton"></meta>
+          <meta name="email" content="adrian@ephox.com"></meta>
+        
+        
+        
+        
+      </head>
+
+      <body class="composite">
+
+        <div id="banner">
+          <table border="0" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+              
+              <td>
+                
+                
+                  
+                  
+                  
+                    
+                  
+                  
+                  
+                  
+                  
+                  <a href="http://jakarta.apache.org/">
+                    <img border="0" alt="Apache Software Foundation" src="http://jakarta.apache.org/commons/images/jakarta-logo-blue.gif" align="left"></img>
+                  </a>
+                
+              </td>
+
+              
+              <td>
+                <div id="login" align="right">
+                  
+                  
+                    
+                    
+                    
+                      
+                    
+
+                    <a href="http://jakarta.apache.org/commons/httpclient/">
+                      <img border="0" alt="HttpClient" src="../images/httpclient_logo.png" align="right"></img>
+                    </a>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="breadcrumbs">
+          <table border="0" width="100%" cellpadding="4" cellspacing="0">
+            <tr>
+              
+                
+                <td>Last published: 13 October 2003
+                  | Doc for 2.0-rc2
+                </td>
+              
+              <td>
+                <div align="right">
+                  
+                  
+                  
+                  
+                    
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <table border="0" width="100%" cellpadding="8" cellspacing="0"> 
+          <tr valign="top">
+            <td width="20%" id="leftcol">
+              <div id="navcolumn">
+                
+
+                
+                  
+    <div>
+      <strong>Overview</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../features.html"><img class="handle" src="../images/none.png" alt=""></img>Features</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../news.html"><img class="handle" src="../images/none.png" alt=""></img>News</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../status.html"><img class="handle" src="../images/none.png" alt=""></img>Status</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../downloads.html"><img class="handle" src="../images/none.png" alt=""></img>Download</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../applications.html"><img class="handle" src="../images/none.png" alt=""></img>Applications</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../userguide.html"><img class="handle" src="../images/expanded.png" alt=""></img>User Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../authentication.html"><img class="handle" src="../images/none.png" alt=""></img>Authentication Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../charencodings.html"><img class="handle" src="../images/none.png" alt=""></img>Character Encodings</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../cookies.html"><img class="handle" src="../images/none.png" alt=""></img>Cookies</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../redirects.html"><img class="handle" src="../images/none.png" alt=""></img>Cross Host Redirects</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../logging.html"><img class="handle" src="../images/none.png" alt=""></img>Logging Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../methods.html"><img class="handle" src="../images/none.png" alt=""></img>Methods</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/"><img class="handle" src="../images/none.png" alt=""></img>Sample Code</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../sslguide.html"><img class="handle" src="../images/none.png" alt=""></img>SSL Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../threading.html"><img class="handle" src="../images/none.png" alt=""></img>Threading</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../troubleshooting.html"><img class="handle" src="../images/none.png" alt=""></img>Trouble Shooting</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../tutorial.html"><img class="handle" src="../images/none.png" alt=""></img>Tutorial</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../developerguide.html"><img class="handle" src="../images/expanded.png" alt=""></img>Developer Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../releases.html"><img class="handle" src="../images/none.png" alt=""></img>Release Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../testwebapp.html"><img class="handle" src="../images/none.png" alt=""></img>Webapp Test Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    </div>
+  
+                
+
+				
+    <div>
+      <strong>Project Documentation</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../index.html"><img class="handle" src="../images/none.png" alt=""></img>About HttpClient</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../project-info.html"><img class="handle" src="../images/collapsed.png" alt=""></img>Project Info</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../maven-reports.html"><img class="handle" src="../images/collapsed.png" alt=""></img>Project Reports</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../apidocs/index.html"><img class="handle" src="../images/none.png" alt=""></img>JavaDocs</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../xref/index.html"><img class="handle" src="../images/none.png" alt=""></img>Source XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../xref-test/index.html"><img class="handle" src="../images/none.png" alt=""></img>Test XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://maven.apache.org/development-process.html"><img class="handle" src="../images/none.png" alt=""></img>Development Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+                
+                
+                
+
+                
+                
+                
+                
+                	<div style="margin-top: 20px; width: 100%; text-align: center;">
+                		<a href="http://maven.apache.org/" title="Powered by Maven"><img style="border: 1px solid black" alt="Powered by Maven" src="../images/logos/maven-propaganda.png"></img></a>
+                	</div>
+                
+              
+                
+              </div>
+            </td>
+            <td rowspan="2">
+              <div id="bodycol">
+                
+                <div class="app">
+                  
+                  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Introduction">Introduction</a>
+        </h3>
+      
+      
+    <p>
+      
+     The GET method retrieves whatever information (in the form of an
+   
+     
+      entity) is identified by the Request-URI.  If the Request-URI refers to a
+   
+     
+      data-producing process, it is the produced data which shall be returned
+   
+     
+      as the entity in the response and not the source text of the process,
+   
+     
+      unless that text happens to be the output of the process.
+   
+    </p>
+   
+    <p>
+      
+     The semantics of the GET method change to a "conditional GET" if the
+   
+     
+      request message includes an If-ModifiedSince, If-Unmodified-Since,
+   
+     
+      If-Match, If-None-Match, or If-Range header field.  A conditional GET
+   
+     
+      method requests that the entity be transferred only under the
+   
+     
+      circumstances described by the conditional header field(s).  This reduces
+   
+     
+      unnecessary network usage by allowing cached entities to be refreshed
+   
+     
+      without requiring multiple requests or transferring data already held by
+   
+     
+      the client.
+   
+    </p>
+   
+    <p>
+      
+     If a Range header field is included, the request is for only the part
+   
+     
+      of the entity specified by the range header.  This allows partially
+   
+     
+      retrieved entities to be completed without transferring previously
+   
+     
+      received data.
+   
+    </p>
+   
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Typical Usage">Typical Usage</a>
+        </h3>
+      
+      
+    <p>
+      
+     Typically the get method is used to download a document from a web
+   
+     
+      server.  This can be achieved with the method, getResponseBody,
+   
+     
+      getResponseBodyAsStream or getResponseBodyAsString.  Of these methods,
+   
+     
+      getResponseBodyAsStream is generally the best choice as it avoids
+   
+     
+      unnessecary buffering of all data into memory before processing.
+   
+    </p>
+   
+    <p>
+      
+     See the 
+   
+    <a href="../tutorial.html">
+     tutorial
+   </a>
+  
+      for a full example
+   
+     
+      of using the GET method.  There are also a number of examples in the 
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/">
+     sample
+   
+     
+      code
+   </a>
+  
+     .
+   
+    </p>
+   
+    <div id="source">
+      <pre>
+        GetMethod get = new GetMethod("http://jakarta.apache.org");
+        // execute method and handle any error responses.
+        ...
+        InputStream in = get.getResponseBodyAsStream();
+        // Process the data from the input stream.
+        get.releaseConnection();
+        
+      </pre>
+    </div>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Common Problems">Common Problems</a>
+        </h3>
+      
+      
+    <p>
+      
+     The most common mistake when using the GET method is failing to read
+   
+     
+      the entire response body even if an error code, redirect or any other
+   
+     
+      response status is received.  As with all methods, one must also be sure to call 
+   
+     
+      method.releaseConnection(), regardless of the response code received.
+   
+    </p>
+   
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="RFC Section">RFC Section</a>
+        </h3>
+      
+      
+    <p>
+      
+     The get method is defined in section 8.1 of 
+   
+    <a href="http://www.ietf.org/rfc/rfc1945.txt">
+     RFC1945
+   </a>
+  
+      and similarly
+   
+     
+      defined for HTTP 1.1 in section 9.3 of 
+   
+    <a href="http://www.ietf.org/rfc/rfc2616.txt">
+     RFC2616
+   </a>
+  
+     .
+   
+    </p>
+   
+    </div>
+  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="footer">
+          <table border="0" style="width:100%" cellpadding="4" cellspacing="0">
+            
+            <tr>
+              <td>
+                
+                  
+                    
+                    
+                      © 2001-2003, Apache Software Foundation
+                    
+                  
+                  
+                
+
+                
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>
+  

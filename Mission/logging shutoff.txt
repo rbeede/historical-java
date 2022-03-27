@@ -1,0 +1,17 @@
+org.apache.commons.logging.simplelog.defaultlog=info 
+
+
+org.apache.commons.logging.simplelog.defaultlog=fatal
+
+
+
+
+
+System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.SimpleLog"); 
+
+
+System.setProperty("org.apache.commons.logging.simplelog.defaultlog", "fatal"); 
+
+
+maybe this
+org.apache.commons.httpclient.HttpMethodBase readResponseBody

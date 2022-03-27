@@ -1,0 +1,1451 @@
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  
+      
+  
+
+      
+      
+      
+      
+      
+      
+        
+         
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      
+
+      
+
+  
+  
+
+  
+  
+
+   
+   
+
+   
+   
+
+
+    
+	
+	
+
+    
+    
+      
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <html>
+      <head>
+        
+        
+        
+          <title>HttpClient - 
+          HttpClient Applications
+        </title>
+        
+        
+        <style type="text/css">
+          @import url("./style/tigris.css");
+          @import url("./style/maven.css");
+        </style>
+        
+        
+        
+        
+        
+        <link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+        
+          <meta name="author" content="Commons Documentation Team"></meta>
+          <meta name="email" content="commons-dev@jakarta.apache.org"></meta>
+        
+          <meta name="author" content="Rodney Waldhoff"></meta>
+          <meta name="email" content="rwaldhoff@apache.org"></meta>
+        
+          <meta name="author" content="Jeff Dever"></meta>
+          <meta name="email" content="jsdever@apache.org"></meta>
+        
+        
+        
+        
+      </head>
+
+      <body class="composite">
+
+        <div id="banner">
+          <table border="0" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+              
+              <td>
+                
+                
+                  
+                  
+                  
+                    
+                  
+                  
+                  
+                  
+                  
+                  <a href="http://jakarta.apache.org/">
+                    <img border="0" alt="Apache Software Foundation" src="http://jakarta.apache.org/commons/images/jakarta-logo-blue.gif" align="left"></img>
+                  </a>
+                
+              </td>
+
+              
+              <td>
+                <div id="login" align="right">
+                  
+                  
+                    
+                    
+                    
+                      
+                    
+
+                    <a href="http://jakarta.apache.org/commons/httpclient/">
+                      <img border="0" alt="HttpClient" src="./images/httpclient_logo.png" align="right"></img>
+                    </a>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="breadcrumbs">
+          <table border="0" width="100%" cellpadding="4" cellspacing="0">
+            <tr>
+              
+                
+                <td>Last published: 13 October 2003
+                  | Doc for 2.0-rc2
+                </td>
+              
+              <td>
+                <div align="right">
+                  
+                  
+                  
+                  
+                    
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <table border="0" width="100%" cellpadding="8" cellspacing="0"> 
+          <tr valign="top">
+            <td width="20%" id="leftcol">
+              <div id="navcolumn">
+                
+
+                
+                  
+    <div>
+      <strong>Overview</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="features.html"><img class="handle" src="./images/none.png" alt=""></img>Features</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="news.html"><img class="handle" src="./images/none.png" alt=""></img>News</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="status.html"><img class="handle" src="./images/none.png" alt=""></img>Status</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="downloads.html"><img class="handle" src="./images/none.png" alt=""></img>Download</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      		<b><a href="applications.html"><img class="handle" src="./images/none.png" alt=""></img>Applications</a></b>
+      	
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="userguide.html"><img class="handle" src="./images/expanded.png" alt=""></img>User Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="authentication.html"><img class="handle" src="./images/none.png" alt=""></img>Authentication Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="charencodings.html"><img class="handle" src="./images/none.png" alt=""></img>Character Encodings</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="cookies.html"><img class="handle" src="./images/none.png" alt=""></img>Cookies</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="redirects.html"><img class="handle" src="./images/none.png" alt=""></img>Cross Host Redirects</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="logging.html"><img class="handle" src="./images/none.png" alt=""></img>Logging Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="methods.html"><img class="handle" src="./images/none.png" alt=""></img>Methods</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/"><img class="handle" src="./images/none.png" alt=""></img>Sample Code</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="sslguide.html"><img class="handle" src="./images/none.png" alt=""></img>SSL Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="threading.html"><img class="handle" src="./images/none.png" alt=""></img>Threading</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="troubleshooting.html"><img class="handle" src="./images/none.png" alt=""></img>Trouble Shooting</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="tutorial.html"><img class="handle" src="./images/none.png" alt=""></img>Tutorial</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="developerguide.html"><img class="handle" src="./images/expanded.png" alt=""></img>Developer Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="releases.html"><img class="handle" src="./images/none.png" alt=""></img>Release Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="testwebapp.html"><img class="handle" src="./images/none.png" alt=""></img>Webapp Test Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    </div>
+  
+                
+
+				
+    <div>
+      <strong>Project Documentation</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="index.html"><img class="handle" src="./images/none.png" alt=""></img>About HttpClient</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="project-info.html"><img class="handle" src="./images/collapsed.png" alt=""></img>Project Info</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="maven-reports.html"><img class="handle" src="./images/collapsed.png" alt=""></img>Project Reports</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs/index.html"><img class="handle" src="./images/none.png" alt=""></img>JavaDocs</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref/index.html"><img class="handle" src="./images/none.png" alt=""></img>Source XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref-test/index.html"><img class="handle" src="./images/none.png" alt=""></img>Test XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://maven.apache.org/development-process.html"><img class="handle" src="./images/none.png" alt=""></img>Development Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+                
+                
+                
+
+                
+                
+                
+                
+                	<div style="margin-top: 20px; width: 100%; text-align: center;">
+                		<a href="http://maven.apache.org/" title="Powered by Maven"><img style="border: 1px solid black" alt="Powered by Maven" src="./images/logos/maven-propaganda.png"></img></a>
+                	</div>
+                
+              
+                
+              </div>
+            </td>
+            <td rowspan="2">
+              <div id="bodycol">
+                
+                <div class="app">
+                  
+                  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="HttpClient Powered">HttpClient Powered</a>
+        </h3>
+      
+      
+    <p>
+      
+     
+        The following projects and applications use 
+   
+    <em>
+      
+     HttpClient
+   
+    </em>
+   
+     .
+   
+     
+      
+   
+    </p>
+   
+    <dl>
+      
+     
+
+        
+   
+    <dt>
+      
+    <a href="http://jakarta.apache.org/slide/">
+     Jakarta Slide
+   </a>
+  
+    </dt>
+   
+     
+        
+   
+    <dd>
+      
+     
+          Jakarta Slide is an open-source project composed of multiple modules tied
+   
+     
+          together using WebDAV. It includes a CM API, a WebDAV server, WebDAV client
+   
+     
+          APIs, J2EE compliant stores and more.
+   
+     
+        
+   
+    </dd>
+   
+     
+
+        
+   
+    <dt>
+      
+    <a href="http://jakarta.apache.org/commons/latka/">
+     Jakarta Commons Latka
+   </a>
+  
+    </dt>
+   
+     
+        
+   
+    <dd>
+      
+     
+          Latka is a functional (end-to-end) testing tool. It is implemented in Java, 
+   
+     
+          and uses an XML syntax to define a series of HTTP (or HTTPS) requests and a 
+   
+     
+          set of validations used to verify that the request was processed correctly.
+   
+     
+        
+   
+    </dd>
+   
+     
+
+        
+   
+    <dt>
+      
+    <a href="http://www.nortelnetworks.com/">
+     Nortel Networks
+   </a>
+  
+    </dt>
+   
+     
+        
+   
+    <dd>
+      
+     
+          Operator Simulation Tool (OST) - A server side performance and scalability testing tool
+   
+     
+          uses HttpClient to drive loads to web based server applications.
+   
+     
+        
+   
+    </dd>
+   
+     
+
+        
+   
+    <dt>
+      
+    <a href="http://htmlunit.sourceforge.net/">
+     HtmlUnit
+   </a>
+  
+    </dt>
+   
+     
+        
+   
+    <dd>
+      
+     
+          HtmlUnit is a java unit testing framework for testing web based applications.
+   
+     
+          HtmlUnit models the returned document so that you deal with pages and forms and tables. 
+   
+     
+        
+   
+    </dd>
+   
+     
+
+        
+   
+    <dt>
+      
+    <a href="http://jakarta.apache.org/cactus/">
+     Jakarta Cactus
+   </a>
+  
+    </dt>
+   
+     
+        
+   
+    <dd>
+      
+     
+           Cactus is a simple test framework for unit testing server-side java code.
+   
+     
+           The intent of Cactus is to lower the cost
+   
+      of writing tests for server-side code.
+   
+     
+        
+   
+    </dd>
+   
+     
+
+        
+   
+    <dt>
+      
+    <a href="http://www.jcp.org/en/jsr/detail?id=147">
+     JSR 147
+   </a>
+  
+    </dt>
+   
+     
+        
+   
+    <dd>
+      
+     
+          Workspace Versioning and Configuration Management.
+   
+     
+          Software AG is going to implement the current draft of JSR 147 API.
+   
+     
+          The implementation will be based on the Jakarta Commons HttpClient
+   
+     
+          and located in the Jakarta Slide project.
+   
+     
+        
+   
+    </dd>
+   
+     
+
+        
+   
+    <dt>
+      
+    <a href="http://www.nose.ch/">
+     NOSE Applied Intelligence ag
+   </a>
+  
+    </dt>
+   
+     
+        
+   
+    <dd>
+      
+     
+          HttpClient is used in a number of applications:
+   
+     
+          
+   
+    <ol>
+      
+     
+            
+   
+    <li>
+      
+     ACE: A groupware (fat client) and document management system for closed user groups for project management, e-learning etc. HttpClient is used for communication between the user client and server to transfer XML messages.
+   
+    </li>
+   
+     
+            
+   
+    <li>
+      
+     Desktop Navigator: Company wide, centrally managed "bookmark list" that integrates in the Desktop. HttpClient is used to check links.
+   
+    </li>
+   
+     
+            
+   
+    <li>
+      
+     Backend of a Webapp for a major swiss airline. HttpClient gets XML data from the business layer.
+   
+    </li>
+   
+     
+          
+   
+    </ol>
+   
+     
+        
+   
+    </dd>
+   
+     
+        
+   
+     
+        
+   
+    <dt>
+      
+    <a href="http://www.designacourse.com/">
+     MindIQ's Design-a-Course
+   </a>
+  
+    </dt>
+   
+     
+        
+   
+    <dd>
+      
+     
+          Design-a-Course, a quick, easy, and inexpensive e-learning software tool allows 
+   
+     
+          novice users to create sophisticated web-based training (WBT) courses within minutes.
+   
+     
+        
+   
+    </dd>
+   
+     
+
+        
+   
+    <dt>
+      
+    <a href="http://www.contactoffice.com/">
+     ContactOffice
+   </a>
+  
+    </dt>
+   
+     
+        
+   
+    <dd>
+      
+     
+          ContactOffice is a complete groupware solution ('Virtual office') combining mail, 
+   
+     
+          calendar, storage, contacts, and more.  HttpClient is used for back-end tasks
+   
+     
+          such as inter-server communication and SMS transmission.
+   
+     
+        
+   
+    </dd>
+   
+     
+        
+   
+     
+        
+   
+    <dt>
+      
+    <a href="http://www.newknow.com/">
+     Newknow
+   </a>
+  
+    </dt>
+   
+     
+        
+   
+    <dd>
+      
+     
+          Newknow is a Knowledge Management Suite based on Artificial Intelligence, 
+   
+     
+          Collaboration and Document Management and we use Commons HttpClien
+   
+     t as part 
+   
+     
+          of our Knowledge Spider.  This Spider retrieves all the information gathered 
+   
+     
+          by the Agents and the corporative sources on the network.
+   
+     
+        
+   
+    </dd>
+   
+     
+
+        
+   
+    <dt>
+      
+    <a href="http://www.xam.de/dev/de4d2c/">
+     de4d2c
+   </a>
+  
+    </dt>
+   
+     
+        
+   
+    <dd>
+      
+     
+          de4d2c - development environment 4 documents 2 content -
+   
+     
+          is an in-browser web page wrapper development system that returns
+   
+     
+          it's extraction result as XML using XSLT generated from intuitive user input.
+   
+     
+          Commons HttpClient is used as the robust base of the whole system.
+   
+     
+        
+   
+    </dd>
+   
+     
+
+        
+   
+    <dt>
+      
+    <a href="http://furies.sourceforge.net/">
+     Furies
+   </a>
+  
+    </dt>
+   
+     
+        
+   
+    <dd>
+      
+     
+            A web site testing tool that uses HttpClient to download web site resource. 
+   
+     
+            Each web site resource can be then tested against one of the pre-packaged tests from 
+   
+     
+            Furies or you can easily write your own.
+   
+     
+        
+   
+    </dd>
+   
+     
+
+		
+   
+    <dt>
+      
+    <a href="http://www.reflexe.fr/products/highlight/">
+     Term Highlighting for Verity Ultraseek search results
+   </a>
+  
+    </dt>
+   
+     
+		
+   
+    <dd>
+      
+     
+			Reflexe Technologies has developed a servlet-based application that works 
+   
+     
+			with Verity Ultraseek, formerly known as Inktomi
+   
+     
+			Enterprise Search, that highlights terms that match search query, by
+   
+     
+			intercepting HTTP communication between the browser and the original
+   
+     
+			document server.  It can highlight terms in HTML documents, as well as Word,
+   
+     
+			Excel, Powerpoint, and Acrobat PDF documents, and uses the Jakarta
+   
+     
+			HttpClient for better performance than that provided by the standard J2SE
+   
+     
+			platform, and in particular because it must be able to offer NTLM
+   
+     
+			authentification when required.
+   
+     
+		
+   
+    </dd>
+   
+     
+
+		
+   
+    <dt>
+      
+    <a href="http://mule.sourceforge.net/">
+     Mule - Universal Message Objects
+   </a>
+  
+    </dt>
+   
+     
+		
+   
+    <dd>
+      
+     
+			Mule is a robust and highly scalable broker and services ESB framework. It
+   
+     
+			is designed as a light-weight, event-driven component technology that
+   
+     
+			handles communication with disparate systems transparently providing a
+   
+     
+			simple component interface.
+   
+     
+		
+   
+    </dd>
+   
+     
+
+      
+   
+    </dl>
+   
+    <hr width="50%">
+      
+    </hr>
+   
+    <p>
+      
+     
+        To have your application listed, write to
+   
+     
+        
+   
+    <a href="mailto:commons-httpclient-dev@jakarta.apache.org?subject=HttpClient%20Powered">
+     
+          commons-httpclient-dev@jakarta.apache.org
+   </a>
+  
+     .
+   
+     
+      
+   
+    </p>
+   
+    </div>
+  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="footer">
+          <table border="0" style="width:100%" cellpadding="4" cellspacing="0">
+            
+            <tr>
+              <td>
+                
+                  
+                    
+                    
+                      © 2001-2003, Apache Software Foundation
+                    
+                  
+                  
+                
+
+                
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>
+  

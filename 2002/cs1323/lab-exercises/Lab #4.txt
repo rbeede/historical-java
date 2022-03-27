@@ -1,0 +1,177 @@
+Lab Exercises
+February 18, 2000
+
+Due:   Today, before the end of lab (this is proof of your lab attendance).
+
+1.0	Objectives
+
+To be able to correct compilation errors.
+
+
+2.0	Instructions for lab exercises:
+
+Cut and paste the two classes below and paste them into two different files in your editor.
+Save these files as LabMain.java (the main class) and Lab.java.
+
+Compile the LabMain Application and correct all errors.  Continue recompiling until all errors are corrected and the program runs successfully.
+
+/*		
+
+	Class:			LabMain class
+   
+	Purpose:		To create a Lab object in order to
+				to compute a sale price
+
+	Parameters:		None
+			               
+	Returns:		None
+*/
+	   
+class LabMain
+{
+
+	public static void main ( )
+	{
+		Lab lab = new Lab("Lab Exercises");
+		
+		lab.showObjects();
+		lab.describeProgram();   //tell what the program does
+		lab.getInput();          //get two input values
+		lab.computeSalePrice();  //compute the discounted price
+		lab.displayOutput(salePrice);     //display the results
+     
+	}//end main
+
+}//end class LabMain
+
+
+
+/*
+   Class	Lab
+
+   Purpose:	To compute a discount from a retail price.
+
+   Input:  	retail price(float)
+           	discount (float)
+           
+   Compute: 	sale price
+*/
+
+import JavaBook.*;
+
+class Lab
+{
+
+/**********************
+   Data Members
+**********************/
+      
+	//declare data members private, 3 objects and 3 variables
+	
+	private MainWindow mainWindow;
+	private InputBox  inputBox;
+	private OutputBox outputBox;
+
+	private float    retail, discount, salePrice;
+   
+/**********************
+   Constructors
+**********************/
+
+   public void Lab(String title)
+   {
+		//instantiate three objects
+		mainWindow = newMainWindow(title + " MainWindow object");
+		inputBox    = new InputBox(mainWindow);
+		outputBox     = new OutputBox(mainWindow);
+		outputBox.setTitle(title + " OutputBox object");
+   }
+
+
+ 
+
+/**********************
+   Public Methods:
+   
+		void    computeSalePrice  (    )
+		void    describeProgram   (    )
+		void    displayOutput     (    )
+		void    getInput          (    )
+		void    showObjects       (    )
+      
+**********************/
+
+   /*  Method:       computeSalePrice
+   
+       Purpose:      Compute the sale Price from the given retail and discount
+
+       Parameters:   None
+                      
+       Returns:      None
+   */
+   
+   public void computeSalePrice()
+   {
+	//write an arithmetic expression to calculate the private data member, salePrice
+	salePrice = retail - (retail * (discount / 100));
+   }
+   
+   /*  Method:       describeProgram
+   
+       Purpose:      Provide a brief explaination of the program to the user.
+
+       Parameters:   None
+                      
+       Returns:      None
+   */
+   
+   	public int describeProgram()
+   	{
+      		//Print the purpose of the program using the OutputBox object and skip two 		//lines
+		outputBox.printLine("This program calculates the sale price for a"
+				+ " given retail and discount");
+      		outputBox.skipLine(2);
+   }
+
+   /*  Method:       displayOutput
+   
+       Purpose:      Display the input values and sale price
+
+       Parameters:   None
+                      
+       Returns:      None
+   */
+
+	public void displayOutput() ;
+	{
+		//Using the OutputBox object, echo the user input, skip a line, and print 		//the calculated sale price
+		outputBox.printLine("Retail Price:          $" + etail);
+		outputBox.printLine("Discounted Amount:      " + discount + "%");
+		outputBox.skipLine(1);
+		outputBox.printLine("Sale Price:            $" + salePrice);
+	}   
+
+	/*  Method:       getInput
+	 
+	     Purpose:      Get two input values--retail and discount amount--using an 				InputBox object
+
+	     Parameters:   None
+	                    
+	     Returns:      None
+	*/
+
+	public void getnput() 
+	{
+		//Using the InputBox object to get user input for the retail price 
+		//	and the discounted amount
+		retail	= inputBox.getFloat("Enter Retail Amount   (Dollars&Cents):");
+		discount	= inputBox.getFloat("Enter Discount Amount (e.g. 20):");
+	}
+
+	private void showObjects()
+	{
+		//call the show()method for the applicable objects
+		mainWindow.show();
+		outputBox.show();
+	}
+}//end class Lab

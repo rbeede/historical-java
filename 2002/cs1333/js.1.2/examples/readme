@@ -1,0 +1,55 @@
+This directory contains a number of examples from the McGraw-Hill text
+Java Structures, by Duane A. Bailey.  The main purpose of these examples is
+to provide working applications of data structures to support the text, but
+they may also be useful starting points for other more sigificant applications.
+
+Included here are the java sources.  To compile these sources on your
+platform, it will be necessary for you to include the structure.jar file in
+your CLASSPATH (on unix-like machines) or in your project (in environments).
+
+* To set the class path, it is important you add the full path to the
+  file structure.jar.  For example, in Bourne-like shells, you set the
+  environment variable CLASSPATH as follows:
+       CLASSPATH=.:XXX/structure.jar
+       export CLASSPATH
+  where XXX is replaced by the directory that contains the structure.jar
+  file.
+
+* Alternatively, you may set the class path to include the directory that
+  contains the structure directory.  Within the structure directory is
+  the set of .class files that make up the structure package.  The advantage
+  to this technique is that the class files can be added and removed from
+  the package easily.  The disadvantage is that is can slow compilation by
+  a very little bit.
+
+Each of the source files includes a number of comments of the form
+    //+tagname
+     ...
+    //-tagname
+that delimit regions of interest within the code.  Often, these regions
+correspond directly to figures within the text.  Two other regions are
+of special interest --- those delimited by the tags input and output.
+The text within the "input" tagged region is sample text to be provided
+the program; the text within the "output" tagged region is the corresponding
+output.  I use these regions to test the code in a *very* cursory manner.
+If you find a discrepancy, please report it to me (bailey@cs.williams.edu).
+
+There are are also a couple of examples that are not found within the text,
+but for example, might be answers to problems.  The same comments hold true:
+enjoy.
+
+More examples will appear, over time, on the web, including example lab 
+assignments and supporting Java applets.  Please feel free to download
+anything found off the McGraw-Hill page:
+     http://www.mhhe.com/javastructures
+or my page:
+     http://www.cs.williams.edu/~bailey/JavaStructures
+
+If you have items to contribute, please contact me!
+
+
+Regards,
+ Duane Bailey
+ Department of Computer Science
+ Williams College
+ Williamstown, Massachusetts 01267

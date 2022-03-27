@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>Java Structures' FAQ Page</title>
+</head>
+<center>
+<h1>Java Structures' FAQ Page</h1>
+</center>
+
+<font size="+1">
+Here are answers to some common questions about the structures
+package.
+
+<hr>
+<b>
+What is the structure package all about?
+</b>
+<p>
+I wrote the structure package because core Java has poor support for
+the study of object-oriented data structures.  This state is
+improving but, still, there are many inconsistencies and holes within
+the Java language packages available from Sun that make teaching a
+course on data structures (CS2) difficult.  These issues are,
+somewhat, covered in the text.
+<p>
+Here, however, are some highlights:
+<ul>
+<li> This is one package.  Data structures are not distributed between
+a large number of packages that are difficult to find.
+<li> The structures are developed by one designer.  This provides a
+consistency of approach not often found in commercial products.
+<li> It is tested and stable code.  This package has been course
+tested for two years.
+</ul>
+<hr>
+<b> Who may use the structures package?</b>
+<p>
+The structures package is freely available for non-commercial use from
+<a href="http://www.mhhe.com/javastructures">McGraw-Hill</a>.  You need not buy the text to use it, but you may not
+make money from its use.
+<hr>
+<b> Under what environments may this code be used?</b>
+<p>
+The structures package available currently from <a
+href="http://www.mhhe.com/javastructures">McGraw-Hill</a> works with
+any environment that is Java JDK 1.1 compliant.  
+Software that works specifically with JDK 1.2 is also available.
+As Sun improves its support for data structures, the structures
+package is made to be as consistent as possible with the existing JDK.
+<hr>
+<b> You provide javadoc-based documentation, but there is no javadoc
+documentation in the source code.  Why? </b>
+<p>
+The on-line documentation is generated from a master copy of the
+structure package that has these comments.  For release, these
+comments are removed, providing a more readable source for programmers
+to peruse.  Javadoc comments are great reading for the javadoc
+utility; they're not so great for humans.
+<p>
+<i>The javadoc comments are a subset of the comments found in the
+source.</i>
+<p>
+If you believe you absolutely need the javadoc comments, contact the
+author at <a href="mailto:bailey@cs.williams.edu"><address>bailey@cs.williams.edu</address></a>.
+<hr>
+<b>You re-implement some data structures already implemented by Sun.
+Why?</b>
+<p>
+To ensure there are no copyright infringements I provide (often simpler)
+non-commercial implementations of some classes.  Sometime of these
+implementations may not be as efficient as the commercial classes, but
+the details of the implementation are easier to grasp.  Of course, if
+necessary, the code can be modified to make use of those
+implementations found in Java's native classes.
+<hr>
+<b>What do you mean by "for the principled programmer"?</b>
+<p>
+Learning how to program well is a difficult task.  One that can,
+arguably, take many years of practice beyond coursework.  One of the
+reasons for this is that there are a number of "tricks of the trade"
+or "heuristics" that guide experienced programmers, that are not often
+conveyed (or conveyed well) by existing texts.  In the Java Structures
+text, I present a number of "principles" (rules-of-thumb, really) that
+guide the data structure design process.
+<hr>
+<b>Why are private fields of the structures not declared private?</b>
+<p>
+The reasoning for this is long and drawn out (and discussed more fully
+in the text), but basically, there is no disadvantage to declaring
+these fields protected.  The particular distinctions between private,
+protected, public, and default protects are rather technical and their
+motivation is somewhat difficult to understand.
+<hr>
+<b>What differences are there between the JDK 1.1 and the JDK 1.2
+versions of the software?</b>
+<p>
+When JDK 1.2 was announced, Sun added a number of important new
+features to their packages - including -
+- <tt>java.lang.Comparable</tt>.  Java Structures defines a very
+similar interface, called <tt>structure.Comparable</tt>.  Because of a
+naming conflict introduced by the default importing of
+<tt>java.lang</tt>, I made the decision to adopt Sun's definition of
+<tt>Comparable</tt>.  This necessitates recasting many of the classes
+of the <tt>structure</tt> package, requiring a re-release.  I do not
+expect conflicts in the future, but Sun may further encroach on the
+namespace of data structures distributed under the <tt>structure</tt> package.
+<hr>
+<b>Do you teach this course using applets or applications?</b>
+<p>
+When I teach this course, I teach it using applications.  Many of my
+colleagues use applets.  Either approach is satisfactory, as long as
+Java, itself, does not get in the way of understanding data
+structures.
+<p>
+Unfortunately, there are many disadvantages to using applets in this
+course - the primary problem being security.  Security makes it 
+difficult (and sometimes impossible) to perform input from a keyboard,
+or to read data from a file.  Both of these are often useful in a data
+structures course.
+<p>
+<i>Here is something to think about.</i>  As tax-paying citizens, we
+keep track of tax freedom day - the first day of the year that we are
+earn money above and beyond the money we earn to pay our taxes.
+(Currently, that day appears about 28% of the way through the calendar
+year...ironically, in mid-April.) In a typical programming course, what is
+<b>Programmer Freedom Day</b> - the day that a programmer can first be
+expected to write an entire program without the help of the
+instructor.
+<p>
+Unfortunately, Programmer Freedom Day has been moving later and later
+in the semester.  To use applets, Programmer Freedom Day is
+considerably later than if you use applications.
+</font>
+</html>

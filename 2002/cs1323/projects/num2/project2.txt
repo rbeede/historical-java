@@ -1,0 +1,54 @@
+Programming Project #2 				
+Februaru 4, 2000
+
+Due:   February 11th at the beginning of Lab
+
+1.0	Objectives
+
+1. To be able to write simple arithmetic expressions to accomplish a specific task.
+2. To be able to use these classes in a specified manner:
+	 MainWindow, Math, InputBox, and OutputBox 
+3. To be able to debug a program with syntax errors.
+4. To be able to debug a program with logic errors.
+
+2.0	Class <Give your class a name and place that name here>
+
+Use an editor and write Java code according to the instructions in Exercise #20 in Chapter 3 
+(page 137) from your textbook. Use the template given in Project 1 to help get you started.  
+Keep in mind that you will have to define the body of main in such a way to customize it to 
+this Project.  You should use a method from the Math class in the java.lang package in order to 
+find d2 (see the discussion of the Math class on page 100 in your textbook).    Also, see the 
+LoanCalculator program (part of the "Exercises for Fixing and Compilation Errors" hand out) 
+for clues to writing the code for this project.  You must use the MainWindow, Math, InputBox,
+and OutputBox classes to complete this project.
+
+Do not forget to include your comment header. 
+ 
+/**********************************************************************
+
+	Programmer:  		<Place your name here>
+	ID:			<Place your ID here>
+   	Course:      		 CS1323
+	Lab Section:		<place your lab section here>
+	Lab TA:		  	<Place the name of your TA here>
+
+	Program:		<Place the name of your program here>
+	Project#:    		 Project #<place the project # here>
+	Date:			<Place the due date here>
+
+	Description: 		<Place the description of your program 
+				here>
+
+*********************************************************************/
+
+
+2.0.1	Edit, Compile, Debug, and Run your program
+
+Save your code in a file named <YourClassName>.java.
+Compile, debug, and run your program. 
+
+
+2.2  Submission Guidelines
+
+Your TA will give you instructions for submitting Project 2.
+

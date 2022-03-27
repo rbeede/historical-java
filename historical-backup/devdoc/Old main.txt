@@ -1,0 +1,379 @@
+		
+		final ExecutorService executorService = Executors.newCachedThreadPool();
+		
+		final Future<Set<File>> sourceFuture = executorService.submit(new RecursiveDirectoryListing(sourceDirectory, false, null));
+		final Future<Set<File>> destinationFuture = executorService.submit(new RecursiveDirectoryListing(destinationDirectory, false, new IgnoreTemporaryBackupFileFilter()));
+		
+		
+		// Wait on the listing to be finished
+		final Collection<File> sourceListing;
+		try {
+			sourceListing = sourceFuture.get();
+		} catch (final ExecutionException e) {
+			log.error(e,e);
+			System.exit(255);
+			return;
+		}
+		
+		
+		log.debug(sourceListing.size() + " files in " + sourceDirectory.getAbsolutePath());
+		
+		// Now that we have the current source listing start the backup
+		//TODO Consider using multithreading so while we assemble the source listing we push things into a queue and start work on them
+		//	for potential speed improvement
+		
+		
+		backupNewOrModified(sourceListing, sourceDirectory, destinationDirectory);
+		
+		
+		
+		// Now we need to look for anything in destination backup that isn't in source (deleted files in source)
+		//	We mark those as deleted if necessary
+		
+		// Wait on the listing to be finished
+		final Collection<File> destinationListing;
+		try {
+			destinationListing = destinationFuture.get();
+		} catch (final ExecutionException e) {
+			log.error(e,e);
+			System.exit(255);
+			return;
+		}
+		
+		// Note that this destination (backup) listing is technically slightly out of date since we started
+		//	gathering it before we did a backup of source data.  It doesn't matter since we only need files
+		//	deleted since the last backup which we have from the listing.
+		
+		if(updateMetadataForDeleted(destinationListing, sourceListing, sourceDirectory, destinationDirectory)) {
+			// Some error occurred so return a code to indicate so
+			System.exit(254);
+		}
+		
+
+		executorService.shutdown();
+		
+		log.info("Backup complete");
+	}
+	
+	
+	private static void setupLogging(final File logFilePrefix) {
+		final Layout layout = new PatternLayout("%d{yyyy-MM-dd HH:mm:ss,SSS Z}\t%-5p\tThread=%t\t%c\t%m%n");
+		
+		//TODO have log filename get yyyy-MM-dd_UTC added automatically with auto-rotating log
+		
+		// Setup the logger to also log to the console
+		final ConsoleAppender consoleAppender = new ConsoleAppender(layout);
+		consoleAppender.setEncoding("UTF-8");
+		consoleAppender.setThreshold(Level.INFO);  // Cuts back on so many messages on the console, but the file still has everything else
+		Logger.getRootLogger().addAppender(consoleAppender);
+		
+		
+		// Setup the logger to log into the current working directory
+		final File completeLogFile = new File(logFilePrefix.getAbsolutePath() + "_" + getFormattedDatestamp(null) + ".log");
+		final FileAppender fileAppender;
+		try {
+			fileAppender = new FileAppender(layout, completeLogFile.getAbsolutePath());
+		} catch (final IOException e) {
+			e.printStackTrace();
+			log.error(e,e);
+			return;
+		}
+		fileAppender.setEncoding("UTF-8");
+		Logger.getRootLogger().addAppender(fileAppender);
+		Logger.getRootLogger().setLevel(Level.ALL);  // Appenders may have their own thresholds
+		
+		System.out.println("Logging to " + completeLogFile.getAbsolutePath());
+	}
+	
+	
+	/**
+	 * @param date
+	 * @return Formatted date in UTC time zone
+	 */
+	private static String getFormattedDatestamp(final Date date) {
+		final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+		dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+		
+		if(null == date) {
+			return dateFormat.format(new Date()) + "_UTC";
+		} else {
+			return dateFormat.format(date) + "_UTC";
+		}
+	}
+	
+	private static File translateSourceToDestination(final File file, final File sourceDirectory, final File destinationDirectory) {
+		String modifiedPath = file.getAbsolutePath();
+		modifiedPath = modifiedPath.replace(sourceDirectory.getAbsolutePath(), destinationDirectory.getAbsolutePath());
+		modifiedPath = modifiedPath.concat(".zip");
+		
+		return new File(modifiedPath);
+	}
+
+	private static File translateDestinationToSource(final File file, final File destinationDirectory, final File sourceDirectory) {
+		String modifiedPath = file.getAbsolutePath();
+		
+		modifiedPath = modifiedPath.replace(destinationDirectory.getAbsolutePath(), sourceDirectory.getAbsolutePath());
+
+		// Get rid of very last .ext part
+		modifiedPath = modifiedPath.substring(0, modifiedPath.lastIndexOf('.'));
+		
+		return new File(modifiedPath);
+	}
+
+	
+
+	private static void backupNewOrModified(final Collection<File> sourceListing, final File sourceDirectory, final File destinationDirectory) {
+		for(final File sourceFile : sourceListing) {
+			final File destinationArchiveFile = translateSourceToDestination(sourceFile, sourceDirectory, destinationDirectory);
+			
+			// Do we need to backup?
+			if(!destinationArchiveFile.exists() || destinationArchiveFile.lastModified() != sourceFile.lastModified()) {
+				// We need to backup
+				log.trace("Need to backup source file " + sourceFile.getAbsolutePath() + " which has last modified of " + getFormattedDatestamp(new Date(sourceFile.lastModified())));
+				try {
+					backupFile(sourceFile, destinationArchiveFile);
+				} catch(final ZipException excep) {
+					if(excep.getMessage().contains("duplicate entry")) {
+						// Old archive had file marked as deleted or user tweaked last mod date on the zip container while inside content already exists
+						// Unmark as deleted
+						try {
+							log.info("Unmarking " + destinationArchiveFile.getAbsolutePath() + " as deleted");
+							unmarkDeleted(destinationArchiveFile);
+						} catch(final ZipException e) {
+							log.error(e,e);
+							log.debug("source file = " + sourceFile.getAbsolutePath());
+							log.debug("destination backup archive = " + destinationArchiveFile.getAbsolutePath());
+						} catch(final IOException e) {
+							log.error(e,e);
+							log.debug("source file = " + sourceFile.getAbsolutePath());
+							log.debug("destination backup archive = " + destinationArchiveFile.getAbsolutePath());
+						}
+						
+						// Since the backup already has the file update the last modified date
+						destinationArchiveFile.setLastModified(sourceFile.lastModified());
+						
+						continue;
+					}
+					
+					// Some other error
+					log.error(excep,excep);
+					log.debug("source file = " + sourceFile.getAbsolutePath());
+					log.debug("destination backup archive = " + destinationArchiveFile.getAbsolutePath());
+				} catch(final IOException e) {
+					// Method should have provided all the details we need in the log already
+					log.error(e,e);
+					log.debug("source file = " + sourceFile.getAbsolutePath());
+					log.debug("destination backup archive = " + destinationArchiveFile.getAbsolutePath());
+				}
+			}
+		}
+
+		log.info("Finished with backup of new or modified files");
+	}
+	
+	
+	/**
+	 * Allows for interrupted backup and restart from beginning.
+	 * Content of existing destination is preserved provided only 1 backup process is acting on the file.  No locking is attempted.
+	 * 
+	 * @param source File to be backed up
+	 * @param destination Compressed archive of backup for source
+	 * @throws IOException 
+	 */
+	private static void backupFile(final File source, final File destination) throws IOException {
+		// Historical record of file is accomplished by the archive having directories of modification timestamps and those directories
+		//	containing the actual source file/directory inside of it.
+
+		// Directory entry with last modified timestamp of the source file
+		final String pathInsideArchive = getFormattedDatestamp(new Date(source.lastModified())) + "/" + source.getName();
+		
+		appendToArchive(destination, source, pathInsideArchive);
+		
+		// Set the last modified time appropriately on the actual archive file as it is used in comparison for later runs of the program
+		destination.setLastModified(source.lastModified());
+	}
+	
+	/**
+	 * Writes to temporary file first in same directory as targetArchive file and does move when complete.  Last modified time and uncompressed size of source file is also set inside the archive.
+	 * 
+	 * If no archive already exists a new one is created
+	 * 
+	 * @param targetArchive
+	 * @param sourceFile File (not directory) to add.  Does not support directories or recursion.
+	 * @param fullPathnameInArchive Full pathname ("/" signifies the directory separator in archives regardless of the OS system path separator) to use for the file inside the archive.  If null then only the name of the sourceFile (as per {@link File#getName()} is used and placed in the root of the archive.
+	 * @throws FileNotFoundException If sourceFile does not exist
+	 * @throws IOException if an I/O error occurs
+	 */
+	private static void appendToArchive(final File targetArchive, final File sourceFile, String fullPathnameInArchive) throws FileNotFoundException, IOException {
+		if(!sourceFile.exists())  throw new FileNotFoundException(sourceFile.getAbsolutePath());
+		if(null == fullPathnameInArchive)  fullPathnameInArchive = sourceFile.getName();
+		
+		final File tempArchiveFile = new File(targetArchive.getAbsolutePath() + TEMP_ARCHIVE_POSTFIX);
+		
+		tempArchiveFile.getParentFile().mkdirs();
+		tempArchiveFile.createNewFile();
+		
+		final ZipArchiveOutputStream archiveOutputStream = new ZipArchiveOutputStream(new FileOutputStream(tempArchiveFile));
+		archiveOutputStream.setLevel(Deflater.BEST_SPEED);
+		if(targetArchive.exists()) {
+			makeOpenCopyOfArchive(targetArchive, archiveOutputStream);  // destination is existing archive to copy to archiveOutputStream
+		}
+		
+		// Copy new content
+		try {
+			final ZipArchiveEntry newEntry = new ZipArchiveEntry(fullPathnameInArchive);
+			newEntry.setTime(sourceFile.lastModified());
+			newEntry.setSize(sourceFile.length());
+			archiveOutputStream.putArchiveEntry(newEntry);
+			FileUtils.copyFile(sourceFile, archiveOutputStream);
+			archiveOutputStream.closeArchiveEntry();
+		} finally {
+			// Exceptions still get thrown, but we also ensure we close open file handles
+			archiveOutputStream.close();	
+		}
+		
+		
+		// Now that we've successfully made a complete temporary file we need to replace the old archive file with the new one
+		if(targetArchive.exists() && !targetArchive.delete()) {
+			log.warn("Temporary file orphaned at " + tempArchiveFile.getAbsolutePath());
+			throw new IOException("Unable to delete old existing archive at " + targetArchive.getAbsolutePath());
+		}
+		
+		try {
+			FileUtils.moveFile(tempArchiveFile, targetArchive);
+		} catch(final FileExistsException excep) {
+			final String errMsg = "Failed to move " + tempArchiveFile.getAbsolutePath() + " to " + targetArchive.getAbsolutePath() + " because the old destination file exists.  The deleted probably failed from before.";
+			log.error(errMsg, excep);
+			throw new IOException(errMsg, excep);
+		}
+	}
+	
+	/**
+	 * @param existingArchive
+	 * @param zaos Where to copy the existing archive to
+	 * @return Copy of archive still open for appending
+	 * @throws IOException 
+	 * @throws ZipException 
+	 */
+	private static void makeOpenCopyOfArchive(final File existingArchive, final ZipArchiveOutputStream zaos) throws ZipException, IOException {
+		final ZipFile existingZip = new ZipFile(existingArchive);
+		
+		final Enumeration<ZipArchiveEntry> entries = existingZip.getEntries();
+		while(entries.hasMoreElements()) {
+			final ZipArchiveEntry entry = entries.nextElement();
+			zaos.putArchiveEntry(entry);
+			if(!entry.isDirectory()) {
+				// Copy the file content
+				IOUtils.copyLarge(existingZip.getInputStream(entry), zaos);
+			}
+			zaos.closeArchiveEntry();
+			
+		}
+
+		existingZip.close();
+
+		// We leave zos open so others can append to it
+	}
+	
+	private static boolean updateMetadataForDeleted(final Collection<File> destinationListing, final Collection<File> sourceListing, final File sourceDirectory, final File destinationDirectory) {
+		boolean errorOccurred = false;
+		
+		for(final File destinationFile : destinationListing) {
+			final File expectedSourceFile = translateDestinationToSource(destinationFile, destinationDirectory, sourceDirectory);
+			if(!sourceListing.contains(expectedSourceFile)) {
+				log.trace("Source file " + expectedSourceFile.getAbsolutePath() + " no longer exists");
+				try {
+					markDeletedIfNeeded(destinationFile);
+				} catch(final ZipException e) {
+					log.error(destinationFile.getAbsoluteFile() + "\t" + e.getMessage(), e);
+					errorOccurred = true;
+				} catch(final IOException e) {
+					log.error(destinationFile.getAbsoluteFile() + "\t" + e.getMessage(), e);
+					errorOccurred = true;
+				}
+			}
+		}
+		
+		return errorOccurred;
+	}
+	
+	/**
+	 * The destination backup archive will have an entry at the root which has a filename of "DELETED".  If not it will be added and the last modified timestame updated
+	 * with the current date and time to signify so. 
+	 * 
+	 * @param archiveFile
+	 * @throws IOException 
+	 * @throws ZipException 
+	 */
+	private static void markDeletedIfNeeded(final File archiveFile) throws ZipException, IOException {
+		final ZipFile backupArchiveFile = new ZipFile(archiveFile);
+
+		final ZipArchiveEntry deletedMarker = backupArchiveFile.getEntry("DELETED");
+		if(null != deletedMarker) {
+			backupArchiveFile.close();  // Must do so to release file lock
+			return;  // Already marked deleted
+		}
+		backupArchiveFile.close();  // Must do so to release file lock
+		
+		// Need to add a new entry
+		final File deleted = File.createTempFile("DELETED", null);
+		deleted.setLastModified(Calendar.getInstance().getTimeInMillis());
+		
+		appendToArchive(archiveFile, deleted, "DELETED");
+		
+		deleted.delete();
+		
+		log.info(archiveFile.getAbsolutePath() + " has been marked as deleted");
+	}
+	
+	/**
+	 * If the user recreated a formally deleted file or actually undeleted it we need to remove the flag marking the file as deleted.
+	 * 
+	 * @param archiveFile
+	 * @throws IOException 
+	 * @throws ZipException 
+	 */
+	private static void unmarkDeleted(final File archiveFile) throws ZipException, IOException {
+		final ZipFile backupArchiveFile = new ZipFile(archiveFile);
+		
+		// We must recreate the archive with all entries but the DELETE one
+		final File tempArchiveFile = new File(archiveFile.getAbsolutePath() + TEMP_ARCHIVE_POSTFIX);
+		final ZipArchiveOutputStream archiveOutputStream = new ZipArchiveOutputStream(new FileOutputStream(tempArchiveFile));
+		archiveOutputStream.setLevel(Deflater.BEST_SPEED);
+
+		
+		final Enumeration<ZipArchiveEntry> entries = backupArchiveFile.getEntries();
+		while(entries.hasMoreElements()) {
+			final ZipArchiveEntry entry = entries.nextElement();
+			
+			if(entry.getName().equals("DELETED"))  continue;
+			
+			archiveOutputStream.putArchiveEntry(entry);
+			if(!entry.isDirectory()) {
+				// Copy the file content
+				IOUtils.copyLarge(backupArchiveFile.getInputStream(entry), archiveOutputStream);
+			}
+			archiveOutputStream.closeArchiveEntry();
+			
+		}
+
+		
+		archiveOutputStream.close();
+		backupArchiveFile.close();
+		
+		
+		// Now that we've successfully made a complete temporary file we need to replace the old archive file with the new one
+		if(archiveFile.exists() && !archiveFile.delete()) {
+			log.warn("Temporary file orphaned at " + tempArchiveFile.getAbsolutePath());
+			throw new IOException("Unable to delete old existing archive at " + archiveFile.getAbsolutePath());
+		}
+		
+		try {
+			FileUtils.moveFile(tempArchiveFile, archiveFile);
+		} catch(final FileExistsException excep) {
+			final String errMsg = "Failed to move " + tempArchiveFile.getAbsolutePath() + " to " + archiveFile.getAbsolutePath() + " because the old destination file exists.  The deleted probably failed from before.";
+			log.error(errMsg, excep);
+			throw new IOException(errMsg, excep);
+		}
+	}
+}

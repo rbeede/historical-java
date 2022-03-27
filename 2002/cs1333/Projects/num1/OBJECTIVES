@@ -1,0 +1,19 @@
+Objective #1:  Compile and execute a Java program
+	I met this objective
+	(See screenshot01.gif)
+
+Objective #2:  Use the Assert class from the structures package
+	I met this objective
+	(See NumCWL.java source code)
+
+Objective #3:  Implement a program which counts the number of ...
+	I met this objective
+	(See NumCWL.java source code and Test_Data.txt)
+
+Objective #4:  Use a command line argument to enter a file name
+	I met this objective
+	(See NumCWL.java source code and EXECUTION)
+
+Objective #5:  Use proper design and documentation techniques
+	I met this objective
+	(See NumCWL.java source code)

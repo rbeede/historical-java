@@ -1,0 +1,19 @@
+GET http://login.yahoo.com/config/verify?.done=http%3a//f252.mail.yahoo.com/ym/login%3f.rand=dfri4qrr8jmqv HTTP/1.0
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/x-gsarcade-launch, application/msword, application/x-shockwave-flash, */*
+Accept-Language: en-us
+Cookie: B=8rv1smt05cnf3&b=2; Q=q1=AACAAAAAAAAAcw--&q2=QFZEqg--; F=a=I5R2vYcsvRClF48p6qWlsoRzxQUgg9loHDscfWaBwzJ3crLynuloWlqr3TSo&b=hkkM; C=mg=1; Y=v=1&n=cn9tlo4mvqea3&l=he3d4o14434/o&p=m2h27qu013000000&jb=16|47|&r=cf&lg=it&intl=it&np=1; T=z=YbnVABYh8VABUJGiVil2Z6NNTI1BjQwNjM1MzMwMjU-&a=QAE&sk=DAAu6WQEmsMGBO&d=c2wBTWpVeUFUTTNNVFF5TkRRM05USS0BYQFRQUUBdGlwAU1VYVNiQgF6egFZYm5WQUJnV0E-
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90; .NET CLR 1.1.4322)
+Host: login.yahoo.com
+Proxy-Connection: Keep-Alive
+
+
+HTTP/1.1 302 Found
+Date: Tue, 16 Mar 2004 03:39:04 GMT
+P3P: policyref="http://p3p.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE GOV"
+Location: http://f252.mail.yahoo.com/ym/login?.rand=dfri4qrr8jmqv
+Cache-Control: private
+Pragma: no-cache
+Expires: Thu, 05 Jan 1995 22:00:00 GMT
+Connection: close
+Content-Type: text/html
+

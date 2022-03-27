@@ -1,0 +1,11 @@
+Objective #1:  Use file I/O and command line arguments in Java
+
+
+Objective #2:  Use a Vector to store and retrieve <keyword, color> pairs
+
+
+Objective #3:  Use the StreamTokenizer class to identify keywords, comments,
+	and, quoted strings in Java code from the description in the standard
+	Java documentation
+
+

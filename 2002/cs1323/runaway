@@ -1,0 +1,2 @@
+echo "Killing runaway Java programs..."
+killall -9 java

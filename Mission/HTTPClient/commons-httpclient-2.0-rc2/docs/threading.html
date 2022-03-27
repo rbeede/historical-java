@@ -1,0 +1,1204 @@
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  
+      
+  
+
+      
+      
+      
+      
+      
+      
+        
+         
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      
+
+      
+
+  
+  
+
+  
+  
+
+   
+   
+
+   
+   
+
+
+    
+	
+	
+
+    
+    
+      
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <html>
+      <head>
+        
+        
+        
+          <title>HttpClient - 
+          Threading
+        </title>
+        
+        
+        <style type="text/css">
+          @import url("./style/tigris.css");
+          @import url("./style/maven.css");
+        </style>
+        
+        
+        
+        
+        
+        <link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+        
+          <meta name="author" content="Michael Becke"></meta>
+          <meta name="email" content="becke@u.washington.edu"></meta>
+        
+        
+        
+        
+      </head>
+
+      <body class="composite">
+
+        <div id="banner">
+          <table border="0" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+              
+              <td>
+                
+                
+                  
+                  
+                  
+                    
+                  
+                  
+                  
+                  
+                  
+                  <a href="http://jakarta.apache.org/">
+                    <img border="0" alt="Apache Software Foundation" src="http://jakarta.apache.org/commons/images/jakarta-logo-blue.gif" align="left"></img>
+                  </a>
+                
+              </td>
+
+              
+              <td>
+                <div id="login" align="right">
+                  
+                  
+                    
+                    
+                    
+                      
+                    
+
+                    <a href="http://jakarta.apache.org/commons/httpclient/">
+                      <img border="0" alt="HttpClient" src="./images/httpclient_logo.png" align="right"></img>
+                    </a>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="breadcrumbs">
+          <table border="0" width="100%" cellpadding="4" cellspacing="0">
+            <tr>
+              
+                
+                <td>Last published: 13 October 2003
+                  | Doc for 2.0-rc2
+                </td>
+              
+              <td>
+                <div align="right">
+                  
+                  
+                  
+                  
+                    
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <table border="0" width="100%" cellpadding="8" cellspacing="0"> 
+          <tr valign="top">
+            <td width="20%" id="leftcol">
+              <div id="navcolumn">
+                
+
+                
+                  
+    <div>
+      <strong>Overview</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="features.html"><img class="handle" src="./images/none.png" alt=""></img>Features</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="news.html"><img class="handle" src="./images/none.png" alt=""></img>News</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="status.html"><img class="handle" src="./images/none.png" alt=""></img>Status</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="downloads.html"><img class="handle" src="./images/none.png" alt=""></img>Download</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="applications.html"><img class="handle" src="./images/none.png" alt=""></img>Applications</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="userguide.html"><img class="handle" src="./images/expanded.png" alt=""></img>User Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="authentication.html"><img class="handle" src="./images/none.png" alt=""></img>Authentication Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="charencodings.html"><img class="handle" src="./images/none.png" alt=""></img>Character Encodings</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="cookies.html"><img class="handle" src="./images/none.png" alt=""></img>Cookies</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="redirects.html"><img class="handle" src="./images/none.png" alt=""></img>Cross Host Redirects</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="logging.html"><img class="handle" src="./images/none.png" alt=""></img>Logging Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="methods.html"><img class="handle" src="./images/none.png" alt=""></img>Methods</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/"><img class="handle" src="./images/none.png" alt=""></img>Sample Code</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="sslguide.html"><img class="handle" src="./images/none.png" alt=""></img>SSL Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      		<b><a href="threading.html"><img class="handle" src="./images/none.png" alt=""></img>Threading</a></b>
+      	
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="troubleshooting.html"><img class="handle" src="./images/none.png" alt=""></img>Trouble Shooting</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="tutorial.html"><img class="handle" src="./images/none.png" alt=""></img>Tutorial</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="developerguide.html"><img class="handle" src="./images/expanded.png" alt=""></img>Developer Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="releases.html"><img class="handle" src="./images/none.png" alt=""></img>Release Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="testwebapp.html"><img class="handle" src="./images/none.png" alt=""></img>Webapp Test Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    </div>
+  
+                
+
+				
+    <div>
+      <strong>Project Documentation</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="index.html"><img class="handle" src="./images/none.png" alt=""></img>About HttpClient</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="project-info.html"><img class="handle" src="./images/collapsed.png" alt=""></img>Project Info</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="maven-reports.html"><img class="handle" src="./images/collapsed.png" alt=""></img>Project Reports</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs/index.html"><img class="handle" src="./images/none.png" alt=""></img>JavaDocs</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref/index.html"><img class="handle" src="./images/none.png" alt=""></img>Source XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref-test/index.html"><img class="handle" src="./images/none.png" alt=""></img>Test XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://maven.apache.org/development-process.html"><img class="handle" src="./images/none.png" alt=""></img>Development Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+                
+                
+                
+
+                
+                
+                
+                
+                	<div style="margin-top: 20px; width: 100%; text-align: center;">
+                		<a href="http://maven.apache.org/" title="Powered by Maven"><img style="border: 1px solid black" alt="Powered by Maven" src="./images/logos/maven-propaganda.png"></img></a>
+                	</div>
+                
+              
+                
+              </div>
+            </td>
+            <td rowspan="2">
+              <div id="bodycol">
+                
+                <div class="app">
+                  
+                  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Introduction">Introduction</a>
+        </h3>
+      
+      
+    <p>
+      
+     This document provides an overview of how to use HttpClient safely from within a
+   
+     
+      multi-threaded environment. It is broken down into the following main sections: 
+   
+    </p>
+   
+    <ul>
+      
+     
+      	
+   
+    <li>
+      
+    <a href="#MultiThreadedHttpConnectionManager">
+     MultiThreadedHttpConnectionManager
+   </a>
+  
+    </li>
+   
+     
+	    
+   
+    <li>
+      
+    <a href="#ConnectionRelease">
+     Connection Release
+   </a>
+  
+    </li>
+   
+     
+	  
+   
+    </ul>
+   
+    <p>
+      
+     Please see the 
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/MultiThreadedExample.java?rev=1.1&amp;content-type=text/vnd.viewcvs-markup">
+     MultiThreadedExample
+   </a>
+  
+     
+      	for a concrete example.
+   
+    </p>
+   
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="MultiThreadedHttpConnectionManager">MultiThreadedHttpConnectionManager</a>
+        </h3>
+      
+      
+    <p>
+      
+     The main reason for using multiple theads in HttpClient is to allow the
+   
+     
+      	execution of multiple methods at once (Simultaniously downloading the latest builds of HttpClient and 
+   
+     
+      	Tomcat for example). During execution each method uses an instance of an HttpConnection. 
+   
+     
+      	Since connections can only be safely used from a single thread and method at a time and 
+   
+     
+      	are a finite resource, we need to ensure that connections are properly allocated to the methods that require them. 
+   
+     
+      	This job goes to the 
+   
+    <a href="apidocs/org/apache/commons/httpclient/MultiThreadedHttpConnectionManager.html">
+     MultiThreadedHttpConnectionManager
+   </a>
+  
+     .
+   
+    </p>
+   
+    <p>
+      
+     To get started one must create an instance of the MultiThreadedHttpConnectionManager
+   
+     
+      	and give it to an HttpClient.  This looks something like:
+   
+    </p>
+   
+    <div id="source">
+      <pre>
+      	MultiThreadedHttpConnectionManager connectionManager = 
+      		new MultiThreadedHttpConnectionManager();
+      	HttpClient client = new HttpClient(connectionManager);
+      </pre>
+    </div>
+  
+    <p>
+      
+     This instance of HttpClient can now b
+   
+     e used to execute multiple methods from multiple 
+   
+     
+      	threads. Each subsequent call to HttpClient.executeMethod() will go to the connection 
+   
+     
+      	manager and ask for an instance of HttpConnection.  This connection will be checked out
+   
+     
+      	to the method and as a result it must also be returned.  More on this below in 
+   
+    <b>
+      
+     Connection Release
+   
+    </b>
+   
+     .
+   
+    </p>
+   
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Options">Options</a>
+        </h4>
+      
+      
+    <p>
+      
+     The MultiThreadedHttpConnectionManager supports the following options for
+   
+     
+      	customizing the number of active connections:
+   
+    </p>
+   
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     maxConnectionsPerHost
+   
+    </td>
+   
+    <td>
+      
+     The maximum number of connections that will be created for any particular 
+   
+     
+      	      HostConfiguration. Defaults to 2.
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     maxTotalConnections
+   
+    </td>
+   
+    <td>
+      
+     The maximum number of active connections. Defaults to 20.
+   
+    </td>
+   </tr>
+  
+    </table>
+  
+    <p>
+      
+     In general the connection manager makes an attempt to reuse connections 
+   
+     
+      	  for a particular host while still allowing different connections to
+   
+     
+          be used simultaneously.  Connection are reclaimed using a least recently
+   
+     
+      	  used approach.
+   
+    </p>
+   
+    </div>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Connection Release">Connection Release</a>
+        </h3>
+      
+      
+    <p>
+      
+     One main side effect of connection management is that connections must 
+   
+     
+      	be manually released when no longer used.  This is due to the fact 
+   
+     
+      	that HttpClient cannot determine when a method is no longer using its connection.  
+   
+     
+      	This occurs because a method's response body is not read directly by
+   
+     
+      	HttpClient, but by the application using HttpClient.  When the response is read it must obviously make use of the method's 
+   
+     
+      	connection.  Thus, a connection cannot be released from a method until the method's 
+   
+     
+      	response body is read which is after HttpClient finishes executing the
+   
+     
+        method.  The application therefore must manually release the
+   
+     
+        connection by calling releaseConnection() on the method after the
+   
+     
+    
+   
+         response body has been read.  To safely ensure 
+   
+     
+      	connection release HttpClient should be used in the following manner:
+   
+    </p>
+   
+    <div id="source">
+      <pre>
+
+      	MultiThreadedHttpConnectionManager connectionManager = 
+      		new MultiThreadedHttpConnectionManager();
+      	HttpClient client = new HttpClient(connectionManager);
+			...
+        // and then from inside some thread executing a method
+        GetMethod get = new GetMethod("http://jakarta.apache.org/");
+        try {
+            client.executeMethod(get);
+            // print response to stdout
+            System.out.println(get.getResponseBodyAsStream());
+        } finally {
+            // be sure the connection is released back to the connection 
+            // manager
+            get.releaseConnection();
+        }
+    </pre>
+    </div>
+  
+    <p>
+      
+     Particularly, notice that the connection is released regardless of
+   
+     
+      what the result of executing the method was or whether or not an
+   
+     
+      exception was thrown.  For every call to HttpClient.executeMethod there
+   
+     
+      must be a matching call to method.releaseConnection().
+   
+    </p>
+   
+    </div>
+  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="footer">
+          <table border="0" style="width:100%" cellpadding="4" cellspacing="0">
+            
+            <tr>
+              <td>
+                
+                  
+                    
+                    
+                      © 2001-2003, Apache Software Foundation
+                    
+                  
+                  
+                
+
+                
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>
+  

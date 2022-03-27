@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0043)http://www.cs.ou.edu/~muehring/project7.htm -->
+<HTML><HEAD><TITLE>Project#7</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2920.0" name=GENERATOR>
+<META content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot" 
+name=Template></HEAD>
+<BODY link=#0000ff vLink=#800080><FONT size=5><B>
+<P align=left>CS 1323, PROJECT # 7</P></B></FONT>
+<TABLE border=0 width=623>
+  <TBODY>
+  <TR>
+    <TD width=617><B><STRONG>Project #7: </STRONG>&nbsp;&nbsp; </B>Turn in the 
+      following files: CheckBookMain.java, CheckBookController.java, 
+      CheckBook.java, Check,java
+      <P><B><STRONG>Due Date:</STRONG> &nbsp;&nbsp; </B>Midnight, Friday, April 
+      7, 2000</P>
+      <P><B><STRONG>Assignment:&nbsp; </STRONG></B>Write a checkbook application 
+      program that maintains N number of checkbook objects in an array (where N 
+      is the number of checkbooks the user would like to maintain).&nbsp; Allow 
+      the user to choose a title for each checkbook.&nbsp; For each checkbook, 
+      the user can deposit, write a check, and withdraw, displaying the total 
+      balance after each transaction.&nbsp; It is possible for the balance to 
+      become negative in a checkbook.&nbsp; When a new check is written, a 
+      CheckBook object will automatically assign the next available check 
+      number.&nbsp; The user will have the options of voiding a check and 
+      overriding the automatically assigned check number. &nbsp;&nbsp; The 
+      beginning check number (chosen by the user) is set when the object is 
+      initially created.&nbsp; In addition, maintain N number of OutputBox 
+      objects in an array (one for each checkbook) and output every individual 
+      transaction for that checkbook to the corresponding OutputBox 
+      object.&nbsp; Allow the user to continue to work on the checkbooks (just 
+      like the PersonalAddressBook program) until they desire to quit.&nbsp; 
+      When the user chooses to quit, call the saveToFile method for all 
+      OutputBox objects such that the output for each separate checkbook appears 
+      in a unique file, whose format closely resembles a bank statement.&nbsp; 
+      Remember to make the CheckBook and Check classes reusable!</P>
+      <P><STRONG>Note:&nbsp; </STRONG>Declare, instantiate and use objects from 
+      the other classes as needed.</P></TD></TR></TBODY></TABLE>
+<DL>
+  <TABLE border=1 width=623>
+    <TBODY>
+    <TR>
+      <TD bgColor=#c0c0c0 colSpan=2 width=617><STRONG>Design 
+      Document</STRONG></TD></TR>
+    <TR>
+      <TD bgColor=#c0c0c0 vAlign=top width=191><STRONG>CLASS</STRONG></TD>
+      <TD bgColor=#c0c0c0 width=420><STRONG>Purpose</STRONG></TD></TR>
+    <TR>
+      <TD vAlign=top width=191><STRONG>CheckBookMain</STRONG></TD>
+      <TD width=420>The main class of the program</TD></TR>
+    <TR>
+      <TD vAlign=top width=191><STRONG>CheckBookController</STRONG></TD>
+      <TD vAlign=top width=420>The top level control object that manages other 
+        objects in the program.</TD></TR>
+    <TR>
+      <TD vAlign=top width=191><STRONG>CheckBook</STRONG></TD>
+      <TD vAlign=top width=420>A CheckBook application logic object contains a 
+        list of Check objects.</TD></TR>
+    <TR>
+      <TD vAlign=top width=191><STRONG>Check</STRONG></TD>
+      <TD vAlign=top width=420>A Check application logic object is used to 
+        represent a single check.</TD></TR>
+    <TR>
+      <TD vAlign=top width=191><STRONG>&lt;interface classes&gt;</STRONG></TD>
+      <TD vAlign=top width=420>Use other objects from the javabook or the 
+        standard java packages for handling the user interface of the 
+    program.</TD></TR></TBODY></TABLE>
+  <DD><SMALL><SMALL><SMALL><SMALL><SMALL><SMALL>&nbsp;&nbsp; 
+  </SMALL></SMALL></SMALL></SMALL></SMALL></SMALL>
+  <DD> </DD></DL>
+<P><SMALL><SMALL><SMALL><SMALL><SMALL><SMALL>&nbsp; 
+</SMALL></SMALL></SMALL></SMALL></SMALL></SMALL></P></BODY></HTML>

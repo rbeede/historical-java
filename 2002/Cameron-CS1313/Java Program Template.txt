@@ -1,0 +1,30 @@
+//===================================================================
+//  classname.java -- ?/??/?? -- Rodney Beede
+//===================================================================
+//  Problem:
+//  Input:
+//  Output:
+//  Method:
+//
+//  Notes:
+//
+//===================================================================
+
+//Tell compilier to include the Java IO package of the Java API
+import java.io.*;
+
+class CLASSNAME {
+     public static void main (String[] args) throws IOException {
+          //Set up a input stream from standard input
+          BufferedReader stdin = new BufferedReader
+             (new InputStreamReader(System.in) );
+
+
+          //Print out who is responsible for this program
+          System.out.println( "Rodney Beede -- PROGRAM NAME -- " 
+             + "CS1313 -- ??/??/??" );
+
+          System.out.println( "" );  //Print a blank line
+
+     }
+}

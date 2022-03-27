@@ -1,0 +1,19 @@
+GET http://us.i1.yimg.com/us.yimg.com/i/mc/mc1.js HTTP/1.0
+Accept: */*
+Referer: http://mail.yahoo.com/
+Accept-Language: en-us
+Proxy-Connection: Keep-Alive
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90; .NET CLR 1.1.4322)
+Host: us.i1.yimg.com
+
+
+HTTP/1.0 200 OK
+Content-Type: application/x-javascript
+Content-Length: 81
+Last-Modified: Thu, 20 Sep 2001 07:37:31 GMT
+Date: Tue, 16 Mar 2004 03:38:57 GMT
+Connection: close
+
+document.write('<span style="behavior:url(#default#clientCaps)" id=cc></span>');
+
+

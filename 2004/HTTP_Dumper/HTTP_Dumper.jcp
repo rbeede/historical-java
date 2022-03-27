@@ -1,0 +1,44 @@
+<?xml?>
+<project>
+	<settings>
+		<label>HTTP_Dumper</label>
+		<root_path>\</root_path>
+		<output_path>classes\</output_path>
+		<source_path>src\</source_path>
+		<jdkprofile_ref>j2sdk1.4.2</jdkprofile_ref>
+		<compiler_ref/>
+		<ant_ref/>
+	</settings>
+	<runtimes>
+		<runtime>
+			<label>&lt;Default&gt;</label>
+			<application_ref>&lt;Default&gt;</application_ref>
+			<applet_ref>&lt;Default&gt;</applet_ref>
+			<debugger_ref>&lt;Default&gt;</debugger_ref>
+			<param/>
+			<run>HTTP_Dumper</run>
+		</runtime>
+	</runtimes>
+	<libraries/>
+	<files>
+		<include>
+			<folderitem>
+				<path>src</path>
+				<ext/>
+			</folderitem>
+			<fileitem>
+				<path>src\HTTP_Dumper.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>src\HTTP_GetWorker.java</path>
+				<source>true</source>
+			</fileitem>
+			<fileitem>
+				<path>src\SckAcceptorWorker.java</path>
+				<source>true</source>
+			</fileitem>
+		</include>
+	</files>
+	<tasks/>
+</project>

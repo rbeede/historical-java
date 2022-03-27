@@ -1,0 +1,1226 @@
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  
+      
+  
+
+      
+      
+      
+      
+      
+      
+        
+         
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      
+
+      
+
+  
+  
+
+  
+  
+
+   
+   
+
+   
+   
+
+
+    
+	
+	
+
+    
+    
+      
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <html>
+      <head>
+        
+        
+        
+          <title>HttpClient - 
+          Multipart Post Method
+        </title>
+        
+        
+        <style type="text/css">
+          @import url("../style/tigris.css");
+          @import url("../style/maven.css");
+        </style>
+        
+        
+        
+        
+        
+        <link rel="stylesheet" href="../style/print.css" type="text/css" media="print"></link>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+        
+          <meta name="author" content="Adrian Sutton"></meta>
+          <meta name="email" content="adrian@ephox.com"></meta>
+        
+        
+        
+        
+      </head>
+
+      <body class="composite">
+
+        <div id="banner">
+          <table border="0" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+              
+              <td>
+                
+                
+                  
+                  
+                  
+                    
+                  
+                  
+                  
+                  
+                  
+                  <a href="http://jakarta.apache.org/">
+                    <img border="0" alt="Apache Software Foundation" src="http://jakarta.apache.org/commons/images/jakarta-logo-blue.gif" align="left"></img>
+                  </a>
+                
+              </td>
+
+              
+              <td>
+                <div id="login" align="right">
+                  
+                  
+                    
+                    
+                    
+                      
+                    
+
+                    <a href="http://jakarta.apache.org/commons/httpclient/">
+                      <img border="0" alt="HttpClient" src="../images/httpclient_logo.png" align="right"></img>
+                    </a>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="breadcrumbs">
+          <table border="0" width="100%" cellpadding="4" cellspacing="0">
+            <tr>
+              
+                
+                <td>Last published: 13 October 2003
+                  | Doc for 2.0-rc2
+                </td>
+              
+              <td>
+                <div align="right">
+                  
+                  
+                  
+                  
+                    
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <table border="0" width="100%" cellpadding="8" cellspacing="0"> 
+          <tr valign="top">
+            <td width="20%" id="leftcol">
+              <div id="navcolumn">
+                
+
+                
+                  
+    <div>
+      <strong>Overview</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../features.html"><img class="handle" src="../images/none.png" alt=""></img>Features</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../news.html"><img class="handle" src="../images/none.png" alt=""></img>News</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../status.html"><img class="handle" src="../images/none.png" alt=""></img>Status</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../downloads.html"><img class="handle" src="../images/none.png" alt=""></img>Download</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../applications.html"><img class="handle" src="../images/none.png" alt=""></img>Applications</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../userguide.html"><img class="handle" src="../images/expanded.png" alt=""></img>User Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../authentication.html"><img class="handle" src="../images/none.png" alt=""></img>Authentication Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../charencodings.html"><img class="handle" src="../images/none.png" alt=""></img>Character Encodings</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../cookies.html"><img class="handle" src="../images/none.png" alt=""></img>Cookies</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../redirects.html"><img class="handle" src="../images/none.png" alt=""></img>Cross Host Redirects</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../logging.html"><img class="handle" src="../images/none.png" alt=""></img>Logging Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../methods.html"><img class="handle" src="../images/none.png" alt=""></img>Methods</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/"><img class="handle" src="../images/none.png" alt=""></img>Sample Code</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../sslguide.html"><img class="handle" src="../images/none.png" alt=""></img>SSL Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../threading.html"><img class="handle" src="../images/none.png" alt=""></img>Threading</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../troubleshooting.html"><img class="handle" src="../images/none.png" alt=""></img>Trouble Shooting</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../tutorial.html"><img class="handle" src="../images/none.png" alt=""></img>Tutorial</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../developerguide.html"><img class="handle" src="../images/expanded.png" alt=""></img>Developer Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../releases.html"><img class="handle" src="../images/none.png" alt=""></img>Release Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../testwebapp.html"><img class="handle" src="../images/none.png" alt=""></img>Webapp Test Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    </div>
+  
+                
+
+				
+    <div>
+      <strong>Project Documentation</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../index.html"><img class="handle" src="../images/none.png" alt=""></img>About HttpClient</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../project-info.html"><img class="handle" src="../images/collapsed.png" alt=""></img>Project Info</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../maven-reports.html"><img class="handle" src="../images/collapsed.png" alt=""></img>Project Reports</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../apidocs/index.html"><img class="handle" src="../images/none.png" alt=""></img>JavaDocs</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../xref/index.html"><img class="handle" src="../images/none.png" alt=""></img>Source XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="../xref-test/index.html"><img class="handle" src="../images/none.png" alt=""></img>Test XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://maven.apache.org/development-process.html"><img class="handle" src="../images/none.png" alt=""></img>Development Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+                
+                
+                
+
+                
+                
+                
+                
+                	<div style="margin-top: 20px; width: 100%; text-align: center;">
+                		<a href="http://maven.apache.org/" title="Powered by Maven"><img style="border: 1px solid black" alt="Powered by Maven" src="../images/logos/maven-propaganda.png"></img></a>
+                	</div>
+                
+              
+                
+              </div>
+            </td>
+            <td rowspan="2">
+              <div id="bodycol">
+                
+                <div class="app">
+                  
+                  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Introduction">Introduction</a>
+        </h3>
+      
+      
+    <p>
+      
+     The multipart post method is a different request body format for a
+   
+     
+      
+   
+    <a href="post.html">
+     POST
+   </a>
+  
+      method.  The media-type multipart/form-data
+   
+     
+      follows the rules of all multipart MIME data streams as outlined in RFC
+   
+     
+      1521.  It is intended for use in returning the data that comes about from
+   
+     
+      filling out a form, particularly when the form requires binary data to
+   
+     
+      be uploaded such as the contents of a file.
+   
+    </p>
+   
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Typical Usage">Typical Usage</a>
+        </h3>
+      
+      
+    <p>
+      
+     Like for the standard POST method, there are two main steps to using
+   
+     
+      the multipart post method, setting the request data and retrieving the
+   
+     
+      response data.
+   
+    </p>
+   
+    <p>
+      
+     The request data is specified by adding parameters to the method,
+   
+     
+      these are defined by the
+   
+     
+      
+   
+    <code>
+      
+     org.apache.commons.httpclient.methods.multipart.Part
+   
+    </code>
+   
+      class
+   
+     
+      and it's various subclasses.  A description of each of these is below.
+   
+    </p>
+   
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <th>
+      
+     Part
+   
+    </th>
+   
+    <th>
+      
+     Description
+   
+    </th>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     StringPart
+   
+    </td>
+   
+    <td>
+      
+     The string part is a simple part that takes a name for the part
+   
+     
+          and the value of the part as a string.  This is typically used for
+   
+     
+          standard form elements such as a text area within a multipart
+   
+     
+          form.
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     FilePart
+   
+    </td>
+   
+    <td>
+      
+     The file part is actually a very generic type of part that can
+   
+     
+          contain any type of data and specify a name, content type and charset
+   
+     
+          for the data.  In it's simplest form, it takes just a name and a File
+   
+     
+          object and uploads the contents of the file, however it can also be
+   
+     
+          passed a 
+   
+    <code>
+      
+     PartSource
+   
+    </code>
+   
+      object to upload.  See the pa
+   
+     rt
+   
+     
+          source section below for more information.
+   
+    </td>
+   </tr>
+  
+    </table>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Part Sources">Part Sources</a>
+        </h4>
+      
+      
+    <p>
+      
+     The 
+   
+    <code>
+      
+     PartSource
+   
+    </code>
+   
+      interface provides a generic container
+   
+     
+        for providing data to the FilePart class.  There are two concrete
+   
+     
+        implementations of PartSource provided with HttpClient (described
+   
+     
+        below) but you can also provide your own implementation easily.  The
+   
+     
+        input for the multipart post could come from anywhere, perhaps it's
+   
+     
+        being received from another server or process, and all that the
+   
+     
+        PartSource class needs to be able to do is provide the length of the
+   
+     
+        data that will be provided, an input stream to retrieve the data from
+   
+     
+        and a file name (or some name identifying the data).
+   
+    </p>
+   
+    <p>
+      
+     The two concrete implementations of PartSource are FilePartSource
+   
+     
+        and ByteArrayPartSource.  FilePartSource simply takes a File to upload
+   
+     
+        whereas ByteArrayPartSource allows for the case where the data has been
+   
+     
+        cached in memory and takes a file name and a byte array to upload.
+   
+    </p>
+   
+    </div>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Common Problems">Common Problems</a>
+        </h3>
+      
+      
+    <p>
+      
+     The most common problem people run into with multipart uploads is that
+   
+     
+      the length of the data must be known before hand.  If the length of the
+   
+     
+      data can not be determined in advance, it needs to be cached either in
+   
+     
+      memory or to a file and then uploaded using either ByteArrayPartSource or
+   
+     
+      FilePartSource.  The HTTP specification does not allow for POST data to
+   
+     
+      be of an unknown length.
+   
+    </p>
+   
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="RFC Section">RFC Section</a>
+        </h3>
+      
+      
+    <p>
+      
+     The multipart form data uses the POST method from the HTTP standard
+   
+     
+      which is defined in section 8.3 of 
+   
+    <a href="http://www.ietf.org/rfc//rfc1945.txt">
+     RFC1945
+   </a>
+  
+      and similarly
+   
+     
+      redefined for HTTP 1.1 in section 9.5 of 
+   
+    <a href="http://www.ietf.org/rfc/rfc2616.txt">
+     RFC2616
+   </a>
+  
+     .
+   
+    </p>
+   
+    <p>
+      
+     The multipart/form-data MIME type used to format the body 
+   
+     of the
+   
+     
+      request is defined in 
+   
+    <a href="http://www.ietf.org/rfc/rfc1867.txt">
+     RFC1867
+   </a>
+  
+     .
+   
+    </p>
+   
+    </div>
+  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="footer">
+          <table border="0" style="width:100%" cellpadding="4" cellspacing="0">
+            
+            <tr>
+              <td>
+                
+                  
+                    
+                    
+                      © 2001-2003, Apache Software Foundation
+                    
+                  
+                  
+                
+
+                
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>
+  

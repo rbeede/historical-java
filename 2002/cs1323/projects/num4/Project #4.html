@@ -1,0 +1,165 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+<title>A car dealership has suffered a computer crash that damaged its inventory database</title>
+<meta NAME="Template" CONTENT="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+</head>
+
+<body LINK="#0000ff" VLINK="#800080">
+
+<p>&nbsp;</p>
+
+<p>CS 1323</p>
+
+<p>Project # 4</p>
+
+<p>Due Date: March 3, 2000</p>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="7" WIDTH="638">
+  <tr>
+    <td VALIGN="TOP"><font SIZE="2">A car dealership has suffered a computer crash that
+    damaged its inventory database. Entries for each vehicle still exist, including certain
+    specifications, although the actual type of vehicle has been lost. Your job is to develop
+    an application that will take as inputs the price, number of doors, and transmission type,
+    and then output the vehicle series type (A-G). In addition, if the vehicle is a G-series,
+    you must then and only then also ask the user for the horsepower of the vehicle and
+    determine the trim level (1-4). The following table has been constructed detailing the
+    vehicle series and trim levels in inventory and their specifications.</font></td>
+  </tr>
+</table>
+
+<table BORDER="1" CELLSPACING="1" CELLPADDING="7" WIDTH="590">
+  <tr>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">Vehicle Series</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">Trim level</font></td>
+    <td WIDTH="19%" VALIGN="TOP"><font SIZE="2">Price</font></td>
+    <td WIDTH="15%" VALIGN="TOP"><font SIZE="2">Doors</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">Transmission</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">Horsepower</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">A</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">-</font></td>
+    <td WIDTH="19%" VALIGN="TOP"><font SIZE="2">$12000-$14500</font></td>
+    <td WIDTH="15%" VALIGN="TOP"><font SIZE="2">4</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">Manual</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">-</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">B</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">-</font></td>
+    <td WIDTH="19%" VALIGN="TOP"><font SIZE="2">$17500-$19000</font></td>
+    <td WIDTH="15%" VALIGN="TOP"><font SIZE="2">4</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">Automatic</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">-</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">C</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">-</font></td>
+    <td WIDTH="19%" VALIGN="TOP"><font SIZE="2">$21500-$24000</font></td>
+    <td WIDTH="15%" VALIGN="TOP"><font SIZE="2">4</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">Manual</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">-</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">D</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">-</font></td>
+    <td WIDTH="19%" VALIGN="TOP"><font SIZE="2">$16000-$18500</font></td>
+    <td WIDTH="15%" VALIGN="TOP"><font SIZE="2">2</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">Manual</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">-</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">E</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">-</font></td>
+    <td WIDTH="19%" VALIGN="TOP"><font SIZE="2">$11250-$13000</font></td>
+    <td WIDTH="15%" VALIGN="TOP"><font SIZE="2">4</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">Automatic</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">-</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">F</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">-</font></td>
+    <td WIDTH="19%" VALIGN="TOP"><font SIZE="2">$18000-$19250</font></td>
+    <td WIDTH="15%" VALIGN="TOP"><font SIZE="2">4</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">Manual</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">-</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">G</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">1</font></td>
+    <td WIDTH="19%" VALIGN="TOP"><font SIZE="2">$22150-$26200</font></td>
+    <td WIDTH="15%" VALIGN="TOP"><font SIZE="2">2</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">Automatic</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">200</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">G</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">2</font></td>
+    <td WIDTH="19%" VALIGN="TOP"><font SIZE="2">$23050-$27100</font></td>
+    <td WIDTH="15%" VALIGN="TOP"><font SIZE="2">2</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">Automatic</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">215</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">G</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">3</font></td>
+    <td WIDTH="19%" VALIGN="TOP"><font SIZE="2">$24600-$28750</font></td>
+    <td WIDTH="15%" VALIGN="TOP"><font SIZE="2">2</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">Automatic</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">240</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">G</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">4</font></td>
+    <td WIDTH="19%" VALIGN="TOP"><font SIZE="2">$24500-$29200</font></td>
+    <td WIDTH="15%" VALIGN="TOP"><font SIZE="2">2</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">Automatic</font></td>
+    <td WIDTH="17%" VALIGN="TOP"><font SIZE="2">310</font></td>
+  </tr>
+</table>
+<font SIZE="2">
+
+<p>&nbsp;</p>
+</font>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="7" WIDTH="638">
+  <tr>
+    <td VALIGN="TOP"><font SIZE="2">Use at least one switch statement. When you are deciding
+    how to code the if else statements, look for trends so that you can group the data
+    efficiently. Define the following methods in an instantiable class called Inventory. </font></td>
+  </tr>
+  <tr>
+    <td VALIGN="TOP"><table border="0" width="100%">
+      <tr>
+        <td><font SIZE="2">getSeriesInput() </font></td>
+        <td><font size="2">Gets the Price, Doors, and Transmission data.</font></td>
+      </tr>
+      <tr>
+        <td><font SIZE="2">getHorsepower() </font></td>
+        <td><font size="2">Gets the Horsepower data, only called if a G series.</font></td>
+      </tr>
+      <tr>
+        <td><font SIZE="2">findSeries() </font></td>
+        <td><font size="2">Determines the Series.</font></td>
+      </tr>
+      <tr>
+        <td><font SIZE="2">findTrimLevel() </font></td>
+        <td><font size="2">Determines the Trim, only called if a G series.</font></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td VALIGN="TOP"><font SIZE="2">The main class called InventoryMain will then declare and
+    instantiate an Inventory object. </font></td>
+  </tr>
+  <tr>
+    <td VALIGN="TOP"><font SIZE="2"><b>Something to think about &#133;</b>With valid input,
+    can every vehicle series and (if applicable) trim level be determined?</font></td>
+  </tr>
+</table>
+</body>
+</html>

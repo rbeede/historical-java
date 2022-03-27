@@ -1,0 +1,17 @@
+Objective #1:  Implement a program to handle patients in an emergency room
+	I partially achived this directive.  My program can load in the
+the information about that patients, but cannot process them
+
+
+Objective #2:  Use Queues, Stacks, and Lists to store patient and doctor data
+	I achived this objective.  I have ADT that store databases and I have
+ADT that store queries.  I used queues, stacks, and lists to do this.
+
+
+Objective #3:  Implement recursive methods to display the contents of Stacks and Queues
+	I did not fully achive this objective.  I used simple for loops to
+gather the contents of my stacks and queues.
+
+Objective #4:  Use Java Date and Random classes to generate patient data
+	I did not meet this objective.  I never implemented that processing of
+patients.

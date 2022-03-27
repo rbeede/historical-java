@@ -1,0 +1,1436 @@
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  
+      
+  
+
+      
+      
+      
+      
+      
+      
+        
+         
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      
+
+      
+
+  
+  
+
+  
+  
+
+   
+   
+
+   
+   
+
+
+    
+	
+	
+
+    
+    
+      
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <html>
+      <head>
+        
+        
+        
+          <title>HttpClient - 
+          HttpClient Cookie Guide
+        </title>
+        
+        
+        <style type="text/css">
+          @import url("./style/tigris.css");
+          @import url("./style/maven.css");
+        </style>
+        
+        
+        
+        
+        
+        <link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+        
+          <meta name="author" content="Adrian Sutton"></meta>
+          <meta name="email" content="adrian@intencha.com"></meta>
+        
+          <meta name="author" content="Oleg Kalnichevski"></meta>
+          <meta name="email" content="oleg@ural.ru"></meta>
+        
+        
+        
+        
+      </head>
+
+      <body class="composite">
+
+        <div id="banner">
+          <table border="0" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+              
+              <td>
+                
+                
+                  
+                  
+                  
+                    
+                  
+                  
+                  
+                  
+                  
+                  <a href="http://jakarta.apache.org/">
+                    <img border="0" alt="Apache Software Foundation" src="http://jakarta.apache.org/commons/images/jakarta-logo-blue.gif" align="left"></img>
+                  </a>
+                
+              </td>
+
+              
+              <td>
+                <div id="login" align="right">
+                  
+                  
+                    
+                    
+                    
+                      
+                    
+
+                    <a href="http://jakarta.apache.org/commons/httpclient/">
+                      <img border="0" alt="HttpClient" src="./images/httpclient_logo.png" align="right"></img>
+                    </a>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="breadcrumbs">
+          <table border="0" width="100%" cellpadding="4" cellspacing="0">
+            <tr>
+              
+                
+                <td>Last published: 13 October 2003
+                  | Doc for 2.0-rc2
+                </td>
+              
+              <td>
+                <div align="right">
+                  
+                  
+                  
+                  
+                    
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <table border="0" width="100%" cellpadding="8" cellspacing="0"> 
+          <tr valign="top">
+            <td width="20%" id="leftcol">
+              <div id="navcolumn">
+                
+
+                
+                  
+    <div>
+      <strong>Overview</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="features.html"><img class="handle" src="./images/none.png" alt=""></img>Features</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="news.html"><img class="handle" src="./images/none.png" alt=""></img>News</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="status.html"><img class="handle" src="./images/none.png" alt=""></img>Status</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="downloads.html"><img class="handle" src="./images/none.png" alt=""></img>Download</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="applications.html"><img class="handle" src="./images/none.png" alt=""></img>Applications</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="userguide.html"><img class="handle" src="./images/expanded.png" alt=""></img>User Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="authentication.html"><img class="handle" src="./images/none.png" alt=""></img>Authentication Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="charencodings.html"><img class="handle" src="./images/none.png" alt=""></img>Character Encodings</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      		<b><a href="cookies.html"><img class="handle" src="./images/none.png" alt=""></img>Cookies</a></b>
+      	
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="redirects.html"><img class="handle" src="./images/none.png" alt=""></img>Cross Host Redirects</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="logging.html"><img class="handle" src="./images/none.png" alt=""></img>Logging Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="methods.html"><img class="handle" src="./images/none.png" alt=""></img>Methods</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/"><img class="handle" src="./images/none.png" alt=""></img>Sample Code</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="sslguide.html"><img class="handle" src="./images/none.png" alt=""></img>SSL Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="threading.html"><img class="handle" src="./images/none.png" alt=""></img>Threading</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="troubleshooting.html"><img class="handle" src="./images/none.png" alt=""></img>Trouble Shooting</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="tutorial.html"><img class="handle" src="./images/none.png" alt=""></img>Tutorial</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="developerguide.html"><img class="handle" src="./images/expanded.png" alt=""></img>Developer Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="releases.html"><img class="handle" src="./images/none.png" alt=""></img>Release Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="testwebapp.html"><img class="handle" src="./images/none.png" alt=""></img>Webapp Test Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    </div>
+  
+                
+
+				
+    <div>
+      <strong>Project Documentation</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="index.html"><img class="handle" src="./images/none.png" alt=""></img>About HttpClient</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="project-info.html"><img class="handle" src="./images/collapsed.png" alt=""></img>Project Info</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="maven-reports.html"><img class="handle" src="./images/collapsed.png" alt=""></img>Project Reports</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs/index.html"><img class="handle" src="./images/none.png" alt=""></img>JavaDocs</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref/index.html"><img class="handle" src="./images/none.png" alt=""></img>Source XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref-test/index.html"><img class="handle" src="./images/none.png" alt=""></img>Test XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://maven.apache.org/development-process.html"><img class="handle" src="./images/none.png" alt=""></img>Development Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+                
+                
+                
+
+                
+                
+                
+                
+                	<div style="margin-top: 20px; width: 100%; text-align: center;">
+                		<a href="http://maven.apache.org/" title="Powered by Maven"><img style="border: 1px solid black" alt="Powered by Maven" src="./images/logos/maven-propaganda.png"></img></a>
+                	</div>
+                
+              
+                
+              </div>
+            </td>
+            <td rowspan="2">
+              <div id="bodycol">
+                
+                <div class="app">
+                  
+                  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Introduction">Introduction</a>
+        </h3>
+      
+      
+    <p>
+      
+     HttpClient supports automatic management of cookies, including
+   
+     
+      allowing the server to set cookies and automatically return them to the
+   
+     
+      server when required.  It is also possible to manually set cookies to be
+   
+     
+      sent to the server.
+   
+    </p>
+   
+    <p>
+      
+     Unfortunately, there are several at times conflicting  standards for 
+   
+     
+      handling Cookies: the Netscape Cookie draft, RFC2109, RFC2965 and a large
+   
+     
+      number of vendor specific implementations that are compliant with neither 
+   
+     
+      specification. To deal with this, HttpClient provides policy driven cookie 
+   
+     
+      management. This guide will explain how to use the different cookie 
+   
+     
+      specifications and identify some of the common problems people have when 
+   
+     
+      using Cookies and HttpClient.
+   
+    </p>
+   
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Available Specifications">Available Specifications</a>
+        </h3>
+      
+      
+    <p>
+      
+     The following cookie specifications are supported by HttpClient.
+   
+    </p>
+   
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Netscape Draft">Netscape Draft</a>
+        </h4>
+      
+      
+    <p>
+      
+     The Netscape draft is the original cookie specification which formed
+   
+     
+        the basis for RFC2109.  Despite this it has some significant
+   
+     
+        differences with RFC2109 and thus may be required for compatibility
+   
+     
+        with some servers.
+   
+    </p>
+   
+    <p>
+      
+     The Netscape cookie draft is available at 
+   
+    <a href="http://wp.netscape.com/newsref/std/cookie_spec.html">
+     http://wp.netscape.com/newsref/std/cookie_spec.html
+   </a>
+  
+     
+        
+   
+    </p>
+   
+    </div>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="RFC2109">RFC2109</a>
+        </h4>
+      
+      
+    <p>
+      
+     RFC2109 is the first official cookie specification released by the W3C.
+   
+     
+        Theoretically, all servers that handle version 1 cookies should use this
+   
+     
+        specification and as such this specification is used by default within
+   
+     
+
+   
+             HttpClient.
+   
+    </p>
+   
+    <p>
+      
+     Unfortunately, many servers either incorrectly implement this
+   
+     
+        standard or are still using the Netscape draft so occasionally this
+   
+     
+        specification is too strict.  If this is the case, you should switch to
+   
+     
+        the compatibility specification as described below.
+   
+    </p>
+   
+    <p>
+      
+     RFC2109 is available at
+   
+     
+        
+   
+    <a href="http://www.w3.org/Protocols/rfc2109/rfc2109.txt">
+     http://www.w3.org/Protocols/rfc2109/rfc2109.txt
+   </a>
+  
+     
+        
+   
+    </p>
+   
+    </div>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Compatibility">Compatibility</a>
+        </h4>
+      
+      
+    <p>
+      
+     The compatibility specification is designed to be compatible with as
+   
+     
+        many different servers as possible even if they are not completely
+   
+     
+        standards compliant. If you are encountering problems with parsing
+   
+     
+        cookies, you should probably try using this specification.
+   
+    </p>
+   
+    </div>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Unsupported Specifications">Unsupported Specifications</a>
+        </h3>
+      
+      
+    <p>
+      
+     The following cookie specifications are not presently supported by HttpClient.
+   
+    </p>
+   
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="RFC2965">RFC2965</a>
+        </h4>
+      
+      
+    <p>
+      
+     RFC2965 defines cookie version 2 and attempts to address the shortcomings 
+   
+     
+        of the RFC2109 regarding cookie version 1. RFC2965 is intended to eventually 
+   
+     
+        supersede RFC2109.
+   
+    </p>
+   
+    <p>
+      
+     Currently HttpClient does not implement this specification. Support for
+   
+     
+           version 2 cookies will be added in the future
+   
+    </p>
+   
+    <p>
+      
+     RFC2965 is available at
+   
+     
+        
+   
+    <a href="http://www.zvon.org/tmRFC/RFC2965/Output/">
+     http://www.zvon.org/tmRFC/RFC2965/Output/
+   </a>
+  
+     
+        
+   
+    </p>
+   
+    </div>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Specifying the Specification">Specifying the Specification</a>
+        </h3>
+      
+      
+    <p>
+      
+     There is two ways to specify which cookie specification should be
+   
+     
+      used, either for each HttpState instance, or by setting the default for
+   
+     
+      newly created HttpState instances.
+   
+    </p>
+   
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Per HttpState">Per HttpState</a>
+        </h4>
+      
+      
+    <p>
+      
+     In most cases, the best way to set which cookie specification to use
+   
+     
+        is using the 
+   
+    <code>
+      
+     setCookiePolicy(int policy)
+   
+    </code>
+   
+      method on
+   
+     
+  
+   
+           
+   
+    <code>
+      
+     HttpState
+   
+    </code>
+   
+     .  Any HttpClient using that HttpState will then
+   
+     
+        use the specified cookie policy.  The value of 
+   
+    <code>
+      
+     policy
+   
+    </code>
+   
+     
+        should be one of:
+   
+    </p>
+   
+    <ul>
+      
+     
+          
+   
+    <li>
+      
+    <code>
+      
+     CookiePolicy.COMPATIBILITY
+   
+    </code>
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+    <code>
+      
+     CookiePolicy.NETSCAPE_DRAFT
+   
+    </code>
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+    <code>
+      
+     CookiePolicy.RFC2109
+   
+    </code>
+   
+    </li>
+   
+     
+        
+   
+    </ul>
+   
+    <div id="source">
+      <pre>
+        HttpClient client = new HttpClient();
+        client.getState().setCookiePolicy(CookiePolicy.COMPATIBILITY);
+        </pre>
+    </div>
+  
+    </div>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Default">Default</a>
+        </h4>
+      
+      
+    <p>
+      
+     The default cookie specification can be set by setting the system
+   
+     
+        property 
+   
+    <code>
+      
+     apache.commons.httpclient.cookiespec
+   
+    </code>
+   
+      to one
+   
+     
+        of:
+   
+    </p>
+   
+    <ul>
+      
+     
+          
+   
+    <li>
+      
+    <code>
+      
+     "COMPATIBILITY"
+   
+    </code>
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+    <code>
+      
+     "NETSCAPE_DRAFT"
+   
+    </code>
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+    <code>
+      
+     "RFC2109"
+   
+    </code>
+   
+    </li>
+   
+     
+        
+   
+    </ul>
+   
+    <p>
+      
+     This setting will be used by any newly created HttpState objects,
+   
+     
+        however existing HttpState instances will not be affected.
+   
+    </p>
+   
+    <div id="source">
+      <pre>
+        System.setProperty("apache.commons.httpclient.cookiespec", "COMPATIBILITY");
+        </pre>
+    </div>
+  
+    </div>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Common Problems">Common Problems</a>
+        </h3>
+      
+      
+    <p>
+      
+     The most common problems encountered with parsing cookies is due to
+   
+     
+      non-compliant servers.  In these cases, switching to the compatibility
+   
+     
+      cookie specification usually solves the problem.
+   
+    </p>
+   
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Encoding Issues">Encoding Issues</a>
+        </h3>
+      
+      
+    <p>
+      
+     Since cookies are transfered as HTTP Headers they are confined to
+   
+     
+      the 
+   
+    <tt>
+      
+     US-ASCII
+   
+    </tt>
+   
+      character set. Other characters will be lost or
+   
+     
+      mangeled. Cookies are typically set and read by the same server, so
+   
+     
+      a custom scheme for escaping non-ASCII characters can be used, for
+   
+     
+      instance the well-established URL encoding scheme. If cookies are
+   
+     
+      used to transfer data between server and client both parties must
+   
+     
+      agree on the escaping scheme used in a custom way. The HttpClien
+   
+     t
+   
+     
+      cookie implementation provides no special means to handle non-ASCII
+   
+     
+      characters nor does it issue warnings.
+   
+    </p>
+   
+    </div>
+  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="footer">
+          <table border="0" style="width:100%" cellpadding="4" cellspacing="0">
+            
+            <tr>
+              <td>
+                
+                  
+                    
+                    
+                      © 2001-2003, Apache Software Foundation
+                    
+                  
+                  
+                
+
+                
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>
+  

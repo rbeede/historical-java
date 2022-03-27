@@ -1,0 +1,30 @@
+<?xml?>
+<workspace_user>
+	<active_project>
+		<label>HTTP_Dumper</label>
+	</active_project>
+	<projects>
+		<project>
+			<label>HTTP_Dumper</label>
+			<showfiles>false</showfiles>
+			<folderitem>
+				<path>src</path>
+				<ext/>
+			</folderitem>
+		</project>
+	</projects>
+	<open_files>
+		<docitem>
+			<path>src\SckAcceptorWorker.java</path>
+			<source>true</source>
+			<index>0</index>
+			<active>true</active>
+		</docitem>
+		<docitem>
+			<path>src\HTTP_GetWorker.java</path>
+			<source>true</source>
+			<index>1</index>
+			<active>false</active>
+		</docitem>
+	</open_files>
+</workspace_user>

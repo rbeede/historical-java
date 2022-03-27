@@ -1,0 +1,4 @@
+clear
+rm *.class
+echo Compiling...
+javac -classpath /home/rodney/CS1333/js.1.2:. TreeTest.java

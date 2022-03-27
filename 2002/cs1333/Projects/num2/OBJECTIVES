@@ -1,0 +1,16 @@
+Objective #1:  Use file I/O and command line arguments in Java
+	I met this objective by passing filenames to my program
+
+Objective #2:  Use a Vector to store and retrieve <keyword, color> pairs
+	I met this objective by reading in the colors.txt file and parsing it
+
+Objective #3:  Use the StreamTokenizer class to identify keywords, comments,
+  and, quoted strings in Java code from the description in the standard
+  Java documentation
+
+	I met this objective by writing a Parser class that utilizes the
+StreamTokenzier class
+
+
+
+

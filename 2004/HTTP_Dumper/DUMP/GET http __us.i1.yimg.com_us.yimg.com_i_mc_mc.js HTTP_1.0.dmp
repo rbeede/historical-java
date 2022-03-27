@@ -1,0 +1,28 @@
+GET http://us.i1.yimg.com/us.yimg.com/i/mc/mc.js HTTP/1.0
+Accept: */*
+Referer: http://mail.yahoo.com/
+Accept-Language: en-us
+Proxy-Connection: Keep-Alive
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90; .NET CLR 1.1.4322)
+Host: us.i1.yimg.com
+
+
+HTTP/1.0 200 OK
+Content-Type: application/x-javascript
+Content-Length: 407
+Last-Modified: Wed, 06 Feb 2002 19:53:59 GMT
+Date: Tue, 16 Mar 2004 03:38:56 GMT
+Connection: close
+
+var ap = window.navigator.appVersion.toLowerCase();
+var i = ap.indexOf("msie");
+if (ap.indexOf("windows") >= 0 && i >= 0 && ((i + 5) < ap.length)) {
+  var v = ap.charAt(i + 5);
+  if (v >= 5 ) {
+    document.write('<scr' + 'ipt src="http://us.i1.yimg.com/us.yimg.com/i/mc/mc1.js"></scr' + 'ipt>');
+    document.write('<scr' + 'ipt src="http://us.i1.yimg.com/us.yimg.com/i/mc/mc2.js"></scr' + 'ipt>');
+  }
+}
+
+
+

@@ -1,0 +1,187 @@
+<!-- X-URL: http://www.cs.ou.edu/~muehring/Project5.htm -->
+<!-- Date: Fri, 03 Mar 2000 22:32:50 GMT -->
+<BASE HREF="http://www.cs.ou.edu/~muehring/Project5.htm">
+
+<html>
+
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+<title>Project#5</title>
+<meta NAME="Template" CONTENT="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+</head>
+
+<body LINK="#0000ff" VLINK="#800080">
+<b><font SIZE="5">
+
+<p ALIGN="left">CS 1323, PROJECT # 5</p>
+</font>
+
+<dl>
+  </b>
+  <dt><b><strong>Project #5: </strong>&nbsp;&nbsp; </b>Zip up and submit the following files:
+    CalculateGrade.java, CS1323Grades.java, and EasyIn.java (provided for you)</dt>
+  <dt>&nbsp;</dt>
+  <dt><b><strong>Due Date:</strong> &nbsp;&nbsp; </b>Midnight, Friday, March 10, 2000</dt>
+  <dt>&nbsp;</dt>
+  <dt><b><strong>Assignment: </strong></b>Using the EasyIn class for input and output (not the
+    javabook classes), write a program called CalculateGrade that will prompt the user to
+    input all of their grades in CS 1323, calculate and display averages for each subcategory
+    (i.e. quizzes, exams, projects&#133;.) , and then calculate and display the Course Average
+    and Course Letter Grade.</dt>
+  <dd><small><small><small><small><small><small>&nbsp;&nbsp; </small></small></small></small></small></small></dd>
+</dl>
+
+<table BORDER="1" CELLSPACING="1" CELLPADDING="2" WIDTH="492">
+  <tr>
+    <td WIDTH="359" VALIGN="TOP" colspan="2"><small><strong>General information needed for
+    calculations:</strong></small></td>
+  </tr>
+  <tr>
+    <td WIDTH="217" VALIGN="TOP"><small><u><strong>GRADE SUBCATEGORIES</strong></u></small></td>
+    <td WIDTH="145" VALIGN="TOP" align="center"><small><u><b>PERCENTAGES</b></u></small></td>
+    <td WIDTH="43" VALIGN="TOP" align="center" bgcolor="#C0C0C0">&nbsp;</td>
+    <td WIDTH="287" VALIGN="TOP" align="center"><u><b><small>Grade Scale</small></b></u></td>
+  </tr>
+  <tr>
+    <td WIDTH="217" VALIGN="TOP"><small><strong>Projects </strong></small></td>
+    <td WIDTH="145" VALIGN="TOP" align="center"><small>20%</small></td>
+    <td WIDTH="43" VALIGN="TOP" align="center" bgcolor="#C0C0C0">&nbsp;</td>
+    <td WIDTH="287" VALIGN="TOP" align="center"><small><b>90-100 = A</b></small></td>
+  </tr>
+  <tr>
+    <td WIDTH="217" VALIGN="TOP"><small><strong>Quizzes </strong></small></td>
+    <td WIDTH="145" VALIGN="TOP" align="center"><small>10%</small></td>
+    <td WIDTH="43" VALIGN="TOP" align="center" bgcolor="#C0C0C0">&nbsp;</td>
+    <td WIDTH="287" VALIGN="TOP" align="center"><small><b>80-90 = B</b></small></td>
+  </tr>
+  <tr>
+    <td WIDTH="217" VALIGN="TOP"><small><strong>Lab Attendance </strong></small></td>
+    <td WIDTH="145" VALIGN="TOP" align="center"><small>10%</small></td>
+    <td WIDTH="43" VALIGN="TOP" align="center" bgcolor="#C0C0C0">&nbsp;</td>
+    <td WIDTH="287" VALIGN="TOP" align="center"><small><b>70-80 = C</b></small></td>
+  </tr>
+  <tr>
+    <td WIDTH="217" VALIGN="TOP"><small><strong>Lab Final </strong></small></td>
+    <td WIDTH="145" VALIGN="TOP" align="center"><small>10%</small></td>
+    <td WIDTH="43" VALIGN="TOP" align="center" bgcolor="#C0C0C0">&nbsp;</td>
+    <td WIDTH="287" VALIGN="TOP" align="center"><small><b>60-70 = D</b></small></td>
+  </tr>
+  <tr>
+    <td WIDTH="217" VALIGN="TOP"><small><strong>Exam I and II</strong></small></td>
+    <td WIDTH="145" VALIGN="TOP" align="center"><small>30%</small></td>
+    <td WIDTH="43" VALIGN="TOP" align="center" bgcolor="#C0C0C0">&nbsp;</td>
+    <td WIDTH="287" VALIGN="TOP" align="center"><small><b>0-60 = F</b></small></td>
+  </tr>
+  <tr>
+    <td WIDTH="217" VALIGN="TOP"><small><strong>Final Exam</strong></small></td>
+    <td WIDTH="145" VALIGN="TOP" align="center"><small>20%</small></td>
+    <td WIDTH="43" VALIGN="TOP" align="center" bgcolor="#C0C0C0">&nbsp;</td>
+    <td WIDTH="287" VALIGN="TOP" align="center">&nbsp;</td>
+  </tr>
+  <tr>
+    <td WIDTH="217" VALIGN="TOP"><small><strong>TOTAL POSSIBLE </strong></small></td>
+    <td WIDTH="145" VALIGN="TOP" align="center"><small><strong>100%</strong></small></td>
+    <td WIDTH="43" VALIGN="TOP" align="center" bgcolor="#C0C0C0">&nbsp;</td>
+    <td WIDTH="287" VALIGN="TOP" align="center">&nbsp;</td>
+  </tr>
+</table>
+
+<p><small><small><small><small><small><small>&nbsp; </small></small></small></small></small></small></p>
+
+<table border="1" width="688">
+  <tr>
+    <td width="682"><b>Steps for the main class called CalculateGrade (use an EasyIn object
+    for input and output):</b> <ol>
+      <li><small><strong>Declare a CS1323Grades object</strong></small></li>
+      <li><small><strong>Instantiate the CS1323Grades object</strong>, passing the constructor all
+        of the percentages of each subcategory of grades</small></li>
+      <li><small><strong>Prompt the user</strong> for the number of projects they have taken thus
+        far</small></li>
+      <li><small><strong>Call</strong> a public method from the CS1323Grades class called <strong>calculateProjectAverage(
+        )</strong> and pass the number of projects as an argument</small></li>
+      <li><small><strong>Prompt the user </strong>for the number of quizzes they have taken thus
+        far</small></li>
+      <li><small><strong>Call </strong>a public method from the CS1323Grades class called c<strong>alculateQuizAverage(
+        )</strong> and pass the number of quizzes as an argument</small></li>
+      <li><small><strong>Prompt the user</strong> for the number of labs they have missed thus far</small></li>
+      <li><small><strong>Call</strong> a public method from the CS1323Grades class called <strong>calculateAttendanceGrade(
+        ) </strong></small></li>
+      <li><small><strong>Prompt the user</strong> to enter a 'y' or 'n' based on whether they have
+        taken the lab final yet</small><ul type="square">
+          <li><small>If they answered yes, <strong>call</strong> a public method from the CS1323Grades
+            class called <strong>calculateLabFinalGrade( ) </strong></small></li>
+        </ul>
+      </li>
+      <li><small><strong>Prompt the user</strong> for the number of exams (out of two) they have
+        taken this far</small></li>
+      <li><small><strong>Call</strong> a public method from the CS1323Grades class called <strong>calculateExamAverage(
+        )</strong> and pass the number of exams as an argument</small></li>
+      <li><small><strong>Prompt the user </strong>to enter a 'y' or 'n' based on whether they have
+        taken the Final Exam yet</small><ul type="square">
+          <li><small>If they answered yes, <strong>call </strong>a public method from the CS1323Grades
+            called <strong>calculateFinalExamGrade( ) </strong></small></li>
+        </ul>
+      </li>
+      <li><small>Finally, <strong>call</strong> a public method from the CS1323Grades class called
+        <strong>calculateCourseGrade( )</strong> that returns the course average</small></li>
+      <li><small><strong>Calculate the course letter grade and then display the course average and
+        course letter grade</strong></small></li>
+    </ol>
+    </td>
+  </tr>
+</table>
+
+<dl>
+  <dt><small><small><small><small><small><small><small>&nbsp; </small></small></small></small></small></small></small></dt>
+</dl>
+
+<table border="1" width="623">
+  <tr>
+    <td width="611" colspan="2"><b>Method Headings for the instantiable class called
+    CS1323Grades:</b></td>
+  </tr>
+  <tr>
+    <td width="364"><small>public <strong>CS1323Grades</strong>(float projectPercentage, float
+    quizPercentage, float attendancePercentage, float labFinalPercentage, float
+    totalExamPercentage, float finalExam )</small></td>
+    <td width="247"><small>Initializes instance variables of subcategories of grades
+    representing percentages of total grade</small></td>
+  </tr>
+  <tr>
+    <td width="364"><small>public void <strong>calculateProjectAverage</strong>(int
+    numberProjects)&nbsp; </small></td>
+    <td width="247"><small>Prompts the user to input project grades and then calculates and
+    displays the project average</small></td>
+  </tr>
+  <tr>
+    <td width="364"><small>public void <strong>calculateQuizAverage</strong>(int
+    numberQuizzes)</small></td>
+    <td width="247"><small>Prompts the user to input quiz grades and then calculates and
+    displays the quiz average</small></td>
+  </tr>
+  <tr>
+    <td width="364"><small>public void <strong>calculateAttendanceGrade</strong>(int
+    numberAbsences)</small></td>
+    <td width="247"><small>Calculates the attendance grade (more than one absence is a zero)</small></td>
+  </tr>
+  <tr>
+    <td width="364"><small>public void <strong>calculateLabFinalGrade</strong>( )</small></td>
+    <td width="247"><small>Prompts the user to input the lab final grade</small></td>
+  </tr>
+  <tr>
+    <td width="364"><small>public void <strong>calculateExamAverage</strong>(int numberExams)</small></td>
+    <td width="247"><small>Prompts the user to input exam grades and then calculate and
+    displays the exam average</small></td>
+  </tr>
+  <tr>
+    <td width="364"><small>public void <strong>calculateFinalExamGrade</strong>( )</small></td>
+    <td width="247"><small>Prompts the user to input the Final Exam grade</small></td>
+  </tr>
+  <tr>
+    <td width="364"><small>public float <strong>calculateCourseGrade</strong>( )</small></td>
+    <td width="247"><small>Calculates and returns the course grade</small></td>
+  </tr>
+</table>
+</body>
+</html>

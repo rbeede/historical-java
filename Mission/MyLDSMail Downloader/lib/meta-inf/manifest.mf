@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.5.3 
+Created-By: Apache Jakarta Maven
+Built-By: michael
+Package: org.apache.commons.httpclient
+Build-Jdk: 1.4.2
+Extension-Name: commons-httpclient
+Specification-Version: 
+Specification-Vendor: Apache Software Foundation
+Specification-Title: Jakarta Commons HttpClient
+Implementation-Version: 2.0-rc2
+Implementation-Vendor: Apache Software Foundation
+Implementation-Vendor-Id: 
+

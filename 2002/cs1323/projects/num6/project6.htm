@@ -1,0 +1,140 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 3.0">
+<title>Project#6</title>
+<meta NAME="Template" CONTENT="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+</head>
+
+<body LINK="#0000ff" VLINK="#800080">
+<font SIZE="5"><b>
+
+<p ALIGN="left">CS 1323, PROJECT # 6</p>
+</b></font>
+
+<table border="0" width="623">
+  <tr>
+    <td width="617"><b><strong>Project #6: </strong>&nbsp;&nbsp; </b>Turn in the following
+    files: PersonalAddressBookMain.java, PersonalAddressBook.java, AddressBook.java and
+    Person.java <p><b><strong>Due Date:</strong> &nbsp;&nbsp; </b>Midnight, Friday, March 31,
+    2000</p>
+    <p><b><strong>Assignment: </strong></b>Write a program called PersonalAddressBook to do
+    the following:<ol>
+      <li>From the main class (called PersonalAddressBookMain), declare and instantiate a
+        PersonalAddressBook object and call a public void start( ) method.</li>
+      <li>In the instantiable class (called PersonalAddressBook) declare and define the private
+        methods whose headings are provided in the table below.</li>
+    </ol>
+    <p><strong>Note:&nbsp; </strong>Declare, instantiate and use objects from the following
+    classes:&nbsp; AddressBook, InputBox, ListBox, MainWindow, MessageBox, MultiInputBox, and
+    Person (OutputBox is optional)</td>
+  </tr>
+</table>
+
+<dl>
+  <table border="1" width="623">
+    <tr>
+      <td width="617" colspan="2"><b>Method Headings for the instantiable class called
+      PersonalAddressBook:</b></td>
+    </tr>
+    <tr>
+      <td valign="top" width="364">public <strong>PersonalAddressBook( )</strong></td>
+      <td width="247">Instantiate objects (any necessary initiliazation is done here).</td>
+    </tr>
+    <tr>
+      <td width="364" valign="top">public void <strong>start( )<small>&nbsp; </small></strong></td>
+      <td width="247"><ol>
+        <li>Call a method to fill an array of AddressBook objects.</li>
+        <li>Call a method to get the user's choice as to which address book they would like to work
+          on).</li>
+        <li>While the user wishes to continue, call a method to process the selected address book
+          and work on it for as long as they wish to continue.</li>
+        <li>Terminate the program when the user desires to quit.</li>
+      </ol>
+      </td>
+    </tr>
+    <tr>
+      <td width="364" valign="top">private boolean <strong>getMainMenuChoice( )</strong></td>
+      <td width="247" valign="top"><ol>
+        <li>Prompt the user to choose an address book or to choose quit.</li>
+        <li>If the user choose to quit, return false, otherwise return true.</li>
+      </ol>
+      </td>
+    </tr>
+    <tr>
+      <td width="364" valign="top">private void <strong>processAddressBook(AddressBook book)</strong></td>
+      <td width="247" valign="top"><ol>
+        <li>Call a method to get the user's choice to add, delete, search,or close the address book.</li>
+        <li>While the user wishes to continue, call a method to process the entries in the current
+          address book and work on it for as long as they wish to continue.</li>
+      </ol>
+      </td>
+    </tr>
+    <tr>
+      <td width="364" valign="top">private boolean <strong>getSubMenuChoice( )</strong></td>
+      <td width="247" valign="top"><ol>
+        <li>Prompt the user to choose either to add a new entry, delete an entry, search for an
+          entry, or close the current address book.</li>
+        <li>If the user choose to close the current address book, return false, otherwise return
+          true.</li>
+      </ol>
+      </td>
+    </tr>
+    <tr>
+      <td width="364" valign="top">private void <strong>processEntries( )</strong></td>
+      <td width="247" valign="top"><dl>
+        <dt>Depending on the user's choice, call one of these methods: </dt>
+        <dd>addEntry( )</dd>
+        <dd>deleteEntry( )</dd>
+        <dd>searchEntry( )</dd>
+      </dl>
+      </td>
+    </tr>
+    <tr>
+      <td width="364" valign="top">private void <strong>addEntry( )</strong></td>
+      <td width="247" valign="top"><ol>
+        <li>Using a MultiInputBox object, prompt the user to enter their name, age, and gender.</li>
+        <li>Instantiate a Person object with the user input.</li>
+        <li>Add this person to the current address book using a public method from the AddressBook
+          class.</li>
+      </ol>
+      </td>
+    </tr>
+    <tr>
+      <td width="364" valign="top">private void <strong>deleteEntry( )</strong></td>
+      <td width="247" valign="top"><ol>
+        <li>Prompt the user to enter the name they would like to delete.</li>
+        <li>If found, delete the specified entry using a public method from the AddressBook class.
+          &nbsp; Use the same procedure shown in the testDelete( ) method that can be found in the
+          program called TestAddressBook.java.</li>
+      </ol>
+      </td>
+    </tr>
+    <tr>
+      <td width="364" valign="top">private void <strong>searchEntry( )</strong></td>
+      <td width="247" valign="top"><ol>
+        <li>Prompt the user to enter the name they would like to search.</li>
+        <li>If found, notify the user of the success and display the name, age, and gender for this
+          entry.&nbsp; </li>
+        <li>If not found, display &quot;not found&quot; to the user.</li>
+      </ol>
+      </td>
+    </tr>
+    <tr>
+      <td width="364" valign="top">private void<strong> fillArray( )</strong></td>
+      <td width="247" valign="top"><ol>
+        <li>Prompt the user for the number of Address Books they would like to create</li>
+        <li>Fill the AddressBook array, instantiating as many AddressBook objects as the user has
+          requested</li>
+      </ol>
+      </td>
+    </tr>
+  </table>
+  <dd><small><small><small><small><small><small>&nbsp;&nbsp; </small></small></small></small></small></small></dd>
+  <dd>&nbsp;</dd>
+</dl>
+
+<p><small><small><small><small><small><small>&nbsp; </small></small></small></small></small></small></p>
+</body>
+</html>

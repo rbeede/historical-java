@@ -1,0 +1,7 @@
+export CLASSPATH=.:./lib/commons-httpclient-2.0.1.jar:./lib/commons-logging.jar:./lib/commons-logging-api.jar:./lib/log4j-1.2.9.jar
+
+mkdir ./classes
+
+javac -d ./classes -classpath $CLASSPATH ./src/*.java 
+
+

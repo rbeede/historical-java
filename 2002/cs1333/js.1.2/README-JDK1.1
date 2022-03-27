@@ -1,0 +1,36 @@
+This distribution of the structure package is suitable for use
+with JDK 1.2.  If your environment makes use of JDK 1.1, you should
+download the 1.1 version of the structure package, or perform the
+following changes:
+
+1. Create a file, Comparable.java, in the source directory.  It should
+contain the following interface:
+
+  public interface Comparable
+  {
+      public int compareTo(Object item);
+      // pre: item is non-null
+      // post: returns value < 0 if this<item; 0 if =; > 0 if this > item
+  }
+
+(A copy of this code can be found in the examples directory, under
+Comparable1.2.java.  If you use this, make sure you change the name of
+the file.)
+
+2.  Compile Comparable.java.  This should create a class file,
+Comparable.class.   This should be moved to the structure directory.
+
+3.  If you plan to use the structure.zip file as a library, make sure
+you add the class file to the zip.  On unix, this involves the zip
+utility.  In other environments, you may have to make changes to a
+project file.
+
+
+The result of these changes is source and libraries that are suitable
+for use with JDK 1.1.
+
+The 1.1 version of the structure pacakge is also available from
+   http://www.cs.williams.edu/~bailey/JavaStructures/js.1.1
+
+Enjoy!
+ Duane Bailey

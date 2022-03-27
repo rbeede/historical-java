@@ -1,0 +1,76 @@
+Main class
+	load up emergency room class, it does everything for us
+	named ERPM
+
+EmergencyRoom class
+	Create query objects for Patients and Doctors
+
+	Read in DoctorQ.txt and PatientQ.txt into their Queries
+		Queries only store ID number, ID's start with
+		db  for doctor, and  pt  for patients
+
+	Setup DB of patients.  Use a List ADT, where each node holds
+		patient data.  A node contains the patient's ID and
+		a stack with the IllnessHistory
+		A IllnessHistory stack contains a numeric Diagonosis ID,
+		a date, & the doctor's id.  New history goes on top of stack
+
+		Read in this data from PatientDB.txt
+		IDs: dr = doctor, pt = patients, il = illness
+
+	Setup DB of doctors.  Use a List ADT, where each node holds doctor
+		data.  A node contains the doctor's ID, and a stack with the
+		VisitHistory
+		A VisitHistory stack contains a numeric Patient ID & last date
+		that patient was seen.
+		A patient id only shows up once, so if a patient is seen again,
+		they are moved to the top of the stack and the date is set to
+		the current.
+		The most recently seen patients should be at the top
+
+		Read in this data from DoctorDB.txt
+		IDs: dr = doctor, pt = patient
+
+	Show current (starting) state of DoctorDB, PatientDB, DoctorQ,
+		& PatientQ
+
+	Start processing each of our patients in the Patient Query.
+		Loop through the entire query until it is empty.
+
+		Check the current patient to see if they are new, if so then
+		add an entry for them in the PatientDB and mark a special flag
+		that would indicate that they are new and no doctor has seen
+		ever seen them, which saves time
+
+ 	Find the current patient a doctor. Search through the DoctorQuery looking
+	to see if the current patient has seen any of the Doctors before.  If so
+	then pair that Doctor with that patient.  If not, simply grab the first
+	available Doctor and pair the patient with that one
+
+	PairPatientToDoc -- this method should pair the specified patient and
+		Doctor together.  If the patient has visited that doctor
+		before, update the DoctorDB VisitHistory to place that patient
+		at the very top and update the date of the latest visit
+		If the patient has not visited that doctor before, simple add
+		the visit to the top of the DoctorDB VisitHistory
+
+	Diagnosis the patient.  Assign a random number from 0-999999 and prefix
+		with "il" to create an illness id.
+
+		Update the patients DB history info with theillness, current
+		date, and doctor ID.  If this is a new patient, they should
+		have already been added during the start of processing the
+		patient query
+
+	Pop the current patient off of the PatientQuery
+
+	Printout the current state of data in the program:
+		complete info for that patient,
+		the info for the doctor that saw them,
+		and each queue (4 total) should be displayed.
+
+	Loop to the next patient in query
+
+
+	Write the PatientDB, DoctorDB, DoctorQ, and PatientQ back to disk
+		The PatientQ should end up being empty

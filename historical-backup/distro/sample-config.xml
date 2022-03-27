@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<!-- (.yyyy-MM-dd_UTC added for you automatically) -->
+	<LOG_FILE>/path/to/your.log</LOG_FILE>
+	<BACKUP_SOURCE>
+		<DIRECTORY>/path/to/src1</DIRECTORY>
+		<DIRECTORY>/path/to/src2</DIRECTORY>
+	</BACKUP_SOURCE>
+	<BACKUP_DESTINATION>/path/to/dest/dir</BACKUP_DESTINATION>
+</configuration>

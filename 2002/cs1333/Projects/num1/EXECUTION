@@ -1,0 +1,4 @@
+# This runs the NumCWL program and passes the filename
+# Test_Data.txt as a paramater.  It is the file we want
+# to count the number of chars, words, and lines in
+java -cp /home/rodney/CS1333/js.1.2:. NumCWL Test_Data.txt

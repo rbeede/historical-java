@@ -1,0 +1,205 @@
+Lab Exercises
+February 11, 2000
+
+Due:   Today, before the end of lab (this is proof of your lab attendance).
+
+1.0	Objectives
+
+To be able to understand Passing Parameters by value.
+To be able to understand Modifiers.
+To observe the use of a user-defined class called TestClass.
+
+2.0	class PassingArguments
+
+Cut and paste the two classes below and paste them into two different files in your editor.
+Save these files as PassingArguments.java (the main class) and TestClass.java.
+Follow the instructions that appear below the code.
+
+//////////////////////////////////////////////////////////////////////////////////
+//	class PassingArguments 
+//
+//	A program to ....
+//		1.  Call a method to demonstrate pass-by-value.
+//		2.  Demonstrate the use of Modifiers
+//
+////////////////////////////////////////////////////////////////////////////////
+
+class PassingArguments
+{
+        public static void main (String args[])
+        {
+			TestClass testClass = new TestClass();
+						
+			int x = 1;
+			double y = 2;
+					
+			testClass.myMethod(x,y);
+						
+			System.out.println("The Value of x is:  "  + x);
+			System.out.println("The Value of y is:  "  + y);
+			
+			////////////////////////////
+			//	@Begin Exercises
+			////////////////////////////
+			/*
+			System.out.println();
+			System.out.print("Tax on $9.95 is:  " + testClass.figureTax(9.95));
+			System.out.println();
+			*/
+			//	@End Exercises
+			
+		
+				
+		}//end main
+
+}//end PassingArguments class
+
+//////////////////////////////////////////////////////////////////////////////////
+//	class TestClass 
+//
+//	A instantiable class to ....
+//		1.  Demonstrate pass-by-value.
+//		2.  Demonstrate the use of Modifiers
+//
+////////////////////////////////////////////////////////////////////////////////
+class TestClass
+{
+	//data member
+	private final double TAX_RATE = 0.075;
+		
+	//constructor
+	public TestClass()
+	{
+		
+	}//end constructor
+	
+	//myMethod
+	public void myMethod(int number, double anotherNumber)
+	{
+		number = 3;
+		anotherNumber = 4;
+	}//end myMethod method
+		
+	//figureTax
+	public double figureTax(double price)
+	{
+		return price * TAX_RATE;
+	}//end figureTax method
+	
+}//end TestClass class
+
+
+Instructions for lab exercises:
+
+1.  	Compile the PassingArguments Application (make sure that TestClass.java
+	is located in the current working directory).  
+
+		javac PassingArguments.java  
+
+2.	Do a "dir" at the command prompt and notice the two new class files that 
+	now reside in the current directory PassingArguments.class and TestClass.class).
+
+3.	Run the PassingArguments Application by typing:  
+
+		java PassingArguments
+
+4.	View the output on the console.  Notice the values of x and y.  Why were the values 	not changed to 3 and 4, respectively?  We talked about this in class.
+x = 1
+ y = 2.0
+
+  Only copies of the variables x & y were passed to TestClass, so they
+originals weren't changed
+
+ 
+5.  	Uncomment the block of code labeled "Begin Exercises" in PassingArguments.java.
+	Save the file and recompile and run the application again.  View the code
+	in TestClass.java that was executed to figure the tax.  
+
+	Change the modifier "public" to "private" on this line and recompile:
+
+		public double figureTax(double price)
+
+	Like this:
+
+		private double figureTax(double price)
+
+	What is the error message and why did you get one?
+
+ No method matching figureTax(double) found in class TestClass
+
+  The method was made invisible to the PassingArguments class
+
+
+	********* NOW CHANGE THE MODIFIER BACK TO "public" ***********
+
+6.	In TestClass.java, add the modifier "static to this line" and recompile:
+
+		public double figureTax(double price)
+
+	Like this:
+
+		public static double figureTax(double price)
+
+	What is the error message and why did you get one?
+
+Can't make a static reference to nonstatic variable TAX_RATE in class TestClass
+
+  The method was set to not be used in a object designed class.  It was a class
+method
+ 
+7.  	In TestClass.java, leave the modifier static up above and add the modifier
+	"static" to the this line and recompile:
+
+		private final double TAX_RATE = 0.075;
+
+	Like this:
+
+		private static final double TAX_RATE = 0.075;	
+
+	What is the error message (if any)?   NONE
+
+
+	********* NOW REMOVE THE MODIFIER "static" 
+		from the figureTax as well as 
+		from the TAX_RATE and recompile ***********
+
+8.	In PassingArguments.java, change this line and recompile and run:
+
+		System.out.print("Tax on $9.95 is:  " + testClass.figureTax(9.95));
+
+	Like this:
+
+		System.out.print("Tax on" + x + " is:  " + testClass.figureTax(x));
+
+
+	The figureTax(float price) method accepts a float.  Did it accept x even
+	though it was an integer?  Why do you think this happened?
+
+	Yes, it converted it to the correct value
+
+9.	Now change the argument to a String in this line and recompile: 
+
+		System.out.print("Tax on" + x + " is:  " + testClass.figureTax(x));
+
+	Like this:
+
+		System.out.print("Tax on 5.95 is:  " + testClass.figureTax("5.59"));
+
+	What is the error message (if any)?
+
+
+10.	Now send two values as the argument into this method and recompile: 
+
+		System.out.print("Tax on 5.95 is:  " + testClass.figureTax("5.59"));
+
+	Like this:
+
+		System.out.print("Tax on 2,3 is:  " + testClass.figureTax(2.95,3.95));		
+	What is the error message (if any)?
+
+
+	**********  Don't forget to change this line back to the original **************
+		System.out.print("Tax on $9.95 is:  " + testClass.figureTax(9.95));
+
+
+  					  THE END

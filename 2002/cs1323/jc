@@ -1,0 +1,1 @@
+javac -classpath /home/rodney/CS1323:. $1

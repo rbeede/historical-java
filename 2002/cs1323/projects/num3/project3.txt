@@ -1,0 +1,46 @@
+Programming Project #3 				
+February 11, 2000
+
+Due:   February 18th at the beginning of Lab
+
+1.0	Objective
+
+To be able to implement an application by defining and using an instantiable class.
+
+2.0	Java Application
+
+Use an editor and write a Java application according to the instructions in Exercise #6 in Chapter 4 (page 189) from your textbook. 
+
+Do not forget to include your comment header in each .java file. 
+ 
+/**********************************************************************
+
+	Programmer:  		<Place your name here>
+	ID:			<Place your ID here>
+   	Course:      		 CS1323
+	Lab Section:		<place your lab section here>
+	Lab TA:		  	<Place the name of your TA here>
+
+	Class:			<Place the name of your program here>
+	Project#:    		 Project #<place the project # here>
+	Date:			<Place the due date here>
+
+	Description: 		<Place the description of your program 
+				here>
+
+*********************************************************************/
+
+
+2.0.1	Edit, Compile, Debug, and Run your program
+
+Save your code for each class in two separate .java files.
+Explicitly compile the main class on the command line using javac.  Doing so will automatically compile the other class.  
+Debug and run your program.  
+
+
+2.2  Submission Guidelines
+
+1) Submit a stapled hardcopy of both .java files along with a cover sheet.
+	Use the cover sheet at this location: http://www.cs.ou.edu/~muehring/CoverSheet.html 
+2) Zip up both .java files into one .zip file and submit the zip file on-line.
+	See class web site for links to online submission locations specific to each 		section: http://www.cs.ou.edu/~muehring/

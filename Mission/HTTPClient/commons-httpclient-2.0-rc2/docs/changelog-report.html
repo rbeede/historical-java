@@ -1,0 +1,4867 @@
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  
+      
+  
+
+      
+      
+      
+      
+      
+      
+        
+         
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      
+
+      
+
+  
+  
+
+  
+  
+
+   
+   
+
+   
+   
+
+
+    
+	
+	
+
+    
+    
+      
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <html>
+      <head>
+        
+        
+        
+          <title>HttpClient - 
+          Changelog Report
+        </title>
+        
+        
+        <style type="text/css">
+          @import url("./style/tigris.css");
+          @import url("./style/maven.css");
+        </style>
+        
+        
+        
+        
+        
+        <link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+        
+        
+        
+        
+      </head>
+
+      <body class="composite">
+
+        <div id="banner">
+          <table border="0" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+              
+              <td>
+                
+                
+                  
+                  
+                  
+                    
+                  
+                  
+                  
+                  
+                  
+                  <a href="http://jakarta.apache.org/">
+                    <img border="0" alt="Apache Software Foundation" src="http://jakarta.apache.org/commons/images/jakarta-logo-blue.gif" align="left"></img>
+                  </a>
+                
+              </td>
+
+              
+              <td>
+                <div id="login" align="right">
+                  
+                  
+                    
+                    
+                    
+                      
+                    
+
+                    <a href="http://jakarta.apache.org/commons/httpclient/">
+                      <img border="0" alt="HttpClient" src="./images/httpclient_logo.png" align="right"></img>
+                    </a>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="breadcrumbs">
+          <table border="0" width="100%" cellpadding="4" cellspacing="0">
+            <tr>
+              
+                
+                <td>Last published: 13 October 2003
+                  | Doc for 2.0-rc2
+                </td>
+              
+              <td>
+                <div align="right">
+                  
+                  
+                  
+                  
+                    
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <table border="0" width="100%" cellpadding="8" cellspacing="0"> 
+          <tr valign="top">
+            <td width="20%" id="leftcol">
+              <div id="navcolumn">
+                
+
+                
+                  
+    <div>
+      <strong>Overview</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="features.html"><img class="handle" src="./images/none.png" alt=""></img>Features</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="news.html"><img class="handle" src="./images/none.png" alt=""></img>News</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="status.html"><img class="handle" src="./images/none.png" alt=""></img>Status</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="downloads.html"><img class="handle" src="./images/none.png" alt=""></img>Download</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="applications.html"><img class="handle" src="./images/none.png" alt=""></img>Applications</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="userguide.html"><img class="handle" src="./images/expanded.png" alt=""></img>User Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="authentication.html"><img class="handle" src="./images/none.png" alt=""></img>Authentication Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="charencodings.html"><img class="handle" src="./images/none.png" alt=""></img>Character Encodings</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="cookies.html"><img class="handle" src="./images/none.png" alt=""></img>Cookies</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="redirects.html"><img class="handle" src="./images/none.png" alt=""></img>Cross Host Redirects</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="logging.html"><img class="handle" src="./images/none.png" alt=""></img>Logging Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="methods.html"><img class="handle" src="./images/none.png" alt=""></img>Methods</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/"><img class="handle" src="./images/none.png" alt=""></img>Sample Code</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="sslguide.html"><img class="handle" src="./images/none.png" alt=""></img>SSL Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="threading.html"><img class="handle" src="./images/none.png" alt=""></img>Threading</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="troubleshooting.html"><img class="handle" src="./images/none.png" alt=""></img>Trouble Shooting</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="tutorial.html"><img class="handle" src="./images/none.png" alt=""></img>Tutorial</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="developerguide.html"><img class="handle" src="./images/expanded.png" alt=""></img>Developer Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="releases.html"><img class="handle" src="./images/none.png" alt=""></img>Release Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="testwebapp.html"><img class="handle" src="./images/none.png" alt=""></img>Webapp Test Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    </div>
+  
+                
+
+				
+    <div>
+      <strong>Project Documentation</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="index.html"><img class="handle" src="./images/none.png" alt=""></img>About HttpClient</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="project-info.html"><img class="handle" src="./images/collapsed.png" alt=""></img>Project Info</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="maven-reports.html"><img class="handle" src="./images/expanded.png" alt=""></img>Project Reports</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="jdepend-report.html"><img class="handle" src="./images/none.png" alt=""></img>Metrics</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="checkstyle-report.html"><img class="handle" src="./images/none.png" alt=""></img>Checkstyle</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      		<b><a href="changelog-report.html"><img class="handle" src="./images/none.png" alt=""></img>Change Log</a></b>
+      	
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="developer-activity-report.html"><img class="handle" src="./images/none.png" alt=""></img>Developer Activity</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="file-activity-report.html"><img class="handle" src="./images/none.png" alt=""></img>File Activity</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="license.html"><img class="handle" src="./images/none.png" alt=""></img>Project License</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs/index.html"><img class="handle" src="./images/none.png" alt=""></img>JavaDocs</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="javadoc.html"><img class="handle" src="./images/none.png" alt=""></img>JavaDoc Report</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref/index.html"><img class="handle" src="./images/none.png" alt=""></img>Source Xref</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref-test/index.html"><img class="handle" src="./images/none.png" alt=""></img>Test Xref</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="junit-report.html"><img class="handle" src="./images/none.png" alt=""></img>Unit Tests</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="linkcheck.html"><img class="handle" src="./images/none.png" alt=""></img>Link Check Report</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="task-list.html"><img class="handle" src="./images/none.png" alt=""></img>Task List</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs/index.html"><img class="handle" src="./images/none.png" alt=""></img>JavaDocs</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref/index.html"><img class="handle" src="./images/none.png" alt=""></img>Source XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref-test/index.html"><img class="handle" src="./images/none.png" alt=""></img>Test XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://maven.apache.org/development-process.html"><img class="handle" src="./images/none.png" alt=""></img>Development Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+                
+                
+                
+
+                
+                
+                
+                
+                	<div style="margin-top: 20px; width: 100%; text-align: center;">
+                		<a href="http://maven.apache.org/" title="Powered by Maven"><img style="border: 1px solid black" alt="Powered by Maven" src="./images/logos/maven-propaganda.png"></img></a>
+                	</div>
+                
+              
+                
+              </div>
+            </td>
+            <td rowspan="2">
+              <div id="bodycol">
+                
+                <div class="app">
+                  
+                  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Changelog Report">Changelog Report</a>
+        </h3>
+      
+      
+    <p>
+      
+     Timeframe: 30 days, Total Commits: 33 Total Number of Files Changed: 98
+   
+    </p>
+   
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <th>
+      
+     Date
+   
+    </th>
+   
+    <th>
+      
+     Author
+   
+    </th>
+   
+    <th>
+      
+     File/Message
+   
+    </th>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-10-13 12:22:24
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodBase.java">
+     src/java/org/apache/commons/httpclient/HttpMethodBase.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodBase.java?rev=1.182&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.182
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Adds some logging. Submitted by: Oleg Kalnichevski Reviewed by: Michael Becke
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-10-13 12:19:22
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodBase.java">
+     src/java/org/apache/commons/httpclient/HttpMethodBase.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodBase.java?rev=1.159.2.14&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.159.2.14
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Adds some logging. Submitted by: Oleg Kalnichevski Reviewed by: Michael Becke
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-10-12 04:02:20
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/build.xml">
+     build.xml
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/build.xml?rev=1.29.2.2&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.29.2.2
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/project.xml">
+     project.xml
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/project.xml?rev=1.35.2.4&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.35.2.4
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/release_notes.txt">
+     release_notes.txt
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/release_notes.txt?rev=1.9.2.5&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.9.2.5
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodBase.java">
+     src/java/org/apache/commons/httpclient/HttpMethodBase.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodBase.java?rev=1.159.2.13&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.159.2.13
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/xdocs/cookies.xml">
+     xdocs/cookies.xml
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/xdocs/cookies.xml?rev=1.2.2.2&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.2.2.2
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/xdocs/downloads.xml">
+     xdocs/downloads.xml
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/xdocs/downloads.xml?rev=1.19.2.4&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.19.2.4
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/xdocs/features.xml">
+     xdocs/features.xml
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/xdocs/features.xml?rev=1.10.2.2&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.10.2.2
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/xdocs/news.xml">
+     xdocs/news.xml
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/xdocs/news.xml?rev=1.20.2.5&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.20.2.5
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/xdocs/status.xml">
+     xdocs/status.xml
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/xdocs/status.xml?rev=1.20.2.4&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.20.2.4
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Documentation and version updates for release candidate 2.
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-10-11 19:46:51
+   
+    </td>
+   
+    <td>
+      
+     Oleg Kalnichevski
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClient.java">
+     src/java/org/apache/commons/httpclient/HttpClient.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClient.java?rev=1.86&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.86
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/URI.java">
+     src/java/org/apache/commons/httpclient/URI.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/URI.java?rev=1.42&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.42
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/cookie/CookiePolicy.java">
+     src/java/org/apache/commons/httpclient/cookie/CookiePolicy.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/cookie/CookiePolicy.java?rev=1.8&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.8
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/DefaultHttpParamsFactory.java">
+     src/java/org/apache/commons/httpclient/params/DefaultHttpParamsFactory.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/DefaultHttpParamsFactory.java?rev=1.3&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.3
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     PR#: 23708 (HttpClient violates applet sandbox) Changelog: - SecurityException thrown when accessing system properties are ignored Contributed by Oleg Kalnichevski Reviewed by Michael Becke
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-10-11 19:44:27
+   
+    </td>
+   
+    <td>
+      
+     Oleg Kalnichevski
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClient.java">
+     src/java/org/apache/commons/httpclient/HttpClient.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClient.java?rev=1.76.2.2&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.76.2.2
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodBase.java">
+     src/java/org/apache/commons/httpclient/HttpMethodBase.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodBase.java?rev=1.159.2.12&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.159.2.12
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpState.java">
+     src/java/org/apache/commons/httpclient/HttpState.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpState.java?rev=1.22.2.2&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.22.2.2
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/URI.java">
+     src/java/org/apache/commons/httpclient/URI.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/URI.java?rev=1.36.2.4&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.36.2.4
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/cookie/CookiePolicy.java">
+     src/java/org/apache/commons/httpclient/cookie/CookiePolicy.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/cookie/CookiePolicy.java?rev=1.7.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.7.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     PR#: 23708 (HttpClient violates applet sandbox) Changelog: - SecurityException thrown when accessing system properties are ignored Contributed by Oleg Kalnichevski Reviewed by Michael Becke
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-10-10 04:18:35
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/FilePart.java">
+     src/java/org/apache/commons/httpclient/methods/multipart/FilePart.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/FilePart.java?rev=1.15&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.15
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/Part.java">
+     src/java/org/apache/commons/httpclient/methods/multipart/Part.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/Part.java?rev=1.11&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.11
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/PartBase.java">
+     src/java/org/apache/commons/httpclient/methods/multipart/PartBase.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/PartBase.java?rev=1.2&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.2
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/StringPart.java">
+     src/java/org/apache/commons/httpclient/methods/multipart/StringPart.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/StringPart.java?rev=1.8&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.8
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Adds support for disabling transfer-encoding and content-type headers in multi-part posts. PR: 23431 Submitted by: Michael Becke Reviewed by: Oleg Kalnichevski
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-10-10 04:16:02
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/PartBase.java">
+     src/java/org/apache/commons/httpclient/methods/multipart/PartBase.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/PartBase.java?rev=1.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     branches: 1.1.2; file PartBase.java was initially added on branch HTTPCLIENT_2_0_BRANCH.
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-10-10 04:16:03
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/FilePart.java">
+     src/java/org/apache/commons/httpclient/methods/multipart/FilePart.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/FilePart.java?rev=1.14.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.14.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/Part.java">
+     src/java/org/apache/commons/httpclient/methods/multipart/Part.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/Part.java?rev=1.10.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.10.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/PartBase.java">
+     src/java/org/apache/commons/httpclient/methods/multipart/PartBase.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/PartBase.java?rev=1.1.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.1.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/StringPart.java">
+     src/java/org/apache/commons/httpclient/methods/multipart/StringPart.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/multipart/StringPart.java?rev=1.7.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.7.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Adds support for disabling transfer-encoding and content-type headers in multi-part posts. PR: 23431 Submitted by: Michael Becke Reviewed by: Oleg Kalnichevski
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-10-08 23:34:16
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodDirector.java">
+     src/java/org/apache/commons/httpclient/HttpMethodDirector.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodDirector.java?rev=1.5&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.5
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Connection is now released when a recoverable exception occurs. PR: 23663 Submitted by: Michael Becke Reviewed by: Oleg Kalnichevski
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-10-08 23:29:55
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodBase.java">
+     src/java/org/apache/commons/httpclient/HttpMethodBase.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodBase.java?rev=1.159.2.11&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.159.2.11
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Connection is now released when a recoverable eception occurs. PR: 23663 Submitted by: Michael Becke Reviewed by: Oleg Kalnichevski
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-10-07 20:46:03
+   
+    </td>
+   
+    <td>
+      
+     Oleg Kalnichevski
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/release_notes.txt">
+     release_notes.txt
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/release_notes.txt?rev=1.15&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.15
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Updated changelog
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-10-07 20:45:31
+   
+    </td>
+   
+    <td>
+      
+     Oleg Kalnichevski
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/release_notes.txt">
+     release_notes.txt
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/release_notes.txt?rev=1.9.2.4&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.9.2.4
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Updated changelog
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-10-04 02:31:26
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/ChunkedInputStream.java">
+     src/java/org/apache/commons/httpclient/ChunkedInputStream.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/ChunkedInputStream.java?rev=1.16.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.16.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/ConnectMethod.java">
+     src/java/org/apache/commons/httpclient/ConnectMethod.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/ConnectMethod.java?rev=1.18.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.18.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodBase.java">
+     src
+   
+     /java/org/apache/commons/httpclient/HttpMethodBase.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodBase.java?rev=1.159.2.10&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.159.2.10
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/auth/DigestScheme.java">
+     src/java/org/apache/commons/httpclient/auth/DigestScheme.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/auth/DigestScheme.java?rev=1.4.2.4&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.4.2.4
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/cookie/CookieSpec.java">
+     src/java/org/apache/commons/httpclient/cookie/CookieSpec.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/cookie/CookieSpec.java?rev=1.6.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.6.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/cookie/RFC2109Spec.java">
+     src/java/org/apache/commons/httpclient/cookie/RFC2109Spec.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/cookie/RFC2109Spec.java?rev=1.14.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.14.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/EntityEnclosingMethod.java">
+     src/java/org/apache/commons/httpclient/methods/EntityEnclosingMethod.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/EntityEnclosingMethod.java?rev=1.18.2.2&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.18.2.2
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/TraceMethod.java">
+     src/java/org/apache/commons/httpclient/methods/TraceMethod.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/TraceMethod.java?rev=1.12.2.2&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.12.2.2
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     A few style corrections.
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-10-03 20:57:35
+   
+    </td>
+   
+    <td>
+      
+     Oleg Kalnichevski
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/contrib/org/apache/commons/httpclient/contrib/utils/HttpMethodCloner.java">
+     src/contrib/org/apache/commons/httpclient/contrib/utils/HttpMethodCloner.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/contrib/org/apache/commons/httpclient/contrib/utils/HttpMethodCloner.java?rev=1.3&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.3
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/ClientApp.java">
+     src/examples/ClientApp.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/ClientApp.java?rev=1.12&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.12
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/CookieDemoApp.java">
+     src/examples/CookieDemoApp.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/CookieDemoApp.java?rev=1.11&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.11
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/MultipartFileUploadApp.java">
+     src/examples/MultipartFileUploadApp.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/MultipartFileUploadApp.java?rev=1.7&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.7
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/TrivialApp.java">
+     src/examples/TrivialApp.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/TrivialApp.java?rev=1.14&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.14
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClient.java">
+     src/java/org/apache/commons/httpclient/HttpClient.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClient.java?rev=1.85&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.85
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethod.java">
+     src/java/org/apache/commons/httpclient/HttpMethod.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethod.java?rev=1.30&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.30
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodBase.java">
+     src/java/org/apache/commons/httpclient/HttpMethodBase.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodBase.java?rev=1.181&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.181
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/auth/DigestScheme.java">
+     src/java/org/apache/commons/httpclient/auth/DigestScheme.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/auth/DigestScheme.java?rev=1.11&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.11
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/ExpectContinueMethod.java">
+     src/java/org/apache/commons/httpclient/methods/ExpectContinueMethod.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/ExpectContinueMethod.java?rev=1.10&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.10
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/HeadMethod.java">
+     src/java/org/apache/commons/httpclient/methods/HeadMethod.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/HeadMethod.java?rev=1.26&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.26
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/DefaultHttpParams.java">
+     src/java/org/apache/commons/httpclient/params/DefaultHttpParams.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/DefaultHttpParams.java?rev=1.4&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.4
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/HttpMethodParams.java">
+     src/java/org/apache/commons/httpclient/params/HttpMethodParams.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/HttpMethodParams.java?rev=1.3&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.3
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestAuthenticator.java">
+     src/test/org/apache/commons/httpclient/TestAuthenticator.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestAuthenticator.java?rev=1.32&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.32
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestGetMethodLocal.java">
+     src/test/org/apache/commons/httpclient/TestGetMethodLocal.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestGetMethodLocal.java?rev=1.13&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.13
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestHttpConnection.java">
+     src/test/org/apache/commons/httpclient/TestHttpConnection.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestHttpConnection.java?rev=1.11&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.11
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestHttpConnectionManager.java">
+     src/test/org/apache/commons/httpclient/TestHttpConnectionManager.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestHttpConnectionManager.java?rev=1.11&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.11
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestWebappCookie.java">
+     src/test/org/apache/commons/httpclient/TestWebappCookie.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestWebappCookie.java?rev=1.12&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.12
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestWebappNoncompliant.java">
+     src/test/org/apache/commons/httpclient/TestWebappNoncompliant.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestWebappNoncompliant.java?rev=1.6&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.6
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     PR #15435 (New Preferences Architecture) Changelog: - Massive cleanup of deprecated methods - HeadMethod class changed to take advantage of the new preference architecture - ExpectContinueMethod class changed to take advantage of the new preference architecture Contributed by Oleg Kalnichevski Reviewed by Michael Becke
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-10-03 19:36:44
+   
+    </td>
+   
+    <td>
+      
+     Ortwin Glueck
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/project.xml">
+     project.xml
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/project.xml?rev=1.41&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.41
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     fixed link to Bugzilla
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-10-03 19:26:40
+   
+    </td>
+   
+    <td>
+      
+     Ortwin Glueck
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/checkstyle.xml.properties">
+     checkstyle.xml.properties
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/checkstyle.xml.properties?rev=1.1.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.1.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/project.properties">
+     project.properties
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/project.properties?rev=1.3.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.3.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     New Checkstyle configuration in XML format. Use Maven 1.0-beta-10 now. PR: 22654 Reviewed by: Michael Becke
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-10-03 19:18:45
+   
+    </td>
+   
+    <td>
+      
+     Ortwin Glueck
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/MultipartPostMethod.java">
+     src/java/org/apache/commons/httpclient/methods/MultipartPostMethod.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/methods/MultipartPostMethod.java?rev=1.22&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.22
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     typo
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-10-03 18:44:32
+   
+    </td>
+   
+    <td>
+      
+     Ortwin Glueck
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/auth/DigestScheme.java">
+     src/java/org/apache/commons/httpclient/auth/DigestScheme.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/auth/DigestScheme.java?rev=1.10&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.10
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     typo
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-10-03 18:44:13
+   
+    </td>
+   
+    <td>
+      
+     Ortwin Glueck
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/checkstyle.xml.properties">
+     checkstyle.xml.properties
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/checkstyle.xml.properties?rev=1.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     branches: 1.1.2; Checkstyle configuration in XML format Fixes maven site:generate with Maven 1.0-beta PR: 22654 Reviewed by: Michael Becke
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-10-03 18:44:13
+   
+    </td>
+   
+    <td>
+      
+     Ortwin Glueck
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/project.properties">
+     project.properties
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/project.properties?rev=1.4&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.4
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Checkstyle configuration in XML format Fixes maven site:generate with Maven 1.0-beta PR: 22654 Reviewed by: Michael Becke
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-10-01 23:12:50
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/maven.xml">
+     maven.xml
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/maven.xml?rev=1.1.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.1.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Adds generated website to distribution. PR: 17569 Submitted by: Michael Becke Reviewed by: Oleg Kalnichevski
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-10-01 23:06:38
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/maven.xml">
+     maven.xml
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/maven.xml?rev=1.2&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.2
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Adds generated website to distribution. PR: 17569 Submitted by: Michael Becke Reviewed by: Oleg Kalnichevski
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-09-26 02:44:18
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/MultiThreadedHttpConnectionManager.java">
+     src/java/org/apache/commons/httpclient/MultiThreadedHttpConnectionManager.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/MultiThreadedHttpConnectionManager.java?rev=1.25&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.25
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Fixes connection release problem. PR: 22800 Submitted by: Michael Becke
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-09-23 19:51:48
+   
+    </td>
+   
+    <td>
+      
+     Oleg Kalnichevski
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClient.java">
+     src/java/org/apache/commons/httpclient/HttpClient.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClient.java?rev=1.84&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.84
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/DefaultHttpParams.java">
+     src/java/org/apache/commons/httpclient/params/DefaultHttpParams.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/DefaultHttpParams.java?rev=1.3&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.3
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/HttpClientParams.java">
+     src/java/org/apache/commons/httpclient/params/HttpClientParams.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/HttpClientParams.java?rev=1.2&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.2
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/HttpMethodParams.java">
+     src/java/org/apache/commons/httpclient/params/HttpMethodParams.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/HttpMethodParams.java?rev=1.2&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.2
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/HttpParams.java">
+     src/java/org/apache/commons/httpclient/params/HttpParams.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/HttpParams.java?rev=1.2&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.2
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     PR #15435 (New Preferences Architecture) - Ability to clone DefaultHttpParams and its sub-classes - HttpClient constructors that accept custom parameter set - Complete javadoc Contributed by Oleg Kalnichevski Reviewed by Michael Becke 
+   
+     &amp;
+   
+      Roland Weber
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-09-23 13:08:42
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/URI.java">
+     src/java/org/apache/commons/httpclient/URI.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/URI.java?rev=1.41&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.41
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestURI.java">
+     src/test/org/apache/commons/httpclient/TestURI.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestURI.java?rev=1.6&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.6
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Fixes bug with URI.isIPv4address(). PR: 23284 Submitted by: Michael Becke
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-09-23 13:04:14
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/URI.java">
+     src/java/org/apache/commons/httpclient/URI.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/URI.java?rev=1.36.2.3&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.36.2.3
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestURI.java">
+     src/test/org/apache/commons/httpclient/TestURI.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestURI.java?rev=1.4.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.4.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Fixes bug with URI.isIPv4address(). PR: 23284 Submitted by: Michael Becke
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-09-18 13:56:21
+   
+    </td>
+   
+    <td>
+      
+     Ortwin Glueck
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/API_CHANGES_2_1.txt">
+     API_CHANGES_2_1.txt
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/API_CHANGES_2_1.txt?rev=1.3&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.3
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+    
+   
+             
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/release_notes.txt">
+     release_notes.txt
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/release_notes.txt?rev=1.14&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.14
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClientError.java">
+     src/java/org/apache/commons/httpclient/HttpClientError.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClientError.java?rev=1.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/auth/DigestScheme.java">
+     src/java/org/apache/commons/httpclient/auth/DigestScheme.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/auth/DigestScheme.java?rev=1.9&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.9
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestAuthenticator.java">
+     src/test/org/apache/commons/httpclient/TestAuthenticator.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestAuthenticator.java?rev=1.31&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.31
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Reworked DigestScheme - The qop Parameter is parsed correctly and not just ignored - Missing qop is handled correctly - DigestScheme is now prepared to handle the auth-int qop option (even though an implementation is not possible with the current design) - The public interface of DigestScheme is narrowed (as it is not needed by the tests any more) - Th
+   
+     e test cases check the actual result rather than checking for equality after another run through the same logic. Note: This is not simple for requests that require the client to generate a cnonce. Thos cases are still TODO. - DigestScheme requires a nonce in every challange now (according to RFC 2617) test cases changed accordingly Introducing HttpClientError Reviewed by: Oleg Kalnichevski
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-09-17 23:29:05
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClient.java">
+     src/java/org/apache/commons/httpclient/HttpClient.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClient.java?rev=1.83&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.83
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/DefaultHttpParams.java">
+     src/java/org/apache/commons/httpclient/params/DefaultHttpParams.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/DefaultHttpParams.java?rev=1.2&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.2
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/DefaultHttpParamsFactory.java">
+     src/java/org/apache/commons/httpclient/params/DefaultHttpParamsFactory.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/DefaultHttpParamsFactory.java?rev=1.2&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.2
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/HttpParamsFactory.java">
+     src/java/org/apache/commons/httpclient/params/HttpParamsFactory.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/params/HttpParamsFactory.java?rev=1.2&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.2
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/util/DateParser.java">
+     src/java/org/apache/commons/httpclient/util/DateParser.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/util/DateParser.java?rev=1.7&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.7
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Adds Javadocs and moves DateParser formats to configuration system. PR: 15435 Submitted by: Michael Becke Reviewed by: Oleg Kalnichevski
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-09-17 03:53:25
+   
+    </td>
+   
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodDirector.java">
+     src/java/org/apache/commons/httpclient/HttpMethodDirector.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpMethodDirector.java?rev=1.4&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.4
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/NoHostHttpConnectionManager.java">
+     src/test/org/apache/commons/httpclient/NoHostHttpConnectionManager.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/NoHostHttpConnectionManager.java?rev=1.3&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.3
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestHttpConnection.java">
+     src/test/org/apache/commons/httpclient/TestHttpConnection.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test/org/apache/commons/httpclient/TestHttpConnection.java?rev=1.10&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.10
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     Fixes connection release when a timeout occurs in HttpConnection.open(). PR: 23137 Submitted by: Michael Becke Reviewed by: Oleg Kalnichevski
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-09-16 21:30:35
+   
+    </td>
+   
+    <td>
+      
+     Oleg Kalnichevski
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClient.java">
+     src/java/org/apache/commons/httpclient/HttpClient.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClient.java?rev=1.76.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.76.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpState.java">
+     src/java/org/apache/commons/httpclient/HttpState.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpState.java?rev=1.22.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.22.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     HttpState 
+   
+     &amp;
+   
+      HttpClient javadocs cleanup Contributed by Oleg Kalnichevski
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-09-16 21:29:45
+   
+    </td>
+   
+    <td>
+      
+     Oleg Kalnichevski
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClient.java">
+     src/java/org/apache/commons/httpclient/HttpClient.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpClient.java?rev=1.82&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.82
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpState.java">
+     src/java/org/apache/commons/httpclient/HttpState.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/java/org/apache/commons/httpclient/HttpState.java?rev=1.27&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.27
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     HttpState 
+   
+     &amp;
+   
+      HttpClient javadocs cleanup Contributed by Oleg Kalnichevski
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     2003-09-13 10:05:23
+   
+    </td>
+   
+    <td>
+      
+     Oleg Kalnichevski
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test-webapp/src/org/apache/commons/httpclient/ReadCookieServlet.java">
+     src/test-webapp/src/org/apache/commons/httpclient/ReadCookieServlet.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test-webapp/src/org/apache/commons/httpclient/ReadCookieServlet.java?rev=1.4.2.1&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.4.2.1
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+            
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     PR #22340 (In J2SDK 1.5.0 (Tiger) enum is a keyword) Contributed by Oleg Kalnichevski
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     2003-09-13 10:04:40
+   
+    </td>
+   
+    <td>
+      
+     Oleg Kalnichevski
+   
+    </td>
+   
+    <td>
+      
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test-webapp/src/org/apache/commons/httpclient/ReadCookieServlet.java">
+     src/test-webapp/src/org/apache/commons/httpclient/ReadCookieServlet.java
+   </a>
+  
+     
+            
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/test-webapp/src/org/apache/commons/httpclient/ReadCookieServlet.java?rev=1.5&amp;content-type=text/vnd.viewcvs-markup">
+     v 1.5
+   </a>
+  
+     
+            
+   
+    <br>
+      
+     
+   
+   
+              
+   
+    </br>
+   
+     
+            
+   
+    <p>
+      
+     
+            
+   
+    </p>
+   
+     PR #22340 (In J2SDK 1.5.0 (Tiger) enum is a keyword) Contributed by Oleg Kalnichevski
+   
+    </td>
+   </tr>
+  
+    </table>
+  
+    </div>
+  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="footer">
+          <table border="0" style="width:100%" cellpadding="4" cellspacing="0">
+            
+            <tr>
+              <td>
+                
+                  
+                    
+                    
+                      © 2001-2003, Apache Software Foundation
+                    
+                  
+                  
+                
+
+                
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>
+  

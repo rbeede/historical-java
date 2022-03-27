@@ -1,0 +1,131 @@
+<HTML>
+<HEAD>
+<TITLE>testcode.java</TITLE>
+</HEAD>
+<BODY>
+<PRE>
+<I>//</I>==============================================================================
+<I>//</I>JtoHTML.java --Rodney Beede --<U>9.0</U> /20/00 
+<I>//------------------------------------------------------------------------------</I>
+<I>//</I>
+<I>//</I>Course :CS1333-201 
+<I>//</I>Project :#<U>2.0</U> 
+<I>//</I>Instructor <B>'s Name:  Scott J. Swindell'</B> 
+<I>//</I>
+<I>//</I>Program Description :This program converts a java source file into html 
+<I>//</I>formatting keywords ,comments ,quoted strings ,and numbers 
+<I>//</I>
+<I>//</I>
+<I>//</I>
+<I>//</I>Inputs (Command line args ):args [<U>0.0</U> ]-filename of java file 
+<I>//</I>args [<U>1.0</U> ]-filename of keyword/color pair file 
+<I>//</I>
+<I>//</I>
+<I>//</I>
+<I>//</I>Input Requirements :args [<U>0.0</U> ]and args [<U>1.0</U> ]must contain a filename 
+<I>//</I>
+<I>//</I>
+<I>//</I>
+<I>//</I>Outputs :html file of the formatted code with the same filename as args [<U>0.0</U> ]
+<I>//</I>except with a <U>0.0</U> HTML extension 
+<I>//</I>
+<I>//</I>
+<I>//</I>==============================================================================
+
+
+<I>//Import</I>Parser <FONT COLOR=yellow>class</FONT> for use in parsing data 
+import Parser 
+<I>//Import</I>Java.IO package for storing data to a file 
+import java.io. *;
+
+
+<FONT COLOR=green>public</FONT> <FONT COLOR=yellow>class</FONT> JtoHTML {
+
+<I>//</I>**********************************************************************
+<I>//</I>Method :main 
+<I>//</I>
+<I>//</I>Preconditions :String args []-Array of command line args (see top 
+<I>//</I>header for info )
+<I>//</I>
+<I>//</I>Postconditions :Output is an HTML file of the formatted code 
+<I>//</I>
+<I>//</I>Description :This method uses Parser objects to break up keyword/ 
+<I>//</I>color pairs and format java code to html. 
+<I>//</I>
+<I>//</I>It then saves the formatted code to a html file. 
+<I>//</I>
+<I>//</I>**********************************************************************
+<FONT COLOR=green>public</FONT> static void main (String args []){
+<I>//Check</I>that we have the required params 
+if ((args ==null )||(args.length <<U>2.0</U> )){
+System.out.println (<B>"You failed to correctly pass "</B> +
+<B>"your paramaters.
+Correct usage is:
+	JtoHTML "</B> +
+<B>"javafile.java color.txt
+"</B> );
+return ;<I>//End</I>program 
+}
+
+
+<I>//Create</I>a parser object. It will automatically parse our 
+<I>//keyword/color</I>pairs 
+Parser objCodeParser =new Parser (args [<U>0.0</U> ],args [<U>1.0</U> ]);
+
+<I>//Ask</I>objCodeParser to parse the html. It returns true if 
+<I>//successful</I>or false if something failed 
+if (objCodeParser.parseCodeToHTML ()==false ){
+<I>//The</I>parsing failed ,tell user and quit 
+System.out.println (<B>"Parsing of "</B> +args [<U>0.0</U> ]+<B>" has "</B> +
+<B>"failed.
+"</B> );
+return ;<I>//End</I>program 
+}
+else {
+<I>//Tell</I>the user parsing was successful 
+System.out.println (<B>"Parsing of "</B> +args [<U>0.0</U> ]+<B>" was "</B> +
+<B>"successful.
+"</B> );
+}
+}<I>//End</I>of main method 
+
+
+
+/ *CUT THIS OUT AND MOVE IT 
+<I>//</I>**********************************************************************
+<I>//</I>Method :saveToFile 
+<I>//</I>
+<I>//</I>Preconditions :String objDataToSave -data to write to file 
+<I>//</I>String objFileToSave -filename to write to 
+<I>//</I>
+<I>//</I>Postconditions :No return values 
+<I>//</I>
+<I>//</I>Description :This method simply takes the passed data from 
+<I>//</I>objDataToSave and stores it in objFileToSave 
+<I>//</I>
+<I>//</I>**********************************************************************
+<FONT COLOR=green>public</FONT> type saveToFile (String objDataToSave ,objFileToSave ){
+<I>//Make</I>sure we got passed our params 
+if ((objDataToSave ==null )||(objFileToSave ==null )){
+System.out.println (<B>"You failed to correctly pass "</B> +
+<B>"your paramaters in saveToFile method. );"</B> 
+return ;<I>//Leave</I>method 
+}
+
+<I>//Create</I>our file I/O objects 
+FileWriter objOutFile =new FileWriter (objFileToSave );
+BufferedWriter objWriter =new BufferedWriter (objOutFile );
+
+<I>//Save</I>our passed data 
+objWriter.write (objDataToSave );
+
+<I>//Close</I>the file 
+objWriter.close ();
+}<I>//End</I>of saveToFile method 
+*/ 
+
+
+}<I>//End</I>of JtoHTML 
+</PRE>
+</BODY>
+</HTML>

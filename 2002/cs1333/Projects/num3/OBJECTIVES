@@ -1,0 +1,30 @@
+Objective #1:  Implement Insertion Sort Recursively on a Vector of Objects
+	I partially met this requirement.  I did succuessfully sort the Vector
+  	but was unable to do this recursively due to time running out
+
+Objective #2:  Implement a Recursive Binary Search
+	I partially met this requirement.  I partially returned searches
+	correctly, however only the 1st entry would return the defintion
+
+	I did not have time to make this recursive
+
+
+Objective #3:  Use Real-Time User I/O
+	I did manage to open up the dict file for reading, but had to
+	comment out the code to do so since I couldn't use that data
+	I also managed to get input from the user on the command line
+
+
+Objective #4:  (changed) Use an Environmental Variable to Read in a Filename
+               Get the username from the OS and use it to read in a filename
+
+		I successed in doing this.  I makeup the filename and all
+		in my code
+
+
+Objective #5:  Implement a Dynamic Data Structure to Store a Dictionary
+		I failed to achive this objective.  I could not get the
+	data to parse after I had read it in.  I was able to store
+	some static sample data into my data structure.  I could not
+	get Stream or String Tokenizer to parse the data as I read it in
+

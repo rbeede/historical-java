@@ -1,0 +1,9 @@
+Open the source e-mail in it's HTML format.
+Using IE save the page as .TXT (this removes all the HTML tags)
+Remove all lines above  "            X-Auth-OK: @myldsmail.net"
+Modify the "Content-Type: multipart/mixed;" line so the "boundary" line right below is on the same line
+Modify the "            Content-Type: application/x-zip-compressed;" line so that the next line "name=" is on the same line as it
+Modify the "Content-Disposition: attachment;" line so "filename=" is on the same part
+Run TrimSpace.java on the the file
+rename the .DMP file to .EML
+Double click on the file to open it with Outlook Express

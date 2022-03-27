@@ -1,0 +1,172 @@
+Welcome to TreeTest
+===================
+
+Program written by Rodney Beede for CS1333-201
+
+
+
+Beginning test #1
+==================
+
+Generating random data...
+Filling in random data to Binary Search Tree A...
+Filling in sorted data to Binary Search Tree B...
+Filling in random data to Splay Search Tree A...
+Filling in sorted data to Splay Search Tree B...
+Testing trees...DONE
+
+
+Beginning test #2
+==================
+
+Generating random data...
+Filling in random data to Binary Search Tree A...
+Filling in sorted data to Binary Search Tree B...
+Filling in random data to Splay Search Tree A...
+Filling in sorted data to Splay Search Tree B...
+Testing trees...DONE
+
+
+Beginning test #3
+==================
+
+Generating random data...
+Filling in random data to Binary Search Tree A...
+Filling in sorted data to Binary Search Tree B...
+Filling in random data to Splay Search Tree A...
+Filling in sorted data to Splay Search Tree B...
+Testing trees...DONE
+
+
+Beginning test #4
+==================
+
+Generating random data...
+Filling in random data to Binary Search Tree A...
+Filling in sorted data to Binary Search Tree B...
+Filling in random data to Splay Search Tree A...
+Filling in sorted data to Splay Search Tree B...
+Testing trees...DONE
+
+
+Beginning test #5
+==================
+
+Generating random data...
+Filling in random data to Binary Search Tree A...
+Filling in sorted data to Binary Search Tree B...
+Filling in random data to Splay Search Tree A...
+Filling in sorted data to Splay Search Tree B...
+Testing trees...DONE
+
+
+Beginning test #6
+==================
+
+Generating random data...
+Filling in random data to Binary Search Tree A...
+Filling in sorted data to Binary Search Tree B...
+Filling in random data to Splay Search Tree A...
+Filling in sorted data to Splay Search Tree B...
+Testing trees...DONE
+
+
+Beginning test #7
+==================
+
+Generating random data...
+Filling in random data to Binary Search Tree A...
+Filling in sorted data to Binary Search Tree B...
+Filling in random data to Splay Search Tree A...
+Filling in sorted data to Splay Search Tree B...
+Testing trees...DONE
+
+
+Beginning test #8
+==================
+
+Generating random data...
+Filling in random data to Binary Search Tree A...
+Filling in sorted data to Binary Search Tree B...
+Filling in random data to Splay Search Tree A...
+Filling in sorted data to Splay Search Tree B...
+Testing trees...DONE
+
+
+Beginning test #9
+==================
+
+Generating random data...
+Filling in random data to Binary Search Tree A...
+Filling in sorted data to Binary Search Tree B...
+Filling in random data to Splay Search Tree A...
+Filling in sorted data to Splay Search Tree B...
+Testing trees...DONE
+
+
+Beginning test #10
+==================
+
+Generating random data...
+Filling in random data to Binary Search Tree A...
+Filling in sorted data to Binary Search Tree B...
+Filling in random data to Splay Search Tree A...
+Filling in sorted data to Splay Search Tree B...
+Testing trees...DONE
+
+
+Results:
+==========
+
+Tree Type,Pass Number,Start Time,End Time,Total Time
+BST Random,0,975945163567,975945163567,0
+BST Random,1,975945307281,975945307281,0
+BST Random,2,975945429641,975945429641,0
+BST Random,3,975945562918,975945562918,0
+BST Random,4,975945693440,975945693440,0
+BST Random,5,975945831037,975945831037,0
+BST Random,6,975945962691,975945962692,1
+BST Random,7,975946097585,975946097585,0
+BST Random,8,975946227455,975946227455,0
+BST Random,9,975946353198,975946353199,1
+BST Sorted,0,975945163568,975945163593,25
+BST Sorted,1,975945307281,975945307304,23
+BST Sorted,2,975945429641,975945429673,32
+BST Sorted,3,975945562918,975945562932,14
+BST Sorted,4,975945693440,975945693457,17
+BST Sorted,5,975945831037,975945831038,1
+BST Sorted,6,975945962692,975945962714,22
+BST Sorted,7,975946097585,975946097588,3
+BST Sorted,8,975946227455,975946227457,2
+BST Sorted,9,975946353199,975946353203,4
+ST Random,0,975945163593,975945163593,0
+ST Random,1,975945307304,975945307304,0
+ST Random,2,975945429673,975945429673,0
+ST Random,3,975945562932,975945562932,0
+ST Random,4,975945693457,975945693458,1
+ST Random,5,975945831038,975945831038,0
+ST Random,6,975945962714,975945962715,1
+ST Random,7,975946097588,975946097588,0
+ST Random,8,975946227457,975946227457,0
+ST Random,9,975946353203,975946353203,0
+ST Sorted,0,975945163593,975945163619,26
+ST Sorted,1,975945307304,975945307328,24
+ST Sorted,2,975945429673,975945429674,1
+ST Sorted,3,975945562932,975945562973,41
+ST Sorted,4,975945693458,975945693489,31
+ST Sorted,5,975945831038,975945831116,78
+ST Sorted,6,975945962715,975945962734,19
+ST Sorted,7,975946097588,975946097662,74
+ST Sorted,8,975946227457,975946227532,75
+ST Sorted,9,975946353203,975946353273,70
+
+
+Tree Type,Average Search Time
+BST Random,0.2
+BST Sorted,14.3
+ST Random,0.2
+ST Sorted,43.9
+
+
+
+

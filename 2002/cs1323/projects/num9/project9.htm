@@ -1,0 +1,122 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+<title>Project#9</title>
+</head>
+
+<body link="#0000FF" vlink="#800080">
+<b><font size="+2">
+
+<p>CS 1323, PROJECT # 9</font></b> <br>
+&nbsp; </p>
+
+<table BORDER="0" WIDTH="623">
+  <tr>
+    <td WIDTH="617"><b>Project #9:&nbsp;</b> <br>
+    <strong>Turn in the following files: </strong>InsuranceApplet.html, InsuranceApplet.java,
+    Applicant.java, SmokerApplicant.java, and NonsmokerApplicant.java <p><b>Due Date:&nbsp;</b>
+    <br>
+    Midnight, Friday, April 28, 2000 </p>
+    <p><b>Assignment:&nbsp;</b> <br>
+    Following the format of the BMIApplet program (from Chapter 5), write an applet that
+    accepts the user's name, age, gender, and smoking preference and displays their insurance
+    premium based on their age and smoking preference.&nbsp; DO NOT USE ANY CLASSES FROM THE
+    JAVABOOK PACKAGE !!!</p>
+    <table border="1" width="418" height="204">
+      <tr>
+        <td width="187" height="22" bgcolor="#C0C0C0"></td>
+        <td width="103" height="22">Smoker </td>
+        <td width="110" height="22">Non-Smoker</td>
+      </tr>
+      <tr>
+        <td width="187" height="22">Female 30 and under&nbsp;&nbsp;&nbsp; </td>
+        <td width="103" height="22">165&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+        <td width="110" height="22">120</td>
+      </tr>
+      <tr>
+        <td width="187" height="22">Female over 30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+        <td width="103" height="22">190</td>
+        <td width="110" height="22">140</td>
+      </tr>
+      <tr>
+        <td width="187" height="22">Male 30 and under&nbsp;</td>
+        <td width="103" height="22">175</td>
+        <td width="110" height="22">130</td>
+      </tr>
+      <tr>
+        <td width="187" height="22">Male over 30&nbsp;&nbsp;</td>
+        <td width="103" height="22">200</td>
+        <td width="110" height="22">150</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <table border="1" width="613">
+      <tr>
+        <td width="235" valign="top"><strong>InsuranceApplet.html</strong></td>
+        <td width="366"><ul>
+          <li>See BMIApplet.html for an example html file (Chapter 5)</li>
+        </ul>
+        </td>
+      </tr>
+      <tr>
+        <td width="235" valign="top"><strong>InsuranceApplet.java</strong></td>
+        <td width="366"><ul>
+          <li>Inherits from Applet</li>
+          <li>Implements the ActionListener interface</li>
+          <li>See the BMIApplet program for an example applet (Chapter 5)</li>
+          <li>GUI componets to add to the applet:</li>
+          <blockquote>
+            <dl>
+              <dt>5 Labels</dt>
+              <dt>4 TextFields<br>
+                1 Button</dt>
+            </dl>
+          </blockquote>
+          <li>In the actionPerformed method, use the Integer wrapper to convert the age to an integer </li>
+          <li>declare only one Applicant object</li>
+          <li>depending on the smoking preference, instantiate the appropriate object
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (either SmokerApplicant or
+            NonsmokerApplicant)</li>
+          <li>call the calculatePremium method (the polymorphic method) </li>
+          <li>reset the text on the premium label like this (where Dave and 200 are dynamically
+            displayed at runtime):<br>
+            <small>&quot;Dave's estimated monthly premium is $200&quot;</small></li>
+        </ul>
+        </td>
+      </tr>
+      <tr>
+        <td width="235" valign="top"><strong>Applicant.java</strong></td>
+        <td width="366"><ul>
+          <li>Start with Person.java from Chapter 9 and rename to Applicant.java</li>
+          <li>make it an abstract class (see Student.java, Chapter 13) </li>
+          <li>declare one abstract method called calculatePremium</li>
+          <li>add a data member called premium </li>
+          <li>add only one public method called getPremium</li>
+          <li>decide whether data members should be public, private or protected</li>
+          <li>initialize the data member called premium in the constructor (see courseGrade in
+            Student.java) </li>
+        </ul>
+        </td>
+      </tr>
+      <tr>
+        <td width="235" valign="top"><strong>SmokerApplicant.java&nbsp; NonsmokerApplicant.java</strong></td>
+        <td width="366"><ul>
+          <li>Both are subclasses of Applicant </li>
+          <li>See GraduateStudent.java and UndergraduateStudent.java (Chapter 13)</li>
+          <li>In each, define two constructors to match the superclass constructors (using the
+            reserved word <em>this </em>in one constructor and <em>super</em> in the other
+            constructor)</li>
+          <li>In each of these subclasses, implement the abstract method from Applicant based on the
+            table shown above</li>
+        </ul>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

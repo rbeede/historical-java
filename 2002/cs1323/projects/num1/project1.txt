@@ -1,0 +1,86 @@
+Project #1 	
+Given:	January 21, 2000
+Due:  	January 28, 2000 (beginning of lab)
+
+1.0  Objectives:
+
+1. Learn to write code and correct errors in a Java template program.
+2. Learn to use the class OutputBox from the Javabook package.
+3. Edit, compile, debug, and run a Java program that uses JavaBook classes.
+
+2.0	Description
+
+Write a program that uses an OutputBox object to display the following phrase three times, 
+on three separate lines:  I Love Java
+
+2.1 Class TestOutputBox
+
+2.1.1	Edit, Compile, Debug, and Run TestOutputBox
+
+Use an editor to enter the Java code below into a file called TestOutputBox.java. 
+ 
+/***************************************************************
+
+	Programmer:  		<Place your name here>
+	ID:			<Place your ID here>
+	Course:      		CS1323
+	Lab Section:		<place your lab section here>
+	Lab TA:		  	<Place the name of your TA here>
+
+	Program:		<Place the name of your program here>
+	Project#:    		Project #<place the project # here>
+	Date:				Place the due date here>
+
+	Description: 		This Program uses an OutputBox object to
+               			display the following phrase three times, 
+				on three separate lines:  I Love Java
+
+***************************************************************/
+
+import <package>;
+
+class <ClassName>
+{
+    <modifier> <modifier> <return type> main (String args[])
+    {
+	//declare a MainWindow object
+	<ClassName> <objectName>;
+
+	//and an OutputBox object
+	<ClassName> <objectName>;
+
+	//create the MainWindow object and pass the title of 
+	//this class as an argument:  CS 1323
+	<objectName> = new <ClassName> (<arguments>);
+
+	//create the OutputBox object and pass a frame  
+	//owner as an argument
+	<objectName> = new <ClassName> (<arguments>);
+
+	//display the objects        	
+	<objectName>.<method>(<arguments>);      
+	<objectName>.<method>(<arguments>);
+
+	//Display the following phrase three times, 
+	//on three separate lines:  I Love Java
+	//(see Appendix A in your textbook 
+	//to find the method you need)
+	<objectName>.<method>(<arguments>);
+	<objectName>.<method>(<arguments>);
+	<objectName>.<method>(<arguments>);
+
+    }
+
+}
+
+
+Save your code in a file named TestOutputBox.java and compile it. Don't be surprised if your program doesn't compile the first time.  Compilers are very fussy about programs - the program must have all of the right characters in the right places to compile.  Look very carefully for typographical errors before you compile the program. Java is case sensitive, so you must pay attention to the use of capitalization.  The compiler will try to help you locate errors, but it isn't always right.  If you get a string of errors, correct the first error, then recompile.  The rest may just go away.  If they don't, of course, you have to fix them.
+
+Before letting the compiler catch the errors, review the code and correct them.
+
+Create a separate folder for all your projects files. Don't use Microsoft Word as your program editor. Use an editor such as Edit. 
+
+The TAs will provide you with instructions in the lab as to how you should submit this project assignment.
+CS1323 Fundamentals of Programming Spring 2000
+
+

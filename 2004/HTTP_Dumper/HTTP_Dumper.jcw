@@ -1,0 +1,16 @@
+<?xml?>
+<workspace>
+	<settings>
+		<label>HTTP_Dumper</label>
+	</settings>
+	<users>
+		<user>
+			<path>HTTP_Dumper.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>HTTP_Dumper.jcp</path>
+		</project>
+	</projects>
+</workspace>

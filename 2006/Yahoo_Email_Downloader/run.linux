@@ -1,0 +1,5 @@
+export CLASSPATH=.:./classes:./lib/commons-httpclient-2.0.1.jar:./lib/commons-logging.jar:./lib/commons-logging-api.jar:./lib/log4j-1.2.9.jar
+
+echo $CLASSPATH
+
+java Yahoo_Email_Downloader log4j.prop rodneybeede $1

@@ -1,0 +1,8 @@
+GET http://it.f252.mail.yahoo.comhttp//f252.mail.yahoo.com/ym/login?.rand=dfri4qrr8jmqv HTTP/1.0
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/x-gsarcade-launch, application/msword, application/x-shockwave-flash, */*
+Accept-Language: en-us
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90; .NET CLR 1.1.4322)
+Host: it.f252.mail.yahoo.comhttp
+Proxy-Connection: Keep-Alive
+
+

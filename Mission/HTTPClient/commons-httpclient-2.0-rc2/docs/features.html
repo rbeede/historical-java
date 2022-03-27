@@ -1,0 +1,1358 @@
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  
+      
+  
+
+      
+      
+      
+      
+      
+      
+        
+         
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      
+
+      
+
+  
+  
+
+  
+  
+
+   
+   
+
+   
+   
+
+
+    
+	
+	
+
+    
+    
+      
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <html>
+      <head>
+        
+        
+        
+          <title>HttpClient - 
+          HttpClient Features
+        </title>
+        
+        
+        <style type="text/css">
+          @import url("./style/tigris.css");
+          @import url("./style/maven.css");
+        </style>
+        
+        
+        
+        
+        
+        <link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+        
+          <meta name="author" content="Commons Documentation Team"></meta>
+          <meta name="email" content="commons-dev@jakarta.apache.org"></meta>
+        
+          <meta name="author" content="Rodney Waldhoff"></meta>
+          <meta name="email" content="rwaldhoff@apache.org"></meta>
+        
+          <meta name="author" content="Jeff Dever"></meta>
+          <meta name="email" content="jsdever@apache.org"></meta>
+        
+        
+        
+        
+      </head>
+
+      <body class="composite">
+
+        <div id="banner">
+          <table border="0" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+              
+              <td>
+                
+                
+                  
+                  
+                  
+                    
+                  
+                  
+                  
+                  
+                  
+                  <a href="http://jakarta.apache.org/">
+                    <img border="0" alt="Apache Software Foundation" src="http://jakarta.apache.org/commons/images/jakarta-logo-blue.gif" align="left"></img>
+                  </a>
+                
+              </td>
+
+              
+              <td>
+                <div id="login" align="right">
+                  
+                  
+                    
+                    
+                    
+                      
+                    
+
+                    <a href="http://jakarta.apache.org/commons/httpclient/">
+                      <img border="0" alt="HttpClient" src="./images/httpclient_logo.png" align="right"></img>
+                    </a>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="breadcrumbs">
+          <table border="0" width="100%" cellpadding="4" cellspacing="0">
+            <tr>
+              
+                
+                <td>Last published: 13 October 2003
+                  | Doc for 2.0-rc2
+                </td>
+              
+              <td>
+                <div align="right">
+                  
+                  
+                  
+                  
+                    
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <table border="0" width="100%" cellpadding="8" cellspacing="0"> 
+          <tr valign="top">
+            <td width="20%" id="leftcol">
+              <div id="navcolumn">
+                
+
+                
+                  
+    <div>
+      <strong>Overview</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      		<b><a href="features.html"><img class="handle" src="./images/none.png" alt=""></img>Features</a></b>
+      	
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="news.html"><img class="handle" src="./images/none.png" alt=""></img>News</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="status.html"><img class="handle" src="./images/none.png" alt=""></img>Status</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="downloads.html"><img class="handle" src="./images/none.png" alt=""></img>Download</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="applications.html"><img class="handle" src="./images/none.png" alt=""></img>Applications</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="userguide.html"><img class="handle" src="./images/expanded.png" alt=""></img>User Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="authentication.html"><img class="handle" src="./images/none.png" alt=""></img>Authentication Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="charencodings.html"><img class="handle" src="./images/none.png" alt=""></img>Character Encodings</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="cookies.html"><img class="handle" src="./images/none.png" alt=""></img>Cookies</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="redirects.html"><img class="handle" src="./images/none.png" alt=""></img>Cross Host Redirects</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="logging.html"><img class="handle" src="./images/none.png" alt=""></img>Logging Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="methods.html"><img class="handle" src="./images/none.png" alt=""></img>Methods</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/"><img class="handle" src="./images/none.png" alt=""></img>Sample Code</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="sslguide.html"><img class="handle" src="./images/none.png" alt=""></img>SSL Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="threading.html"><img class="handle" src="./images/none.png" alt=""></img>Threading</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="troubleshooting.html"><img class="handle" src="./images/none.png" alt=""></img>Trouble Shooting</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="tutorial.html"><img class="handle" src="./images/none.png" alt=""></img>Tutorial</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="developerguide.html"><img class="handle" src="./images/expanded.png" alt=""></img>Developer Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="releases.html"><img class="handle" src="./images/none.png" alt=""></img>Release Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="testwebapp.html"><img class="handle" src="./images/none.png" alt=""></img>Webapp Test Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    </div>
+  
+                
+
+				
+    <div>
+      <strong>Project Documentation</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="index.html"><img class="handle" src="./images/none.png" alt=""></img>About HttpClient</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="project-info.html"><img class="handle" src="./images/collapsed.png" alt=""></img>Project Info</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="maven-reports.html"><img class="handle" src="./images/collapsed.png" alt=""></img>Project Reports</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs/index.html"><img class="handle" src="./images/none.png" alt=""></img>JavaDocs</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref/index.html"><img class="handle" src="./images/none.png" alt=""></img>Source XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref-test/index.html"><img class="handle" src="./images/none.png" alt=""></img>Test XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://maven.apache.org/development-process.html"><img class="handle" src="./images/none.png" alt=""></img>Development Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+                
+                
+                
+
+                
+                
+                
+                
+                	<div style="margin-top: 20px; width: 100%; text-align: center;">
+                		<a href="http://maven.apache.org/" title="Powered by Maven"><img style="border: 1px solid black" alt="Powered by Maven" src="./images/logos/maven-propaganda.png"></img></a>
+                	</div>
+                
+              
+                
+              </div>
+            </td>
+            <td rowspan="2">
+              <div id="bodycol">
+                
+                <div class="app">
+                  
+                  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Features">Features</a>
+        </h3>
+      
+      
+    <p>
+      
+     
+        
+   
+    <ul>
+      
+     
+          
+   
+    <li>
+      
+     Standards based, pure Java, implementation of HTTP versions 1.0 and 1.1
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     Full implementation of all HTTP methods (GET, POST, PUT, DELETE, 
+   
+     
+              HEAD, OPTIONS, and TRACE) in an extensible OO framework.
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     Supports encryption with HTTPS (HTTP over SSL) protocol.
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     Transparent connections through HTTP proxies.
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     Tunneled HTTPS connections through HTTP proxies, via the CONNECT method.
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     Transparent connections through SOCKS proxies (version 4 
+   
+     &amp;
+   
+      5) using native Java 
+   
+     
+              socket support.
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     Authentication using Basic, Digest and the encrypting NTLM (NT Lan Manager) methods.
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     Multi-Part form POST for uploading large files.
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     Pluggable secure sockets implementations, making it easier to use third party solutions
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     Connection management support for use in multi-threaded applications.  Supports setting the
+   
+     
+              maximum total connections as well as the maximum connections per host.  Detects and closes 
+   
+     
+              stale connections.
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     Automatic Cookie handling for reading Set-Cookie: headers from the server and sending
+   
+     
+            them back out in a Cookie: header when appropriate.
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     Request output streams to avoid buffering any content body by streaming
+   
+     
+            directly to the socket to the server.
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     Resp
+   
+     onse input streams to efficiently read the response body by streaming
+   
+     
+            directly from the socket to the server.
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     Persistent connections using KeepAlive in HTTP/1.0 and persistance in HTTP/1.1
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     Direct access to the response code and headers sent by the server.
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     The ability to set connection timeouts.
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     HttpMethods implement the Command Pattern to allow for parallel requests
+   
+     
+            and efficient re-use of connections.
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+     Source code is freely available under the Apache Software License.
+   
+     
+          
+   
+    </li>
+   
+     
+        
+   
+    </ul>
+   
+     
+      
+   
+    </p>
+   
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Standards Compliance">Standards Compliance</a>
+        </h3>
+      
+      
+    <p>
+      
+     
+        
+   
+    <em>
+      
+     HttpClient
+   
+    </em>
+   
+      implements the following specifications
+   
+     
+        endorsed by the Internet Engineering Task Force (IETF) 
+   
+     
+        and the internet at large:
+   
+     
+        
+   
+    <ul>
+      
+     
+          
+   
+    <li>
+      
+    <a href="http://www.ietf.org/rfc/rfc1945.txt">
+     RFC1945
+   </a>
+  
+     
+            Hypertext Transfer Protocol -- HTTP/1.0
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+    <a href="http://www.ietf.org/rfc/rfc2616.txt">
+     RFC2616
+   </a>
+  
+     
+            Hypertext Transfer Protocol -- HTTP/1.1
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+    <a href="http://www.ietf.org/rfc/rfc2617.txt">
+     RFC2617
+   </a>
+  
+     
+            HTTP Authentication: Basic and Digest Access Authentication
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+    <a href="http://www.ietf.org/rfc/rfc2109.txt">
+     RFC2109
+   </a>
+  
+     
+            HTTP State Management Mechanism (Cookies)
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+    <a href="http://www.ietf.org/rfc/rfc2396.txt">
+     RFC2396
+   </a>
+  
+     
+            Uniform Resource Identifiers (URI): Generic Syntax
+   
+     
+          
+   
+    </li>
+   
+     
+          
+   
+    <li>
+      
+    <a href="http://www.ietf.org/rfc/rfc1867.txt">
+     RFC1867
+   </a>
+  
+     
+            Form-based File Upload in HTML
+   
+     
+          
+   
+    </li>
+   
+     
+        
+   
+    </ul>
+   
+     
+      
+   
+    </p>
+   
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Product Comparision">Product Comparision</a>
+        </h3>
+      
+      
+    <p>
+      
+     The HTTP protocol is so ubiquitous on the internet that you can find other
+   
+     
+        client side implementations written in Java.  The jdk has the HttpUrlConn
+   
+     ection
+   
+     
+        which is limited and in many ways flawed.  This is one reason why Jakarta, and
+   
+     
+        others free and commercial vendors, have implemented independant HTTP clients.
+   
+     
+        To help you choose the right solution, one of those commercial vendors, nogoop, has a fair 
+   
+     
+        
+   
+    <a href="http://www.nogoop.com/product_16.html#compare">
+     product comparison
+   </a>
+  
+     .
+   
+    </p>
+   
+    </div>
+  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="footer">
+          <table border="0" style="width:100%" cellpadding="4" cellspacing="0">
+            
+            <tr>
+              <td>
+                
+                  
+                    
+                    
+                      © 2001-2003, Apache Software Foundation
+                    
+                  
+                  
+                
+
+                
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>
+  

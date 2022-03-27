@@ -1,0 +1,1 @@
+wscript "W:\Shauna's Laptop Backup\Backup Program\HiddenBatchLauncher.vbs" "W:\Shauna's Laptop Backup\Backup Program\Shauna's Laptop.cmd" 

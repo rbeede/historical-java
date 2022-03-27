@@ -1,0 +1,21 @@
+log4j.rootCategory=DEBUG, dest1, R
+
+log4j.appender.dest1=org.apache.log4j.ConsoleAppender
+log4j.appender.dest1.layout=org.apache.log4j.PatternLayout
+log4j.appender.dest1.layout.ConversionPattern=%d [%t] %-5p %c - %m%n
+
+
+
+log4j.appender.R=org.apache.log4j.RollingFileAppender
+log4j.appender.R.File=run.log
+
+# Control the maximum log file size
+log4j.appender.R.MaxFileSize=100000KB
+# Archive log files (one backup file here)
+log4j.appender.R.MaxBackupIndex=2
+
+log4j.appender.R.layout=org.apache.log4j.PatternLayout
+log4j.appender.R.layout.ConversionPattern=%d [%t] %-5p %c - %m%n
+
+
+

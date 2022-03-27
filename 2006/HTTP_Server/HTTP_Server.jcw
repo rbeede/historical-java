@@ -1,0 +1,16 @@
+<?xml?>
+<workspace>
+	<settings>
+		<label>HTTP_Server</label>
+	</settings>
+	<users>
+		<user>
+			<path>HTTP_Server.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>HTTP_Server.jcp</path>
+		</project>
+	</projects>
+</workspace>

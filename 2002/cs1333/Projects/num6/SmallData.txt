@@ -1,0 +1,82 @@
+Welcome to TreeTest
+===================
+
+Program written by Rodney Beede for CS1333-201
+
+
+
+Beginning test #1
+==================
+
+Generating random data...
+Filling in random data to Binary Search Tree A...
+Filling in sorted data to Binary Search Tree B...
+Filling in random data to Splay Search Tree A...
+Filling in sorted data to Splay Search Tree B...
+Testing trees...DONE
+
+
+Beginning test #2
+==================
+
+Generating random data...
+Filling in random data to Binary Search Tree A...
+Filling in sorted data to Binary Search Tree B...
+Filling in random data to Splay Search Tree A...
+Filling in sorted data to Splay Search Tree B...
+Testing trees...DONE
+
+
+Beginning test #3
+==================
+
+Generating random data...
+Filling in random data to Binary Search Tree A...
+Filling in sorted data to Binary Search Tree B...
+Filling in random data to Splay Search Tree A...
+Filling in sorted data to Splay Search Tree B...
+Testing trees...DONE
+
+
+Beginning test #4
+==================
+
+Generating random data...
+Filling in random data to Binary Search Tree A...
+Filling in sorted data to Binary Search Tree B...
+Filling in random data to Splay Search Tree A...
+Filling in sorted data to Splay Search Tree B...
+Testing trees...DONE
+
+
+Results:
+==========
+
+Tree Type,Pass Number,Start Time,End Time,Total Time
+BST Random,0,975928000372,975928000373,1
+BST Random,1,975928000434,975928000435,1
+BST Random,2,975928000914,975928000914,0
+BST Random,3,975928000972,975928000972,0
+BST Sorted,0,975928000373,975928000374,1
+BST Sorted,1,975928000435,975928000435,0
+BST Sorted,2,975928000914,975928000915,1
+BST Sorted,3,975928000972,975928000973,1
+ST Random,0,975928000374,975928000374,0
+ST Random,1,975928000435,975928000435,0
+ST Random,2,975928000915,975928000915,0
+ST Random,3,975928000973,975928000973,0
+ST Sorted,0,975928000374,975928000375,1
+ST Sorted,1,975928000435,975928000436,1
+ST Sorted,2,975928000915,975928000916,1
+ST Sorted,3,975928000973,975928000973,0
+
+
+Tree Type,Average Search Time
+BST Random,0.5
+BST Sorted,0.75
+ST Random,0.0
+ST Sorted,0.75
+
+
+
+

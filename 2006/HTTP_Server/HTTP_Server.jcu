@@ -1,0 +1,34 @@
+<?xml?>
+<workspace_user>
+	<active_project>
+		<label>HTTP_Server</label>
+	</active_project>
+	<projects>
+		<project>
+			<label>HTTP_Server</label>
+			<showfiles>false</showfiles>
+			<folderitem>
+				<path>classes</path>
+				<ext/>
+			</folderitem>
+			<folderitem>
+				<path>src</path>
+				<ext/>
+			</folderitem>
+		</project>
+	</projects>
+	<open_files>
+		<docitem>
+			<path>src\HTTP_Server.java</path>
+			<source>true</source>
+			<index>0</index>
+			<active>false</active>
+		</docitem>
+		<docitem>
+			<path>src\SocketServerWorker.java</path>
+			<source>true</source>
+			<index>1</index>
+			<active>true</active>
+		</docitem>
+	</open_files>
+</workspace_user>

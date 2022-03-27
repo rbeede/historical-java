@@ -1,0 +1,12 @@
+Objective #1:  Use a binary tree to create, store, and manipulate a decision
+	       tree.
+	I have fully met this objective.  My code for this is in the GameEngine
+	class
+
+
+Objective #2:  Create a game which questions the user to guess an animal.
+	I have fully met this objective.  Run the Guesser class
+
+
+Objective #3:  Use real-time user I/O.
+	I have fully met this objective.  My program prompts the user for input

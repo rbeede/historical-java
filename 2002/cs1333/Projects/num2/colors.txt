@@ -1,0 +1,4 @@
+class yellow
+public green
+int blue
+

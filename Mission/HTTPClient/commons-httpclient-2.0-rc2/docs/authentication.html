@@ -1,0 +1,1536 @@
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  
+      
+  
+
+      
+      
+      
+      
+      
+      
+        
+         
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      
+
+      
+
+  
+  
+
+  
+  
+
+   
+   
+
+   
+   
+
+
+    
+	
+	
+
+    
+    
+      
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <html>
+      <head>
+        
+        
+        
+          <title>HttpClient - 
+          HttpClient Authentication Guide
+        </title>
+        
+        
+        <style type="text/css">
+          @import url("./style/tigris.css");
+          @import url("./style/maven.css");
+        </style>
+        
+        
+        
+        
+        
+        <link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+        
+          <meta name="author" content="Jeff Dever"></meta>
+          <meta name="email" content="jsdever@apache.org"></meta>
+        
+          <meta name="author" content="Adrian Sutton"></meta>
+          <meta name="email" content="adrian.sutton@ephox.com"></meta>
+        
+        
+        
+        
+      </head>
+
+      <body class="composite">
+
+        <div id="banner">
+          <table border="0" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+              
+              <td>
+                
+                
+                  
+                  
+                  
+                    
+                  
+                  
+                  
+                  
+                  
+                  <a href="http://jakarta.apache.org/">
+                    <img border="0" alt="Apache Software Foundation" src="http://jakarta.apache.org/commons/images/jakarta-logo-blue.gif" align="left"></img>
+                  </a>
+                
+              </td>
+
+              
+              <td>
+                <div id="login" align="right">
+                  
+                  
+                    
+                    
+                    
+                      
+                    
+
+                    <a href="http://jakarta.apache.org/commons/httpclient/">
+                      <img border="0" alt="HttpClient" src="./images/httpclient_logo.png" align="right"></img>
+                    </a>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="breadcrumbs">
+          <table border="0" width="100%" cellpadding="4" cellspacing="0">
+            <tr>
+              
+                
+                <td>Last published: 13 October 2003
+                  | Doc for 2.0-rc2
+                </td>
+              
+              <td>
+                <div align="right">
+                  
+                  
+                  
+                  
+                    
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <table border="0" width="100%" cellpadding="8" cellspacing="0"> 
+          <tr valign="top">
+            <td width="20%" id="leftcol">
+              <div id="navcolumn">
+                
+
+                
+                  
+    <div>
+      <strong>Overview</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="features.html"><img class="handle" src="./images/none.png" alt=""></img>Features</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="news.html"><img class="handle" src="./images/none.png" alt=""></img>News</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="status.html"><img class="handle" src="./images/none.png" alt=""></img>Status</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="downloads.html"><img class="handle" src="./images/none.png" alt=""></img>Download</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="applications.html"><img class="handle" src="./images/none.png" alt=""></img>Applications</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="userguide.html"><img class="handle" src="./images/expanded.png" alt=""></img>User Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      		<b><a href="authentication.html"><img class="handle" src="./images/none.png" alt=""></img>Authentication Guide</a></b>
+      	
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="charencodings.html"><img class="handle" src="./images/none.png" alt=""></img>Character Encodings</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="cookies.html"><img class="handle" src="./images/none.png" alt=""></img>Cookies</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="redirects.html"><img class="handle" src="./images/none.png" alt=""></img>Cross Host Redirects</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="logging.html"><img class="handle" src="./images/none.png" alt=""></img>Logging Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="methods.html"><img class="handle" src="./images/none.png" alt=""></img>Methods</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/"><img class="handle" src="./images/none.png" alt=""></img>Sample Code</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="sslguide.html"><img class="handle" src="./images/none.png" alt=""></img>SSL Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="threading.html"><img class="handle" src="./images/none.png" alt=""></img>Threading</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="troubleshooting.html"><img class="handle" src="./images/none.png" alt=""></img>Trouble Shooting</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="tutorial.html"><img class="handle" src="./images/none.png" alt=""></img>Tutorial</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="developerguide.html"><img class="handle" src="./images/expanded.png" alt=""></img>Developer Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="releases.html"><img class="handle" src="./images/none.png" alt=""></img>Release Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="testwebapp.html"><img class="handle" src="./images/none.png" alt=""></img>Webapp Test Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    </div>
+  
+                
+
+				
+    <div>
+      <strong>Project Documentation</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="index.html"><img class="handle" src="./images/none.png" alt=""></img>About HttpClient</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="project-info.html"><img class="handle" src="./images/collapsed.png" alt=""></img>Project Info</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="maven-reports.html"><img class="handle" src="./images/collapsed.png" alt=""></img>Project Reports</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs/index.html"><img class="handle" src="./images/none.png" alt=""></img>JavaDocs</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref/index.html"><img class="handle" src="./images/none.png" alt=""></img>Source XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref-test/index.html"><img class="handle" src="./images/none.png" alt=""></img>Test XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://maven.apache.org/development-process.html"><img class="handle" src="./images/none.png" alt=""></img>Development Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+                
+                
+                
+
+                
+                
+                
+                
+                	<div style="margin-top: 20px; width: 100%; text-align: center;">
+                		<a href="http://maven.apache.org/" title="Powered by Maven"><img style="border: 1px solid black" alt="Powered by Maven" src="./images/logos/maven-propaganda.png"></img></a>
+                	</div>
+                
+              
+                
+              </div>
+            </td>
+            <td rowspan="2">
+              <div id="bodycol">
+                
+                <div class="app">
+                  
+                  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Introduction">Introduction</a>
+        </h3>
+      
+      
+    <p>
+      
+     HttpClient supports three different types of http authentication schemes:
+   
+     
+      Basic, Digest and NTLM.  These can be used to authenticate with http servers
+   
+     
+      or proxies.
+   
+    </p>
+   
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Server Authentication">Server Authentication</a>
+        </h3>
+      
+      
+    <p>
+      
+     HttpClient handles authenticating with servers almost transparently,
+   
+     
+		the only thing a developer must do is actually provide the login
+   
+     
+		credentials.  These credentials are stored in the HttpState instance
+   
+     
+		and can be set or retrieved using the 
+   
+    <code>
+      
+     setCredentials(String realm,
+   
+     
+		Credentials cred)
+   
+    </code>
+   
+      and 
+   
+    <code>
+      
+     getCredentials(String realm)
+   
+    </code>
+   
+     
+		methods.
+   
+    </p>
+   
+    <p>
+      
+    <i>
+      
+     Note:
+   
+    </i>
+   
+      To set default Credentials for any realm that has not been
+   
+     
+		explicitly specified, pass in 
+   
+    <code>
+      
+     null
+   
+    </code>
+   
+      as the value of
+   
+     
+		
+   
+    <code>
+      
+     realm
+   
+    </code>
+   
+     .
+   
+    </p>
+   
+    <p>
+      
+     The automatic authorization built in to HttpClient can be disabled
+   
+     
+		with the method 
+   
+    <code>
+      
+     setDoAuthentication(boolean doAuthentication)
+   
+    </code>
+   
+     
+		in the HttpMethod class.  The change only affects that method instance.
+   
+    </p>
+   
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Preemptive Authentication">Preemptive Authentication</a>
+        </h4>
+      
+      
+    <p>
+      
+     Preemptive authentication can be enabled within HttpClient.  In this
+   
+     
+		mode HttpClient will send the basic authentication response even before
+   
+     
+		the server gives an unauthorized response in certain situations, thus reducing the overhead
+   
+     
+		of making the connection.  To enable this use the following:
+   
+    </p>
+   
+    <div id="source">
+      <pre>client.getState().setAuthenticationPreemptive(true);</pre>
+    </div>
+  
+    <p>
+      
+     To enable preemptive authentication by default for all newly created
+   
+     
+    
+   
+    <tt>
+      
+     HttpState
+   
+    </tt>
+   
+     's, a system property can be set, as shown below.
+   
+    </p>
+   
+    <div id="source">
+      <pre>setSystemProperty(Authenticator.PREEMPTIVE_PROPERTY, "true");</pre>
+    </div>
+  
+    <p>
+      
+     The preemptive authentication in HttpClient conforms to rfc2617:
+   
+    </p>
+   
+    <blockquote>
+      
+     A client SHOULD assume that all paths at or deeper than the depth
+   
+     
+		of the last symbolic element in the path field of the Request-URI also
+   
+     
+		are within the protection space specified by the Basic realm value
+   
+     
+		of the current challenge.  A client MAY preemptively send the 
+   
+     
+		corresponding Authorization header with requests for resources in
+   
+     
+		that space without receipt of another challenge from the server.
+   
+     
+		Similarly, when a client sends a request to a proxy, it may reuse
+   
+     
+		a userid and password in the Proxy-Authorization header field without
+   
+     
+		receiving another challenge from the proxy server.
+   
+    </blockquote>
+   
+    </div>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Proxy Authentication">Proxy Authentication</a>
+        </h3>
+      
+      
+    <p>
+      
+     Proxy authentication in HttpClient is almost identical to server
+   
+     
+		authentication with the exception that the credentials for each are
+   
+     
+		stored independantly.  So for proxy authentication you must use
+   
+     
+		
+   
+    <code>
+      
+     setProxyCredentials(String realm, Credentials cred)
+   
+    </code>
+   
+      and
+   
+     
+		
+   
+    <code>
+      
+     getProxyCredentials(String realm)
+   
+    </code>
+   
+     .  As with server
+   
+     
+		authentication, passing 
+   
+    <code>
+      
+     null
+   
+    </code>
+   
+      as the realm sets or returns
+   
+     
+		the default credentials.
+   
+    </p>
+   
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Authentication Schemes">Authentication Schemes</a>
+        </h3>
+      
+      
+    <p>
+      
+     The following authentication schemes are supported by HttpClient.
+   
+    </p>
+   
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Basic">Basic</a>
+        </h4>
+      
+      
+    <p>
+      
+     Basic authentication is the original and most compatible authentication
+   
+     
+	scheme for HTTP.  Unfortunately, it is also the least secure as it sends
+   
+     
+	the username and password unencrypted to the server.  Basic authentication
+   
+     
+	requires an instance of UsernamePasswordCredentials (which NTCredentials
+   
+     
+	extends) to be available, either for the specific realm specified by the
+   
+     
+	server or as the default credentials.
+   
+    </p>
+   
+    </div>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Digest">Digest</a>
+        </h4>
+      
+      
+    <p>
+      
+     Digest authentication was added in the HTTP 1.1 protocol and while
+   
+     
+		not being as widely supported as Basic authentication there is a great
+   
+     
+		deal of support for it.  Digest authentication is significan
+   
+     tly more
+   
+     
+		secure than basic authentication as it never transfers the actual
+   
+     
+		password across the network, but instead uses it to encrypt a "nonce"
+   
+     
+		value sent from the server.
+   
+    </p>
+   
+    <p>
+      
+     Digest authentication requires an instance of
+   
+     
+		UsernamePasswordCredentials (which NTCredentials extends) to be
+   
+     
+		available either for the specific realm specified by the server or as
+   
+     
+		the default credentials.
+   
+    </p>
+   
+    </div>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="NTLM">NTLM</a>
+        </h4>
+      
+      
+    <p>
+      
+     NTLM is the most complex of the authentication protocols supported
+   
+     
+		by HttpClient.  It is a proprietary protocol designed by Microsoft
+   
+     
+		with no publicly available specification.  Early version of NTLM were
+   
+     
+		less secure than Digest authentication due to faults in the design,
+   
+     
+		however these were fixed in a service pack for Windows NT 4 and the
+   
+     
+		protocol is now considered more secure than Digest authentication.
+   
+    </p>
+   
+    <p>
+      
+     NTLM authentication requires an instance of NTCredentials be
+   
+     
+		available for the 
+   
+    <i>
+      
+     domain name
+   
+    </i>
+   
+      of the server or the default
+   
+     
+		credentials.  Note that since NTLM does not use the notion of realms
+   
+     
+		HttpClient uses the domain name of the server as the name of the realm.
+   
+     
+		Also note that the username provided to the NTCredentials should not
+   
+     
+		be prefixed with the domain - ie: "adrian" is correct whereas
+   
+     
+		"DOMAIN\adrian" is not correct.
+   
+    </p>
+   
+    <p>
+      
+     There are some significant differences in the way that NTLM works
+   
+     
+		compared with basic and digest authentication.  These differences
+   
+     
+		are generally handled by HttpClient, however having an
+   
+     
+		understanding of these differences can help avoid problems when using
+   
+     
+		NTLM authentication.
+   
+    </p>
+   
+    <p>
+      
+     
+        
+   
+    <ol>
+      
+     
+          
+   
+    <li>
+      
+     NTLM authentication works almost exactly the same as any other form of
+   
+     
+            authentication in terms of the HttpClient API.  The only difference is that
+   
+     
+            you need to supply 'NTCredentials' instead of 'UsernamePasswordCredentials'
+   
+     
+            (NTCredentials actually extends UsernamePasswordCredentials so you can use
+   
+     
+            NTCredentials right throughout your a
+   
+     pplication if need be).
+   
+    </li>
+   
+     
+
+          
+   
+    <li>
+      
+     The realm for NTLM authentication is the domain name of the computer
+   
+     
+            being connected to, this can be troublesome as servers often have
+   
+     
+			multiple domain names that refer to them.  Only the domain name
+   
+     
+			that HttpClient connects to (as specified by the HostConfiguration)
+   
+     
+			is used to look up the credentials.
+   
+     
+            It is generally advised that while initially testing NTLM
+   
+     
+			authentication, you pass the realm in as null which is used as
+   
+     
+			the default.
+   
+    </li>
+   
+     
+
+          
+   
+    <li>
+      
+     NTLM authenticates a connection and not a request, so you need to
+   
+     
+            authenticate every time a new connection is made and keeping the connection
+   
+     
+            open during authentication is vital.  Due to this, NTLM cannot
+   
+     
+			be used to authenticate with both a proxy and the server, nor can
+   
+     
+			NTLM be used with HTTP 1.0 connections or servers that do not
+   
+     
+			support HTTP keep-alives.
+   
+    </li>
+   
+     
+        
+   
+    </ol>
+   
+     
+      
+   
+    </p>
+   
+    <p>
+      
+     For a detailed explanation of how NTLM authentication works, please see
+   
+     
+      
+   
+    <a href="http://davenport.sourceforge.net/ntlm.html">
+     
+      http://davenport.sourceforge.net/ntlm.html
+   </a>
+  
+     .
+   
+    </p>
+   
+    </div>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Examples">Examples</a>
+        </h3>
+      
+      
+    <p>
+      
+     There is an 
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/*checkout*/jakarta-commons/httpclient/src/examples/BasicAuthenticatonExample.java?rev=HEAD&amp;content-type=text/plain">
+     example
+   </a>
+  
+      
+   
+     
+      of basic authentication available in the       
+   
+     
+      
+   
+    <a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/">
+     example directory
+   </a>
+  
+      in CVS.
+   
+     
+      
+   
+    </p>
+   
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Troubleshooting">Troubleshooting</a>
+        </h3>
+      
+      
+    <p>
+      
+     Some authentication schemes may use cryptographic algorithms. It is recommended to include the
+   
+     
+         
+   
+    <a href="http://java.sun.com/products/jce/" target="_blank">
+     Java Cryptography Extension
+   </a>
+  
+      in
+   
+     
+         your runtime environment prior to JDK 1.4.  Also note that you must register the JCE
+   
+     
+         implementation manually as HttpClient will not do so automatically.  For instan
+   
+     ce to
+   
+     
+         register the Sun JCE implementation, you should execute the following code before attempting
+   
+     
+         to use HttpClient.
+   
+     
+      
+   
+    </p>
+   
+    <div id="source">
+      <pre>
+String secProviderName = "com.sun.crypto.provider.SunJCE");
+java.security.Provider secProvider = 
+    (java.security.Provider)Class.forName(secProviderName).newInstance();
+Security.addProvider(secProvider);
+	  </pre>
+    </div>
+  
+    </div>
+  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="footer">
+          <table border="0" style="width:100%" cellpadding="4" cellspacing="0">
+            
+            <tr>
+              <td>
+                
+                  
+                    
+                    
+                      © 2001-2003, Apache Software Foundation
+                    
+                  
+                  
+                
+
+                
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>
+  

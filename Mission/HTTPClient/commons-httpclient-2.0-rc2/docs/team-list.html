@@ -1,0 +1,2179 @@
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  
+      
+  
+
+      
+      
+      
+      
+      
+      
+        
+         
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      
+
+      
+
+  
+  
+
+  
+  
+
+   
+   
+
+   
+   
+
+
+    
+	
+	
+
+    
+    
+      
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <html>
+      <head>
+        
+        
+        
+          <title>HttpClient - 
+          Project Team
+        </title>
+        
+        
+        <style type="text/css">
+          @import url("./style/tigris.css");
+          @import url("./style/maven.css");
+        </style>
+        
+        
+        
+        
+        
+        <link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+        
+        
+        
+    <script language="javascript">
+      
+     
+  	  function offsetDate(id, offset) {
+   
+     
+	    var date = new Date();
+   
+     
+	    var dateOffset = new Date(
+   
+     
+		  Date.UTC(
+   
+     
+		  	date.getFullYear(),
+   
+     
+		    date.getMonth(),
+   
+     
+			date.getDate(),
+   
+     
+			date.getHours(),
+   
+     
+			date.getMinutes(),
+   
+     
+			date.getSeconds()
+   
+     
+		  ) + (offset - 20) *60*60*1000);
+   
+     
+
+	    document.getElementById(id).innerHTML = dateOffset;
+   
+     
+      }
+   
+     
+  	
+   
+     
+  	  function init() {
+   
+     
+	    	       	         	               	       	         	               	       	         	               	       	         	               	       	         	               	       	         	               	       	         	               	       	         	               	       	         	                     }
+   
+     
+    
+   
+    </script>
+   
+        
+      </head>
+
+      <body class="composite" OnLoad="init();">
+
+        <div id="banner">
+          <table border="0" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+              
+              <td>
+                
+                
+                  
+                  
+                  
+                    
+                  
+                  
+                  
+                  
+                  
+                  <a href="http://jakarta.apache.org/">
+                    <img border="0" alt="Apache Software Foundation" src="http://jakarta.apache.org/commons/images/jakarta-logo-blue.gif" align="left"></img>
+                  </a>
+                
+              </td>
+
+              
+              <td>
+                <div id="login" align="right">
+                  
+                  
+                    
+                    
+                    
+                      
+                    
+
+                    <a href="http://jakarta.apache.org/commons/httpclient/">
+                      <img border="0" alt="HttpClient" src="./images/httpclient_logo.png" align="right"></img>
+                    </a>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="breadcrumbs">
+          <table border="0" width="100%" cellpadding="4" cellspacing="0">
+            <tr>
+              
+                
+                <td>Last published: 13 October 2003
+                  | Doc for 2.0-rc2
+                </td>
+              
+              <td>
+                <div align="right">
+                  
+                  
+                  
+                  
+                    
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <table border="0" width="100%" cellpadding="8" cellspacing="0"> 
+          <tr valign="top">
+            <td width="20%" id="leftcol">
+              <div id="navcolumn">
+                
+
+                
+                  
+    <div>
+      <strong>Overview</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="features.html"><img class="handle" src="./images/none.png" alt=""></img>Features</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="news.html"><img class="handle" src="./images/none.png" alt=""></img>News</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="status.html"><img class="handle" src="./images/none.png" alt=""></img>Status</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="downloads.html"><img class="handle" src="./images/none.png" alt=""></img>Download</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="applications.html"><img class="handle" src="./images/none.png" alt=""></img>Applications</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="userguide.html"><img class="handle" src="./images/expanded.png" alt=""></img>User Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="authentication.html"><img class="handle" src="./images/none.png" alt=""></img>Authentication Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="charencodings.html"><img class="handle" src="./images/none.png" alt=""></img>Character Encodings</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="cookies.html"><img class="handle" src="./images/none.png" alt=""></img>Cookies</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="redirects.html"><img class="handle" src="./images/none.png" alt=""></img>Cross Host Redirects</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="logging.html"><img class="handle" src="./images/none.png" alt=""></img>Logging Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="methods.html"><img class="handle" src="./images/none.png" alt=""></img>Methods</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://cvs.apache.org/viewcvs.cgi/jakarta-commons/httpclient/src/examples/"><img class="handle" src="./images/none.png" alt=""></img>Sample Code</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="sslguide.html"><img class="handle" src="./images/none.png" alt=""></img>SSL Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="threading.html"><img class="handle" src="./images/none.png" alt=""></img>Threading</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="troubleshooting.html"><img class="handle" src="./images/none.png" alt=""></img>Trouble Shooting</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="tutorial.html"><img class="handle" src="./images/none.png" alt=""></img>Tutorial</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="developerguide.html"><img class="handle" src="./images/expanded.png" alt=""></img>Developer Guide</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="releases.html"><img class="handle" src="./images/none.png" alt=""></img>Release Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="testwebapp.html"><img class="handle" src="./images/none.png" alt=""></img>Webapp Test Guide</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    </div>
+  
+                
+
+				
+    <div>
+      <strong>Project Documentation</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="index.html"><img class="handle" src="./images/none.png" alt=""></img>About HttpClient</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="project-info.html"><img class="handle" src="./images/expanded.png" alt=""></img>Project Info</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="mail-lists.html"><img class="handle" src="./images/none.png" alt=""></img>Mailing Lists</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      		<b><a href="team-list.html"><img class="handle" src="./images/none.png" alt=""></img>Project Team</a></b>
+      	
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="dependencies.html"><img class="handle" src="./images/none.png" alt=""></img>Dependencies</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="cvs-usage.html"><img class="handle" src="./images/none.png" alt=""></img>Source Repository</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="issue-tracking.html"><img class="handle" src="./images/none.png" alt=""></img>Issue Tracking</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="maven-reports.html"><img class="handle" src="./images/collapsed.png" alt=""></img>Project Reports</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs/index.html"><img class="handle" src="./images/none.png" alt=""></img>JavaDocs</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref/index.html"><img class="handle" src="./images/none.png" alt=""></img>Source XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref-test/index.html"><img class="handle" src="./images/none.png" alt=""></img>Test XReference</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://maven.apache.org/development-process.html"><img class="handle" src="./images/none.png" alt=""></img>Development Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+                
+                
+                
+
+                
+                
+                
+                
+                	<div style="margin-top: 20px; width: 100%; text-align: center;">
+                		<a href="http://maven.apache.org/" title="Powered by Maven"><img style="border: 1px solid black" alt="Powered by Maven" src="./images/logos/maven-propaganda.png"></img></a>
+                	</div>
+                
+              
+                
+              </div>
+            </td>
+            <td rowspan="2">
+              <div id="bodycol">
+                
+                <div class="app">
+                  
+                  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="The Team">The Team</a>
+        </h3>
+      
+      
+    <p>
+      
+     
+        A successful project requires many people to play many roles.
+   
+     
+        Some members write code or documentation, while others are
+   
+     
+        valuable as testers, submitting patches and suggestions.
+   
+     
+      
+   
+    </p>
+   
+    <p>
+      
+     
+        The team is comprised of 
+   
+    <a href="#Members">
+     Members
+   </a>
+  
+     
+        and 
+   
+    <a href="#Contributors">
+     Contributors
+   </a>
+  
+     .  Members 
+   
+     
+        have direct access to the source of a project and actively
+   
+     
+        evolve the code-base.  Contributors improve the project
+   
+     
+        through submission of patches and suggestions to the Members.
+   
+     
+        The number of Contributors to the project is unbounded.
+   
+     
+        Get involved today.  All contributions to the project are
+   
+     
+        greatly appreciated.
+   
+     
+      
+   
+    </p>
+   
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Members">Members</a>
+        </h3>
+      
+      
+    <p>
+      
+     
+        The following is a list of developers with commit privileges that have 
+   
+     
+        directly contributed to the project in one way or another.  
+   
+     
+      
+   
+    </p>
+   
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <th>
+      
+     Name
+   
+    </th>
+   
+    <th>
+      
+     Id
+   
+    </th>
+   
+    <th>
+      
+     Email
+   
+    </th>
+   
+    <th>
+      
+     Organization
+   
+    </th>
+   
+    <th>
+      
+     Roles
+   
+    </th>
+   
+    <th>
+      
+     TZ Offset
+   
+    </th>
+   
+    <th>
+      
+     Time
+   
+    </th>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     Michael Becke
+   
+    </td>
+   
+    <td>
+      
+    <a name="mbecke">
+     mbecke
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    <a href="mailto:mbecke@apache.org">
+     mbecke@apache.org
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+     
+                    Java Developer
+   
+    <br>
+      
+    </br>
+   
+     
+                    
+   
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+    <span id="developer-mbecke">
+      
+     Unknown
+   
+    </span>
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     Jeff Dever
+   
+    </td>
+   
+    <td>
+      
+    <a name="jsdever">
+     jsdever
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    <a href="mailto:jsdever@apache.org">
+     jsdever@apache.org
+   </a>
+  
+    </td>
+   
+    <td>
+      
+     Independent consultant
+   
+    </td>
+   
+    <td>
+      
+     
+                    2.0 Release Prime
+   
+    <br>
+      
+    </br>
+   
+     
+                    Java Developer
+   
+    <br>
+      
+    </br>
+   
+     
+                    
+   
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+    <span id="developer-jsdever">
+      
+     Unknown
+   
+    </span>
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     dIon Gillard
+   
+    </td>
+   
+    <td>
+      
+    <a name="dion">
+     dion
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    <a href="mailto:dion@apache.org">
+     dion@apache.org
+   </a>
+  
+    </td>
+   
+    <td>
+      
+     Multitask Consulting
+   
+    </td>
+   
+    <td>
+      
+     
+                    Java Developer
+   
+    <br>
+      
+    </br>
+   
+     
+                    
+   
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+    <span id="developer-dion">
+      
+     Unknown
+   
+    </span>
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     Ortwin Glueck
+   
+    </td>
+   
+    <td>
+      
+    <a name="oglueck">
+     oglueck
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    <a href="mailto:oglueck@apache.org">
+     oglueck@apache.org
+   </a>
+  
+    </td>
+   
+    <td>
+      
+     Nose Applied Intelligence AG
+   
+    </td>
+   
+    <td>
+      
+     
+                    Java Developer
+   
+    <br>
+      
+    </br>
+   
+     
+                    
+   
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+    <span id="developer-oglueck">
+      
+     Unknown
+   
+    </span>
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     Sung-Gu
+   
+    </td>
+   
+    <td>
+      
+    <a name="jericho">
+     jericho
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    <a href="mailto:jericho@apache.org">
+     jericho@apache.org
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+     
+                    Java Developer
+   
+    <br>
+      
+    </br>
+   
+     
+                    
+   
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+    <span id="developer-jericho">
+      
+     Unknown
+   
+    </span>
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     Oleg Kalnichevski
+   
+    </td>
+   
+    <td>
+      
+    <a name="olegk">
+     olegk
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    <a href="mailto:olegk@apache.org">
+     olegk@apache.org
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+     
+                    Java Developer
+   
+    <br>
+      
+    </br>
+   
+     
+                    
+   
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+    <span id="developer-olegk">
+      
+     Unknown
+   
+    </span>
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     Sean C. Sullivan
+   
+    </td>
+   
+    <td>
+      
+    <a name="sullis">
+     sullis
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    <a href="mailto:sullis@apache.org">
+     sullis@apache.org
+   </a>
+  
+    </td>
+   
+    <td>
+      
+     Independent consultant
+   
+    </td>
+   
+    <td>
+      
+     
+                    Java Developer
+   
+    <br>
+      
+    </br>
+   
+     
+                    
+   
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+    <span id="developer-sullis">
+      
+     Unknown
+   
+    </span>
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     Adrian Sutton
+   
+    </td>
+   
+    <td>
+      
+    <a name="adrian">
+     adrian
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    <a href="mailto:adrian.sutton@ephox.com">
+     adrian.sutton@ephox.com
+   </a>
+  
+    </td>
+   
+    <td>
+      
+     Intencha
+   
+    </td>
+   
+    <td>
+      
+     
+                    Java Developer
+   
+    <br>
+      
+    </br>
+   
+     
+                    
+   
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+    <span id="developer-adrian">
+      
+     Unknown
+   
+    </span>
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     Rodney Waldhoff
+   
+    </td>
+   
+    <td>
+      
+    <a name="rwaldhoff">
+     rwaldhoff
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    <a href="mailto:rwaldhoff@apache">
+     rwaldhoff@apache
+   </a>
+  
+    </td>
+   
+    <td>
+      
+     Britannica
+   
+    </td>
+   
+    <td>
+      
+     
+                    Java Developer
+   
+    <br>
+      
+    </br>
+   
+     
+                    
+   
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+    <span id="developer-rwaldhoff">
+      
+     Unknown
+   
+    </span>
+   
+    </td>
+   </tr>
+  
+    </table>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Contributors">Contributors</a>
+        </h3>
+      
+      
+    <p>
+      
+     
+        The following additional people have contributed to this project
+   
+     
+        through the way of suggestions, patches or documentation.
+   
+     
+      
+   
+    </p>
+   
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <th>
+      
+     Name
+   
+    </th>
+   
+    <th>
+      
+     Email
+   
+    </th>
+   
+    <th>
+      
+     Organization
+   
+    </th>
+   
+    <th>
+      
+     Roles
+   
+    </th>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     Armando AntÃ¯Â¿Ån
+   
+    </td>
+   
+    <td>
+      
+    <a href="mailto:armando.anton@newknow.com">
+     armando.anton@newknow.com
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+     
+                    
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     Ola Berg
+   
+    </td>
+   
+    <td>
+      
+    <a href="mailto:"></a>
+  
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+     
+                    
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     Mike Bowler
+   
+    </td>
+   
+    <td>
+      
+    <a href="mailto:"></a>
+  
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+     
+                    
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     Eric Johnson
+   
+    </td>
+   
+    <td>
+      
+    <a href="mailto:eric@tibco.com">
+     eric@tibco.com
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+     
+                    
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     Ryan Lubke
+   
+    </td>
+   
+    <td>
+      
+    <a href="mailto:Ryan.Lubke@Sun.COM">
+     Ryan.Lubke@Sun.COM
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+     
+                    
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     Sam Maloney
+   
+    </td>
+   
+    <td>
+      
+    <a href="mailto:sam.maloney@filogix.com">
+     sam.maloney@filogix.com
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+     
+                    
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     Rob Di Marco
+   
+    </td>
+   
+    <td>
+      
+    <a href="mailto:rdimarco@hmsonline.com">
+     rdimarco@hmsonline.com
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+     
+                    
+   
+    </td>
+   </tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a">
+    <td>
+      
+     Juergen Pill
+   
+    </td>
+   
+    <td>
+      
+    <a href="mailto:Juergen.Pill@softwareag.com">
+     Juergen.Pill@softwareag.com
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+     
+                    
+   
+    </td>
+   </tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b">
+    <td>
+      
+     Laura Werner
+   
+    </td>
+   
+    <td>
+      
+    <a href="mailto:laura@lwerner.org">
+     laura@lwerner.org
+   </a>
+  
+    </td>
+   
+    <td>
+      
+    </td>
+   
+    <td>
+      
+     
+                    
+   
+    </td>
+   </tr>
+  
+    </table>
+  
+    </div>
+  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="footer">
+          <table border="0" style="width:100%" cellpadding="4" cellspacing="0">
+            
+            <tr>
+              <td>
+                
+                  
+                    
+                    
+                      � 2001-2003, Apache Software Foundation
+                    
+                  
+                  
+                
+
+                
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>
+  

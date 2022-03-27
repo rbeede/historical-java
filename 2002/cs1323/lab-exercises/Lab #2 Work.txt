@@ -1,0 +1,249 @@
+Lab Exercises
+February 4, 2000
+
+Due:   Today, before the end of lab (this is proof of your lab attendance).
+
+1.0	Objectives
+
+To be able to understand Impicit and Explicit Type Coercion.
+To observe the use of System.out.println();
+
+
+2.0	Class TestTypes
+
+Cut and paste the code below into your editor.  Save this application as TestTypes.java
+and compile and run this application.  Follow the instructions that appear below
+the code.
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Program TestTypes
+//
+//	A program to ....
+//		1.  Test Implicit and Explicit Type Coercion to show the difference
+//				between integer and real number division.
+//		2.  Demonstrate the use of System.out
+//
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+class TestTypes
+{
+
+	public static void main (String args[])
+   	{
+		/////////////////////////////////////////
+		//	Declare and initialize variables
+		/////////////////////////////////////////
+		int	intNumFirst	= 6, 
+			intNumSecond	= 3, 
+			intNumThird	= 4, 
+			intNumFourth	= 2,
+			intAnswer	= 0;
+		
+		double	doubleNumFirst	= 6.0, 
+			doubleNumSecond	= 3.0, 
+			doubleNumThird	= 4.0, 
+			doubleNumFourth	= 2.0,
+			doubleAnswer	= 0.0;
+		
+		////////////////////////////////////////////////////////
+		//	Calculate answers for...
+		//		Integer Division:	6   * 3   / 4   * 2  	
+		//		realNumber Division:	6.0 * 3.0 / 4.0 * 2.0	
+		////////////////////////////////////////////////////////
+		intAnswer	= intNumFirst * intNumSecond / intNumThird * intNumFourth;
+		doubleAnswer	= doubleNumFirst * doubleNumSecond / doubleNumThird * doubleNumFourth;
+					
+		//////////////////////
+		//	Output Heading
+		//////////////////////
+		System.out.println();
+		System.out.print("**********************");
+		System.out.print(" Application:  TestTypes ");
+		System.out.print("**********************");
+		System.out.println();
+		System.out.println();
+		
+		/////////////////////////////////////////////////
+		//	Output arithmetic equations and results
+		/////////////////////////////////////////////////
+		System.out.println("Comparison of Integer and Real Number Division");
+		System.out.println("Result of Integer Division:      " 
+					   + intNumFirst	+ "   * " 
+					   + intNumSecond	+ "   /  "
+					   + intNumThird	+ "   * " 
+					   + intNumFourth	+ "    is : " 
+					   + intAnswer);
+												 
+		System.out.println("Result of Real Number Division:  " 
+					   + doubleNumFirst	+ " * " 
+					   + doubleNumSecond	+ " /  "
+					   + doubleNumThird	+ " * " 
+					   + doubleNumFourth	+ "  is : " 
+					   + doubleAnswer);
+		
+		//////////////////////////
+		//	Skip two lines
+		//////////////////////////
+		System.out.println();
+		System.out.println();
+		
+		//////////////////////////////////////////////////////////////////////
+		//	Re-calculate answers with added parentheses...
+		//		Integer Division:	6   * 3   / (4   * 2  )	
+		//		realNumber Division:	6.0 * 3.0 / (4.0 * 2.0)	
+		//////////////////////////////////////////////////////////////////////
+		intAnswer	= intNumFirst * intNumSecond / (intNumThird * intNumFourth);
+		doubleAnswer 	= doubleNumFirst * doubleNumSecond / (doubleNumThird * doubleNumFourth);
+		
+		/////////////////////////////////////////////////////////////////////////////
+		//	Output second set of arithmetic equations and results (with parentheses)
+		/////////////////////////////////////////////////////////////////////////////
+		System.out.println("Problem changed by addition of parentheses");
+		System.out.println("Result of Integer Division:      " 
+					   + intNumFirst	+ "   * " 
+					   + intNumSecond	+ "   / ("
+					   + intNumThird	+ "   * " 
+					   + intNumFourth	+ ")   is : " 
+					   + intAnswer);
+												 
+		System.out.println("Result of Real Number Division:  " 
+					   + doubleNumFirst	+ " * " 
+					   + doubleNumSecond	+ " / ("
+					   + doubleNumThird	+ " * " 
+					   + doubleNumFourth	+ ") is : " 
+					   + doubleAnswer);
+			
+		////////////////////////////
+		//	@Begin Exercises
+		////////////////////////////
+		/*
+		System.out.println();
+		System.out.print("Answer to exercises:  ");
+		System.out.println("(5 + 2) / 3 = " + (5 + 2) / 3);
+		//	@End Exercises
+		*/
+		
+		////////////////////////////
+		//	Output Ending 
+		////////////////////////////
+		System.out.println();
+		System.out.println("****************************** The End *******************************");
+		
+   }//end main
+
+}//end class TestTypes
+
+
+Instructions:
+
+1.  	Compile and run the TestTypes Application.
+	View the output on the console.
+	Notice the difference in the answers between integer and real number division.
+
+2.	Uncomment the code labeled @Begin Exercises and @End Exercises
+	Save, recompile and run the TestTypes Application again
+	Notice the new arithmetic equation and answer in the output.
+
+3.	Change this line:
+
+		System.out.println("(5 + 2) / 3 = " + (5 + 2) / 3);
+
+	To this:
+
+		System.out.println("(5.0 + 2.0) / 3.0 = " + (5.0 + 2.0) / 3.0);
+
+
+	Write down the entire answer here:     2.3333333333333335
+
+
+4.  	Now change this line:
+
+		System.out.println("(5.0 + 2.0) / 3.0 = " + (5.0 + 2.0) / 3.0);
+
+	To this:
+
+		System.out.println("(5.0 + 2) / 3 = " + (5.0 + 2) / 3);
+	
+	Notice only one number is designated as a real number.
+	Write down the entire answer here: 2.3333333333333335
+
+
+5.	Now change this line:
+
+		System.out.println("(5.0 + 2) / 3 = " + (5.0 + 2) / 3);
+
+	To this:
+
+		System.out.println("((float)5 + 2) / 3 = " + ((float)5 + 2) / 3);
+
+	Write down the entire answer here:  2.3333333
+
+6.  	Now change this line:
+
+		System.out.println("((float)5 + 2) / 3 = " + ((float)5 + 2) / 3);
+
+	To this:
+
+		System.out.println("((double)5 + 2) / 3 = " + ((double)5 + 2) / 3);		
+
+	Write down the entire answer here: 2.3333333333333335
+
+	Notice the difference in precision between answer to exercise #5 and #6
+	(this step).  
+
+7.	Designating the data type in parenthesis is called "Explicit" type coercion
+	as was done in exercises 5 and 6.  The answer to exercise #4 used "Implicit"
+	type coercion by automatically promoting all integer data types to real
+	numbers for compatibility with the 5.0 real number.  
+
+	Compare the answer in Exercise #4 to the answers in #5 and #6.  Based on this
+	comparison, what is the default data type for real numbers in Java?  
+
+
+	 DOUBLE 
+
+
+8.	Now change this line:
+
+		System.out.println("((double)5 + 2) / 3 = " + ((double)5 + 2) / 3);		
+
+	To this:
+
+		System.out.println("(int)((5.0 + 2.0) / 3.0) = " + (int)((5.0 + 2.0) / 3.0));				
+
+	Write down the answer here:  2
+
+9.	Now change this line:
+
+		System.out.println("(int)((5.0 + 2.0) / 3.0) = " + (int)((5.0 + 2.0) / 3.0));				
+
+	To this:
+
+		System.out.println("(float)((5 + 2) / 3) = " + (float)((5 + 2) / 3));
+
+	Write down the answer here:  2.0
+
+10.	Now change this line:
+
+		System.out.println("(float)((5 + 2) / 3) = " + (float)((5 + 2) / 3));
+
+	To this:
+
+		System.out.println("(double)((5 + 2) / 3) = " + (double)((5 + 2) / 3));
+
+	Write down the answer here:   2.0
+
+
+	Notice how integer division occurs first within the parentheses and then
+	the entire integer answer is cast as a real number.  You may have questions
+	similar to these on an exam.
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+Hello-
+   First, thank you for considering this software (and, I hope, my text)!
+   Next, most of this, except the text of course, will be available over 
+the Web.  For the immediate future, from Williams:
+       http://www.cs.williams.edu/~bailey/JavaStructures
+   and later from McGraw-Hill Higher Education:
+       http://www.mhhe.edu/javastructures
+
+This version corresponds to the first edition of the Java Structures
+text, and is compatible with JDK 1.2.  If you are using a JDK1.1 version
+of most compilers, you should read the README-JDK1.1.
+
+This directory contains several items:
+    * index.html -- the root of a tree of html files documenting this
+		    release.  Includes links to download the latest versions
+		    of this package.
+    * COPYRIGHT -- basically, you're free to distribute code, intact, but
+                    not the book.  All rights are reserved by
+	            Duane Bailey and McGraw-Hill, etc.
+    * source -- current source for the structure package.  Please report
+                 missing or excess files.
+    * source.zip -- the zip'd version of the sources.
+    * structure -- the class files for the structure package.
+                    Distracting javadoc comments have been removed, if
+                    you need them put back in, please send me mail.
+    * structure.zip -- the zip file I use on the Suns.
+                        It should also work with CodeWarrior.  Put
+                        the class file in the same folder with classes.zip
+                        (on Macs, in the System folder, under Java),
+                        then create some stationery with structure.zip
+                        in the classes folder.  Don't forget to import it, too!
+                        On suns, put the zip file in the class path.
+                        Even though it's not a directory, the compiler
+                        will handle it correctly.
+    * examples -- The examples cited from the book.  Will be available
+                   on the web as well.
+    * javadoc -- this is the hierarchy of javadoc html files it consists
+                  of everything generated for public methods, as well as
+                  the vital missing images folder.  The suggested entry
+                  is packages.html.  Everything else is accessible from
+                  there.  Also available on the web from williams and
+                  mhhe.com.
+   
+
+I hope this is useful to you; if it is not, PLEASE send me complaints and
+comments.
+
+Thanks,
+  Duane A. Bailey (bailey@cs.williams.edu)
+  Department of Computer Science
+  Williams College

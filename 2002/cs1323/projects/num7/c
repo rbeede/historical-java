@@ -1,0 +1,4 @@
+clear
+rm *.class
+echo "Compiling..."
+jc CheckBookMain.java

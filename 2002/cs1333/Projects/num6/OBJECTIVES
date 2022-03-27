@@ -1,0 +1,17 @@
+Objective #1:  Develop a benchmarking class to time certain operations
+	I achieved this one.  See Benchmark.java
+
+Objective #2:  Use random and pre-sorted data to generate BST's and Splay Trees
+	I achieved this one.  See Engine.java and Benchmark.ajva
+
+Objective #3:  Time searches on BST's and Splay Trees to determine performance
+	I achieved this one.  Run TreeTest program
+
+Objective #4:  Write a 2-3 page paper analyzing the results of the benchmark
+   which:
+ 4.1)  Describe the methods used to generate results
+ 4.2)  Details the complete results of the tests
+ 4.3)  Explains why the results turned out how they did
+
+	I achieved all these.  See "Project Results.doc"
+	I also have a copy of test data in TestData.txt

@@ -1,0 +1,204 @@
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><HTML DIR="ltr">
+	<HEAD>
+		<TITLE>
+			Called to Serve...: rodneyb@myldsmail.net
+		</TITLE>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	</HEAD>
+	<BODY BGCOLOR="d8d8d8" TEXT="000000">
+		<A NAME="top">
+			<TABLE bgColor="3d709a" border=0 cellPadding=0 cellSpacing=0 width="100%">
+				<TBODY>
+										<TR>
+						<TD>
+							<TABLE border=0 cellPadding=3 cellSpacing=0 width="100%">
+								<TBODY>
+									<TR>
+										<TD rowSpan=20 vAlign=center width="1%">
+											<A href="/w?BB.e0pMnw.FDqEg.CC7HYPwM.J"><IMG alt="Shortcut to Inbox" border=0 hspace=2 src="/p-B.FM.JLQ.OqFMnw.FDqEg.CC7HYPwM.J" vspace=2 valign=baseline></A>
+										</TD>
+										<TD align=left noWrap vAlign=top width="10%">
+											<A href="/w?.BQ.EE.Zx1Mnw.FDqEg.CC7HYPwM.J" target=_top><FONT color="ffffff">Folders</FONT></A>
+										</TD>
+										<TD align=left noWrap vAlign=top width="10%">
+											<A href="/w?.BQ.EQ.ZylMnw.FDqEg.CC7HYPwM.J" target=_top><FONT color="ffffff">Compose</FONT></A>
+										</TD>
+										<TD align=left noWrap vAlign=top width="10%">
+											<A href="/w?.BQ.EU.Zy1Mnw.FDqEg.CC7HYPwM.J" target=_top><FONT color="ffffff">Address Book</FONT></A>
+										</TD>
+										<TD align=left noWrap vAlign=top width="10%">
+											<A href="/w?.BQ.EY.ZzFMnw.FDqEg.CC7HYPwM.J" target=_top><FONT color="ffffff">Preferences</FONT></A>
+										</TD>
+										
+										<TD align="left" valign="top" width="10%" NOWRAP>
+											<A HREF="/w?.BQ.DBg.Z3lMnw.FDqEg.CC7HYPwM.J" TARGET="_top"><FONT COLOR="ffffff">Rules</FONT></A>
+										</TD>
+										
+										<TD align=left noWrap vAlign=top width="10%">
+											<A href="https://secure.lds.org/ldsm/signin/0,14544,3821-1,00.html" target=_top><FONT color="ffffff">Logout</FONT></A>
+										</TD>
+									</TR>
+									<TR>
+										<TD colspan = 6>
+											<FONT COLOR="#ff0000" Size="3">
+												&nbsp;&nbsp;
+											</FONT>
+										</TD>
+									</TR>
+								</TBODY>
+							</TABLE>
+						</TD>
+					</TR>
+					<TR>
+						<TD bgColor="d8d8d8" height=1>
+						</TD>
+					</TR>
+
+					<TR>
+						<TD>
+							<TABLE cellpadding=3>
+								<TBODY>
+									<TR>
+										<TD>			
+											<FONT COLOR="ffffff" SIZE="+1"><STRONG>Folders</STRONG></FONT>
+										</TD>
+									</TR>
+								</TBODY>
+							</TABLE>
+						</TD>
+					</TR>
+				</TBODY>
+			</TABLE>
+			<TABLE bgColor="3d709a" border=0 cellPadding=0 cellSpacing=0 width="100%">
+				<TBODY>
+					<TR>
+						<TD bgColor="d8d8d8" vAlign="top">
+							<TABLE CELLPADDING="4" WIDTH="100%" CELLSPACING="1" BORDER="0">
+								<TR BGCOLOR="8ba0bd">
+									<TD WIDTH="100%">
+										<FONT COLOR="000000">
+											<STRONG>Name</STRONG>
+										</FONT>
+									</TD>
+									<TD NOWRAP ALIGN="Right">
+										<FONT COLOR="000000">
+											<STRONG>Messages</STRONG>
+										</FONT>
+									</TD>
+									<TD NOWRAP ALIGN="Right">
+										<FONT COLOR="000000">
+											<STRONG>New</STRONG>
+										</FONT>
+									</TD>
+								</TR>
+								
+
+								<TR BGCOLOR="eeeeee">
+									<TD>
+										<FONT COLOR="000000">
+											<A HREF="/w?BB.e0pMnw.FDqEg.CC7HYPwM.J" TARGET="_top">INBOX</A>
+										</FONT>
+									</TD>
+									<TD ALIGN="Right">
+										<FONT COLOR="000000">4&nbsp;</FONT>
+									</TD>
+									<TD ALIGN="Right">
+										<FONT COLOR="000000">4</FONT>
+									</TD>
+								</TR>
+								
+
+								<TR BGCOLOR="eeeeee">
+									<TD>
+										<FONT COLOR="000000">
+											<A HREF="/w?BB.EE.Z05Mnw.FDqEg.CC7HYPwM.J" TARGET="_top">Backup</A>
+										</FONT>
+									</TD>
+									<TD ALIGN="Right">
+										<FONT COLOR="000000">8&nbsp;</FONT>
+									</TD>
+									<TD ALIGN="Right">
+										<FONT COLOR="000000">0</FONT>
+									</TD>
+								</TR>
+								
+
+								<TR BGCOLOR="eeeeee">
+									<TD>
+										<FONT COLOR="000000">
+											<A HREF="/w?BB.EI.Z1JMnw.FDqEg.CC7HYPwM.J" TARGET="_top">Received</A>
+										</FONT>
+									</TD>
+									<TD ALIGN="Right">
+										<FONT COLOR="000000">94&nbsp;</FONT>
+									</TD>
+									<TD ALIGN="Right">
+										<FONT COLOR="000000">0</FONT>
+									</TD>
+								</TR>
+								
+
+								<TR BGCOLOR="eeeeee">
+									<TD>
+										<FONT COLOR="000000">
+											<A HREF="/w?BB.EM.Z1ZMnw.FDqEg.CC7HYPwM.J" TARGET="_top">Received_Not_Backed</A>
+										</FONT>
+									</TD>
+									<TD ALIGN="Right">
+										<FONT COLOR="000000">47&nbsp;</FONT>
+									</TD>
+									<TD ALIGN="Right">
+										<FONT COLOR="000000">0</FONT>
+									</TD>
+								</TR>
+								
+
+								<TR BGCOLOR="eeeeee">
+									<TD>
+										<FONT COLOR="000000">
+											<A HREF="/w?BB.EQ.EI.U3pMnw.FDqEg.CC7HYPwM.J" TARGET="_top">Sent Items</A>
+										</FONT>
+									</TD>
+									<TD ALIGN="Right">
+										<FONT COLOR="000000">114&nbsp;</FONT>
+									</TD>
+									<TD ALIGN="Right">
+										<FONT COLOR="000000">0</FONT>
+									</TD>
+								</TR>
+								
+							</TABLE>
+						</TD>
+					</TR>
+					<TR>
+						<TD>
+							<TABLE WIDTH="100%" border="0">
+								<TBODY>
+									<TR>
+										<TD align=left noWrap>
+											<A href="/w?.BQ.Es.Z0VMnw.FDqEg.CC7HYPwM.J"><IMG Alt="Create Folder" src="/p-B.FM.JCg.Oy1Mnw.FDqEg.CC7HYPwM.J" border=0></A>
+										
+											<A href="/w?.BQ.Ew.Z0lMnw.FDqEg.CC7HYPwM.J"><IMG alt="Delete Folder" src="/p-B.FM.JDQ.OyFMnw.FDqEg.CC7HYPwM.J" border=0></A>
+										
+											<A href="/w?.BQ.E0.Z01Mnw.FDqEg.CC7HYPwM.J"><IMG Alt="Rename Folder" src="/p-B.FM.JHw.OtlMnw.FDqEg.CC7HYPwM.J" border=0></A>
+										</TD>
+										<TD>&nbsp;</TD>
+										<TD Align=center>
+											<FONT COLOR="ffffff" SIZE="-1">
+												<Strong>Mailbox Used: </Strong>4.3MB&nbsp;&nbsp;(87%)
+											</FONT>
+										</TD>
+										<TD>&nbsp;</TD>
+										<TD ALIGN="RIGHT">
+											<A HREF="/w?CB.EE.Z45Mnw.FDqEg.CC7HYPwM.J"><IMG alt=Refresh SRC="/p-B.FM.JHg.Ot1Mnw.FDqEg.CC7HYPwM.J" BORDER="0" VSPACE="2"></A>
+										</TD>
+									</TR>
+								</TBODY>
+							</TABLE>
+						</TD>
+					</TR>
+				</TBODY>
+			</TABLE>
+		</A>	
+	</BODY>
+</HTML>

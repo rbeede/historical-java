@@ -1,0 +1,46 @@
+Modified EasyX509TrustManager to accept ANY certificates.
+SSL protection is not guarenteed.
+
+Before got the following error:
+
+RUNNING...
+This program accepts any SSL connection.  No security promised.
+Trying Login page...DONE
+Logging in rodneyb...Exception in thread "main" javax.net.ssl.SSLHandshakeExcept
+ion: java.security.cert.CertificateException: Untrusted Server Certificate Chain
+
+        at com.sun.net.ssl.internal.ssl.BaseSSLSocketImpl.a(DashoA6275)
+        at com.sun.net.ssl.internal.ssl.SSLSocketImpl.a(DashoA6275)
+        at com.sun.net.ssl.internal.ssl.SSLSocketImpl.a(DashoA6275)
+        at com.sun.net.ssl.internal.ssl.SunJSSE_az.a(DashoA6275)
+        at com.sun.net.ssl.internal.ssl.SunJSSE_az.a(DashoA6275)
+        at com.sun.net.ssl.internal.ssl.SunJSSE_ax.a(DashoA6275)
+        at com.sun.net.ssl.internal.ssl.SSLSocketImpl.a(DashoA6275)
+        at com.sun.net.ssl.internal.ssl.SSLSocketImpl.j(DashoA6275)
+        at com.sun.net.ssl.internal.ssl.SSLSocketImpl.a(DashoA6275)
+        at com.sun.net.ssl.internal.ssl.AppOutputStream.write(DashoA6275)
+        at org.apache.commons.httpclient.HttpConnection$WrappedOutputStream.writ
+e(HttpConnection.java:1351)
+        at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:66
+)
+        at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:124)
+        at org.apache.commons.httpclient.HttpConnection.flushRequestOutputStream
+(HttpConnection.java:779)
+        at org.apache.commons.httpclient.HttpMethodBase.writeRequest(HttpMethodB
+ase.java:2257)
+        at org.apache.commons.httpclient.HttpMethodBase.processRequest(HttpMetho
+dBase.java:2629)
+        at org.apache.commons.httpclient.HttpMethodBase.execute(HttpMethodBase.j
+ava:1085)
+        at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.jav
+a:674)
+        at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.jav
+a:529)
+        at MyLDSMail_Downloader.main(MyLDSMail_Downloader.java:109)
+Caused by: java.security.cert.CertificateException: Untrusted Server Certificate
+ Chain
+        at com.sun.net.ssl.X509TrustManagerJavaxWrapper.checkServerTrusted(Dasho
+A6275)
+        at com.sun.net.ssl.internal.ssl.JsseX509TrustManager.checkServerTrusted(
+DashoA6275)
+        ... 17 more
